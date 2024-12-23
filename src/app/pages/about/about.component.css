@@ -1,0 +1,78 @@
+/* About Us Section */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(13, 17, 23, 0.9); /* Dark semi-transparent background */
+    color: white;
+    backdrop-filter: blur(5px); /* Blur effect for a modern look */
+  }
+  
+  /* Container */
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Title and Content */
+  .about-content {
+    margin-bottom: 40px;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #c4c4c4;
+  }
+  
+  .about-content .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Stats Section */
+  .about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 150px;
+  }
+  
+  .stat-card h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .stat-card p {
+    font-size: 1rem;
+    color: #c4c4c4;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-stats {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  

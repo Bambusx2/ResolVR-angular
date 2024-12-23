@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="nav-bg"></div>
+  <div class="logo">ResolVR</div>
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+    <li><a routerLink="/careers" routerLinkActive="active">Careers</a></li>
+    <div class="cta">
+      <a routerLink="/contact" class="cta-button">Let's Connect →</a>
+    </div>
+  </ul>
+  <div class="burger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>

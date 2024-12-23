@@ -1,0 +1,214 @@
+/* Font Import */
+@font-face {
+  font-family: 'DesMontilles';
+  src: url('/assets/fonts/font1.otf') format('opentype'),
+       url('/assets/fonts/font2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ng-particles {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure particles are in the background */
+}
+
+
+/* General Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 .highlight {
+  color: #007bff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #c4c4c4;
+}
+
+.cta-button {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Partner Carousel */
+.partner-carousel {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+  height: 100px;
+  width: 150px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  filter: grayscale(100%);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo-track img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* About Us Section */
+.about-us {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+  color: white;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #c4c4c4;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #f6f6f6;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-logo {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 15px 0;
+  color: #333333;
+}
+
+.testimonial-text .quote {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+}
+
+.testimonial-author .name {
+  display: block;
+  font-size: 1.4rem;
+  font-family: 'DesMontilles', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 5px;
+}
+
+.testimonial-author .position {
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #777777;
+}
