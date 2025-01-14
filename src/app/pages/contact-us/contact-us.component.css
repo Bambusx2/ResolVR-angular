@@ -2,7 +2,8 @@
     background: linear-gradient(135deg, #0d1b34, #1c3253);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 130px 20px 50px; /* Added extra top padding */
+
   }
   
   .contact-us-header h1 {
@@ -81,11 +82,6 @@
     resize: none;
   }
   
-  .form-group-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
   
   .cta-button {
     background: linear-gradient(90deg, #673ab7, #5e35b1);
@@ -109,7 +105,6 @@
     box-shadow: 0 0 10px #673ab7;
   }
   
-  /* Custom Styling for Dropdown */
 form select {
     padding: 10px;
     border: none;
@@ -119,9 +114,9 @@ form select {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     transition: all 0.3s;
-    appearance: none; /* Removes default arrow in most browsers */
-    -webkit-appearance: none; /* Safari */
-    -moz-appearance: none; /* Firefox */
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;

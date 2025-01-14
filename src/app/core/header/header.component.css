@@ -1,128 +1,149 @@
-/* Navbar styling */
+/* Apply the new font globally */
+:host {
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 60px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
+  /* background: linear-gradient(50deg, #00544f, #21003d);  */
+  backdrop-filter: blur(5px);
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
   z-index: 1000;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
 
-/* Add a semi-transparent blur background */
-.navbar .nav-bg {
-  position: absolute;
-  inset: 0; /* Covers the full navbar */
-  z-index: -1; /* Stays behind navbar content */
-  background-color: rgba(5, 12, 39, 0.6); /* Semi-transparent background color */
-  -webkit-backdrop-filter: blur(0.5rem); /* Blur effect for Safari */
-  backdrop-filter: blur(0.5rem); /* Blur effect for other browsers */
-  transition: opacity 0.3s, backdrop-filter 0.3s; /* Smooth transitions */
-  opacity: 0; /* Initially hidden */
+/* Brand Section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* Activate blur and background when scrolled */
-.navbar.scrolled .nav-bg {
-  opacity: 1; /* Make it visible */
-}
-
-/* Company logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+.brand-text {
+  font-size: 2rem;
   color: white;
-  z-index: 1; /* Ensure it stays on top */
+  font-weight: 600;
 }
 
-/* Navigation links */
+/* Logo */
+
+/* Ensure the logo and text are aligned and clickable */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline */
+}
+
+.logo-link:hover {
+  opacity: 0.9; /* Optional hover effect */
+}
+
+/* Brand Text Styling */
+.brand-text {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  margin-left: 8px; /* Space between logo and text */
+}
+
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation Menu */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 25px;
-  z-index: 1; /* Ensure links stay on top */
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-links.active {
-  display: flex; /* Ensure visibility in mobile view */
 }
 
 .nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #c5cae9;
+  color: #11c4b9;
 }
 
 .nav-links li a.active {
-  font-weight: bold;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #11c4b9;
+  padding-bottom: 3px;
 }
 
-/* Call-to-action button */
+/* Call-to-Action Button */
 .cta .cta-button {
   text-decoration: none;
   color: white;
-  background-color: #673ab7;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
+  background-color: #11c4b9;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .cta .cta-button:hover {
-  background-color: #5e35b1;
+  background-color: #673ab7;
   transform: scale(1.05);
 }
 
-/* Responsive Design for Smaller Screens */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide links by default for mobile */
+  .menu-container {
+    display: none;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+    background: rgba(5, 12, 39, 0.95);
     position: absolute;
-    top: 60px; /* Adjust based on navbar height */
+    top: 80px; /* Matches navbar height */
     right: 0;
     width: 100%;
-    padding: 15px 0;
     text-align: center;
-    z-index: 999;
+    padding: 15px 0;
   }
 
-  .nav-links.active {
-    display: flex; /* Show dropdown when active */
+  .menu-container.active {
+    display: flex;
   }
 
   .cta {
-    display: none;
+    display: block;
   }
 }
 
-/* Burger menu for mobile */
+/* Responsive Burger Menu */
 .burger {
-  display: none; /* Hidden on larger screens */
-  cursor: pointer;
+  display: none;
   flex-direction: column;
-  justify-content: space-between;
-  height: 20px;
-  z-index: 1; /* Keep above the nav-bg */
+  gap: 5px;
+  cursor: pointer;
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   background-color: white;
   transition: all 0.3s;
 }

@@ -7,33 +7,6 @@
   font-style: normal;
 }
 
-ng-particles {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1; /* Ensure particles are in the background */
-}
-
-
-/* General Video Background */
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-#backgroundVideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -43,7 +16,8 @@ ng-particles {
   height: 100vh;
   position: relative;
   color: white;
-}
+  background: linear-gradient(50deg, #00544f, #21003d); 
+} 
 
 .hero-content {
   z-index: 1;
@@ -57,7 +31,7 @@ ng-particles {
 }
 
 .hero-content h1 .highlight {
-  color: #007bff;
+  color: #11c4b9;
 }
 
 .hero-content p {
@@ -69,7 +43,7 @@ ng-particles {
 .cta-button {
   text-decoration: none;
   color: white;
-  background-color: #007bff;
+  background-color: #11c4b9;
   padding: 15px 30px;
   border-radius: 25px;
   font-size: 1.1rem;
@@ -78,7 +52,7 @@ ng-particles {
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #673ab7;
   transform: scale(1.05);
 }
 
@@ -88,6 +62,9 @@ ng-particles {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background: rgba(5, 12, 39, 0.8);  */
+  background: radial-gradient(circle, #11c4b9, #0d1b34);
+
 }
 
 .carousel-container {
@@ -98,26 +75,27 @@ ng-particles {
 
 .logo-track {
   display: flex;
-  gap: 20px;
-  animation: scroll 20s linear infinite;
+  gap: 30px; /* Space between logos */
+  animation: scroll 25s linear infinite;
 }
 
 .logo-track img {
-  height: 100px;
-  width: 150px;
-  object-fit: contain;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  width: 150px; /* Uniform width for all logos */
+  height: 80px; /* Uniform height for all logos */
+  object-fit: contain; /* Prevent distortion */
+  filter: invert(100%) grayscale(100%); /* Makes logos black and white */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
   padding: 10px;
-  filter: grayscale(100%);
-  transition: transform 0.3s, filter 0.3s;
+  background-color: rgba(255, 255, 255, 0.267); /* Subtle background for logos */
+  border-radius: 8px; /* Rounded edges for logos */
 }
 
 .logo-track img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0%);
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  filter: invert(100%) grayscale(100%) brightness(1.1); /* Brightens the logo on hover */
 }
+
+
 
 @keyframes scroll {
   0% {
@@ -128,12 +106,16 @@ ng-particles {
   }
 }
 
+
+
 /* About Us Section */
 .about-us {
   padding: 60px 20px;
   text-align: center;
   background: transparent;
   color: white;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+
 }
 
 .about-us h2 {
@@ -155,6 +137,7 @@ ng-particles {
   padding: 50px 20px;
   text-align: center;
   color: white;
+  background: linear-gradient(135deg, #0d1b34, #1c3253); /* Same gradient */
 }
 
 .section-title {

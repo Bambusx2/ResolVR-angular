@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+/* Box sizing reset for consistency */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin and padding */
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements */
+  ul, ol {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Remove default link styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Set images to be responsive */
+  img, picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Remove border and outline on buttons */
+  button, input, textarea, select {
+    border: none;
+    outline: none;
+    font: inherit;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set default font family and line height */
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Remove border for links in images */
+  a img {
+    border: none;
+  }
+  
+  /* Default cursor for buttons */
+  button {
+    cursor: pointer;
+    background: none;
+  }
+  
+  /* Table normalization */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Input autofill background fix */
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
