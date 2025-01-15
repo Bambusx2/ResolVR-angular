@@ -17,10 +17,10 @@
   position: relative;
   color: white;
   background: linear-gradient(50deg, #00544f, #21003d); 
+  z-index: -1;
 } 
 
 .hero-content {
-  z-index: 1;
   max-width: 800px;
 }
 
