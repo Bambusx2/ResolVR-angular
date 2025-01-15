@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent {
   isScrolled = false;
   menuOpen = false;
+  activeSection: string = 'home';  // ✅ Added to fix the error
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -19,6 +20,19 @@ export class HeaderComponent {
       navbar?.classList.add('scrolled');
     } else {
       navbar?.classList.remove('scrolled');
+    }
+
+    // ✅ Scroll detection logic to update activeSection
+    const sections = ['home', 'about', 'services', 'careers'];
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 80 && rect.bottom >= 80) {
+          this.activeSection = section;
+          break;
+        }
+      }
     }
   }
 

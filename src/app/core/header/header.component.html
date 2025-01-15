@@ -9,10 +9,10 @@
   </div>
   <div class="menu-container">
     <ul class="nav-links">
-      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
-      <li><a routerLink="/careers" routerLinkActive="active">Careers</a></li>
+      <li><a href="#home" [class.active]="activeSection === 'home'">Home</a></li>
+      <li><a href="#about" [class.active]="activeSection === 'about'">About</a></li>
+      <li><a href="#services" [class.active]="activeSection === 'services'">Services</a></li>
+      <li><a href="#careers" [class.active]="activeSection === 'careers'">Careers</a></li>
     </ul>
     <div class="cta">
       <a routerLink="/contact-us" class="cta-button">Let's Connect →</a>

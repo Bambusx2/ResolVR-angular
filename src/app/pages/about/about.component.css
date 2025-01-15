@@ -1,78 +1,96 @@
 /* About Us Section */
 .about-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: rgba(13, 17, 23, 0.9); /* Dark semi-transparent background */
-    color: white;
-    backdrop-filter: blur(5px); /* Blur effect for a modern look */
-  }
-  
-  /* Container */
-  .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Title and Content */
-  .about-content {
-    margin-bottom: 40px;
-  }
-  
-  .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-  
-  .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #c4c4c4;
-  }
-  
-  .about-content .highlight {
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  /* Stats Section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-content {
+  margin-bottom: 60px;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #11c4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #c4c4c4;
+}
+
+.about-content .highlight {
+  color: #11c4b9;
+  font-weight: bold;
+}
+
+/* Stats Section */
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: #11c4b9;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #c4c4c4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .about-stats {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
   }
-  
+
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+
   .stat-card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    width: 150px;
+    width: 100%;
   }
-  
-  .stat-card h3 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin: 0;
-  }
-  
-  .stat-card p {
-    font-size: 1rem;
-    color: #c4c4c4;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-stats {
-      flex-direction: column;
-      gap: 15px;
-    }
-  }
-  
+}

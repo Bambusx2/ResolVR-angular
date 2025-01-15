@@ -16,44 +16,52 @@
   height: 100vh;
   position: relative;
   color: white;
-  background: linear-gradient(50deg, #00544f, #21003d); 
+  background: linear-gradient(50deg, #00544f, #21003d);
+  padding: 0 20px;
   z-index: -1;
-} 
+}
 
+/* Hero Content */
 .hero-content {
-  max-width: 800px;
+  padding-top: 8%;
+  max-width: 1000px; /* Expanded width */
 }
 
+/* Main Headline */
 .hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  font-size: 4.5rem; /* Larger headline */
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
+/* Highlighted Text */
 .hero-content h1 .highlight {
   color: #11c4b9;
 }
 
+/* Subheading */
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 40px;
   color: #c4c4c4;
+  font-weight: 300;
 }
 
+/* Call-to-Action Button */
 .cta-button {
   text-decoration: none;
   color: white;
   background-color: #11c4b9;
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 1.1rem;
+  padding: 20px 45px;
+  border-radius: 30px;
+  font-size: 1.3rem; 
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Button Hover Effect */
 .cta-button:hover {
   background-color: #673ab7;
-  transform: scale(1.05);
 }
 
 /* Partner Carousel */
@@ -133,65 +141,110 @@
 }
 
 /* Testimonials Section */
+/* Testimonials Section */
 .testimonials {
-  padding: 50px 20px;
+  padding: 80px 20px;
   text-align: center;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
   color: white;
-  background: linear-gradient(135deg, #0d1b34, #1c3253); /* Same gradient */
 }
 
-.section-title {
-  font-size: 2.5rem;
-  color: #007bff;
-  margin-bottom: 30px;
+.testimonials .section-title {
+  font-size: 3rem;
+  color: #11c4b9;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
+/* Testimonials Grid */
 .testimonial-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Testimonial Card */
 .testimonial-card {
-  background: #f6f6f6;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
 }
 
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
 .testimonial-logo {
-  max-width: 80px;
+  max-width: 70px;
+  height: auto;
   margin-bottom: 15px;
+  opacity: 0.9;
 }
 
+/* Testimonial Text */
 .testimonial-text {
   font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 15px 0;
-  color: #333333;
+  line-height: 1.8;
+  color: #333;
+  margin: 20px 0;
+  font-family: 'Georgia', serif;
+  text-align: justify;
 }
 
 .testimonial-text .quote {
-  font-size: 2rem;
-  color: #007bff;
+  font-size: 2.8rem;
+  color: #5a2ea6;
+  font-weight: bold;
+  line-height: 0.5;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
+/* Author Section */
+/* Author Section */
 .testimonial-author {
-  margin-top: 20px;
+  margin-top: 25px;
+  line-height: 1.4;
+  position: relative;
 }
 
+/* Name Styling */
 .testimonial-author .name {
   display: block;
-  font-size: 1.4rem;
-  font-family: 'DesMontilles', sans-serif;
-  font-style: italic;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #444444;
-  margin-bottom: 5px;
+  font-style: italic;
+  color: #11c4b9;
+  font-family: 'DesMontilles', serif;
+  margin-bottom: 10px;
+  position: relative;
 }
 
+/* Stylish Line Divider */
+.testimonial-author .name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: #11c4b9;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Position Styling */
 .testimonial-author .position {
-  font-size: 1rem;
-  font-family: 'Arial', sans-serif;
-  color: #777777;
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: capitalize;
+  margin-top: 10px;
 }
