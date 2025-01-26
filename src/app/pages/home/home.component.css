@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'DesMontilles';
   src: url('/assets/fonts/font1.otf') format('opentype'),
-       url('/assets/fonts/font2.ttf') format('truetype');
+    url('/assets/fonts/font2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
 /* Hero Content */
 .hero-content {
   padding-top: 8%;
-  max-width: 1000px; 
+  max-width: 1000px;
 }
 
 /* Main Headline */
@@ -55,7 +55,7 @@
   background-color: #11c4b9;
   padding: 20px 45px;
   border-radius: 30px;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -173,14 +173,14 @@
 }
 
 /* Carousel Styles */
+/* Partner Carousel Section */
 .partner-carousel {
-  padding: 40px 0;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, #11c4b9, #0d1b34);
 }
-
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -191,6 +191,7 @@
   display: flex;
   gap: 30px;
   animation: scroll 40s linear infinite;
+  width: max-content;
 }
 
 .logo-track img {
@@ -225,7 +226,194 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
+  }
+}
+
+
+/* Services Section */
+.services-section {
+  padding: 80px 20px;
+  color: white;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #11c4b9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-description {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #c4c4c4;
+  text-align: center;
+}
+
+/* Service Rows */
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Content */
+.service-content {
+  flex: 1;
+  text-align: left;
+}
+
+.service-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.service-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #e6e6e6;
+}
+
+/* Tags Container */
+.tags {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Purple Tags (for Teal Buttons) */
+.purple-tag {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 30px; /* Fully rounded tags */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(106, 27, 154, 0.2); /* Light purple background */
+  border: 1px solid rgba(106, 27, 154, 0.5);
+  color: #c4c4c4;
+}
+
+.purple-tag:hover {
+  background: #6a1b9a; /* Solid purple on hover */
+  color: white; /* White text on hover */
+  border-color: #6a1b9a;
+}
+
+/* Teal Tags (for Purple Buttons) */
+.teal-tag {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 30px; /* Fully rounded tags */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(17, 196, 185, 0.2); /* Light teal background */
+  border: 1px solid rgba(17, 196, 185, 0.5);
+  color: #c4c4c4;
+}
+
+.teal-tag:hover {
+  background: #11c4b9; /* Solid teal on hover */
+  color: white; /* White text on hover */
+  border-color: #11c4b9;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.purple-button {
+  background: #6a1b9a;
+}
+
+.purple-button:hover {
+  background: #11c4b9;
+}
+
+.teal-button {
+  background: #11c4b9;
+}
+
+.teal-button:hover {
+  background: #6a1b9a;
+}
+
+/* Images */
+.service-image {
+  flex: 1;
+  text-align: center;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .service-title {
+    font-size: 2.5rem;
+  }
+
+  .service-content p {
+    font-size: 1.2rem;
+  }
+
+  .tags {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    height: auto;
   }
 }

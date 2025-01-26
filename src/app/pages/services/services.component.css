@@ -1,0 +1,139 @@
+.services-section {
+  padding: 100px 20px;
+  color: white;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+}
+
+.section-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #11c4b9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-description {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #c4c4c4;
+  text-align: center;
+}
+
+/* Service Rows */
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Content */
+.service-content {
+  flex: 1;
+  text-align: left;
+  position: relative;
+}
+
+.service-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.service-title i {
+  font-size: 2.5rem;
+  color: #11c4b9;
+}
+
+.teal-text {
+  color: #11c4b9;
+}
+
+.service-content p {
+  font-size: 1.3rem;
+  color: #e6e6e6;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.purple-button {
+  background: #6a1b9a;
+}
+
+.purple-button:hover {
+  background: #8e24aa;
+}
+
+.teal-button {
+  background: #11c4b9;
+}
+
+.teal-button:hover {
+  background: #0a998c;
+}
+
+/* Images / Icons */
+.service-image {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.service-image i {
+  font-size: 4rem;
+  color: #11c4b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+  }
+
+  .service-row.reverse {
+    flex-direction: column;
+  }
+
+  .service-content {
+    text-align: center;
+  }
+
+  .service-title {
+    font-size: 2.5rem;
+  }
+}
