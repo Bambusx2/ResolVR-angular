@@ -10,8 +10,14 @@
   width: 100%;
   height: 80px;
   backdrop-filter: blur(5px);
+  background: transparent;
   z-index: 1000;
   box-sizing: border-box;
+}
+
+.navbar.scrolled {
+  background: rgba(13, 19, 42, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Brand Section */

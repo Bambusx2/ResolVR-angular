@@ -1,0 +1,139 @@
+/* Careers Section */
+.careers-section {
+    padding: 100px 40px; /* Increased padding for better spacing */
+    background: linear-gradient(135deg, #0d1b34, #1c3253);
+    color: white;
+    text-align: center;
+}
+
+/* Header Section */
+.careers-header {
+    margin-bottom: 60px;
+}
+
+.careers-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #11c4b9;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.careers-header p {
+    font-size: 1.4rem;
+    color: #b4b4b4;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.careers-header .highlight {
+    color: #11c4b9;
+    font-weight: 700;
+}
+
+/* Career Cards */
+.careers-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Flexible grid for responsiveness */
+    gap: 40px;
+    justify-content: center;
+}
+
+.career-card {
+    background: #1c3253;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    padding: 35px 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.career-card:hover {
+    transform: translateY(-10px);
+    border-color: #11c4b9;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.career-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #11c4b9;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.career-card h2 i {
+    color: #673ab7;
+    font-size: 1.8rem;
+}
+
+.career-card p {
+    font-size: 1rem;
+    color: #c4c4c4;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Requirements */
+.career-card .requirements {
+    margin-bottom: 20px;
+}
+
+.career-card .requirements li {
+    font-size: 1rem;
+    color: #e6e6e6;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.career-card .requirements li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #11c4b9;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.button {
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    background: #11c4b9;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background: #673ab7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .careers-content {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 20px;
+    }
+
+    .careers-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .careers-header p {
+        font-size: 1.1rem;
+    }
+}
