@@ -37,11 +37,12 @@ export class HeaderComponent {
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.menu-container');
     if (this.menuOpen) {
       navLinks?.classList.add('active');
     } else {
       navLinks?.classList.remove('active');
     }
   }
+  
 }
