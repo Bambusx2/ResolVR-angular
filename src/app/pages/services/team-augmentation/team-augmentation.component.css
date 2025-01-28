@@ -1,0 +1,210 @@
+/* 🌟 Section Styling */
+.team-augmentation-section {
+    padding: 140px 20px 100px;
+    background: linear-gradient(135deg, #0b1c2e, #123852);
+    text-align: center;
+    position: relative;
+}
+
+/* 🔥 Title */
+.team-title {
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: #12d7c4;
+    margin-bottom: 1.2rem;
+}
+
+/* 📜 Description */
+.team-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #c4c4c4;
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+/* 🎯 Benefits Grid */
+.team-benefits-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* ✅ Benefit Cards */
+.team-benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 280px;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;  /* 🔥 FIXED TEXT COLOR */
+}
+
+.team-benefit-item p {
+    color: #d1d1d1;  /* 🔥 FIXED TEXT COLOR */
+}
+
+.team-benefit-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🎨 Icon Fix */
+.team-icon {
+    font-size: 2.5rem;
+    background: #12d7c4;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem; /* 🔥 Ensures consistent spacing */
+    flex-shrink: 0; /* Stops icons from shrinking */
+}
+
+/* 🏆 Fixing Card Alignment */
+.team-benefit-item, .team-why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* 🔥 Ensures all elements are evenly spaced */
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    width: 280px;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.team-benefit-item p, .team-why-item p {
+    color: #d1d1d1; /* 🔥 Proper text color */
+    margin-top: 10px; /* 🔥 Ensures proper spacing under the title */
+}
+
+.team-benefit-item:hover, .team-why-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🟢 Fixing Responsive Issues */
+@media (max-width: 768px) {
+    .team-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .team-benefit-item, .team-why-item {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* 🏆 Why Choose Us Section */
+.team-why-choose {
+    margin-top: 80px;
+}
+
+.team-why-title {
+    font-size: 2.8rem;
+    color: #12d7c4;
+    margin-bottom: 30px;
+}
+
+/* 📦 Why Choose Us Grid */
+.team-why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* 🟢 Why Choose Us Cards */
+.team-why-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 280px;
+    max-width: 100%;
+    color: #ffffff;  /* 🔥 FIXED TEXT COLOR */
+}
+
+.team-why-item p {
+    color: #d1d1d1;  /* 🔥 FIXED TEXT COLOR */
+}
+
+.team-why-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🚀 Call to Action */
+/* Call to Action */
+.cta-wrapper {
+    margin-top: 60px;
+}
+
+.cta-text {
+    font-size: 1.4rem;
+    color: #c4c4c4;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    background: #11c4b9;
+    padding: 15px 45px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #673ab7;
+    transform: translateY(-3px);
+}
+
+/* 📱 RESPONSIVENESS */
+@media (max-width: 1024px) {
+    .team-benefits-grid, .team-why-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 2.8rem;
+    }
+
+    .team-description {
+        font-size: 1.2rem;
+    }
+
+    .team-why-title {
+        font-size: 2.5rem;
+    }
+
+    .team-cta-button {
+        font-size: 1.2rem;
+        padding: 12px 35px;
+    }
+}

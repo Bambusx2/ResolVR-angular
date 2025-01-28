@@ -1,0 +1,143 @@
+/* Section Styling */
+.smart-iot-section {
+    padding: 140px 20px 100px;
+    background: linear-gradient(135deg, #0b1c2e, #1b4d6b);
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title */
+.title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #11c4b9;
+    margin-bottom: 1.5rem;
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #c4c4c4;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* IoT Grid Layout */
+.iot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* IoT Items */
+.iot-item {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.iot-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Icons */
+.icon {
+    font-size: 2.5rem;
+    background: #11c4b9;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+}
+
+/* Titles */
+.item-title {
+    font-size: 1.4rem;
+    color: #11c4b9;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Descriptions */
+.item-description {
+    font-size: 1rem;
+    color: #e6e6e6;
+}
+
+/* Call to Action */
+.cta-wrapper {
+    margin-top: 60px;
+}
+
+.cta-text {
+    font-size: 1.4rem;
+    color: #c4c4c4;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    background: #11c4b9;
+    padding: 15px 45px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #673ab7;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .iot-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .iot-item {
+        padding: 1.5rem;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 35px;
+    }
+}
+ 
