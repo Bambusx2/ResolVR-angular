@@ -319,9 +319,9 @@
 }
 
 .purple-tag:hover {
-  background: #6a1b9a;
+  background: #673ab7;
   color: white;
-  border-color: #6a1b9a;
+  border-color: #673ab7;
 }
 
 /* Teal Tags (for Purple Buttons) */
@@ -357,7 +357,7 @@
 }
 
 .purple-button {
-  background: #6a1b9a;
+  background: #673ab7;
 }
 
 .purple-button:hover {
@@ -369,7 +369,7 @@
 }
 
 .teal-button:hover {
-  background: #6a1b9a;
+  background: #673ab7;
 }
 
 /* Service Images */

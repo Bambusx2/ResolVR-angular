@@ -25,7 +25,9 @@
           <li><a routerLink="/services/smart-iot-solutions">Smart IoT Solutions</a></li>
         </ul>
       </li>
-      <li><a href="#careers" [class.active]="activeSection === 'careers'">Careers</a></li>
+      <li>
+        <a routerLink="/careers" [routerLinkActive]="'active'" class="nav-item">Careers</a>
+      </li>
     </ul>
     <div class="cta">
       <a routerLink="/contact-us" class="cta-button">Let's Connect →</a>

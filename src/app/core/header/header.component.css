@@ -20,6 +20,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar.scrolled {
+  background: rgba(13, 19, 42, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Brand Section */
 .brand {
   display: flex;
