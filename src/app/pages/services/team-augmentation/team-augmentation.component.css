@@ -1,20 +1,18 @@
-/* 🌟 Section Styling */
 .team-augmentation-section {
     padding: 140px 20px 100px;
-    background: linear-gradient(135deg, #0b1c2e, #123852);
+    background: linear-gradient(135deg, #0d1b34, #1c3253);
     text-align: center;
     position: relative;
 }
 
-/* 🔥 Title */
-.team-title {
-    font-size: 3.6rem;
-    font-weight: 900;
-    color: #12d7c4;
-    margin-bottom: 1.2rem;
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #11c4b9;
+    margin-bottom: 2rem;
+    letter-spacing: -0.05em;
 }
 
-/* 📜 Description */
 .team-description {
     font-size: 1.4rem;
     line-height: 1.8;
@@ -23,7 +21,6 @@
     margin: 0 auto 40px;
 }
 
-/* 🎯 Benefits Grid */
 .team-benefits-grid {
     display: flex;
     justify-content: center;
@@ -32,7 +29,6 @@
     margin-top: 50px;
 }
 
-/* ✅ Benefit Cards */
 .team-benefit-item {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -45,11 +41,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;  /* 🔥 FIXED TEXT COLOR */
+    color: #ffffff;
 }
 
 .team-benefit-item p {
-    color: #d1d1d1;  /* 🔥 FIXED TEXT COLOR */
+    color: #d1d1d1;
 }
 
 .team-benefit-item:hover {
@@ -57,7 +53,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* 🎨 Icon Fix */
+
 .team-icon {
     font-size: 2.5rem;
     background: #12d7c4;
@@ -68,16 +64,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem; /* 🔥 Ensures consistent spacing */
-    flex-shrink: 0; /* Stops icons from shrinking */
+    margin: 0 auto 1rem;
+    flex-shrink: 0;
 }
 
-/* 🏆 Fixing Card Alignment */
-.team-benefit-item, .team-why-item {
+.team-benefit-item,
+.team-why-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* 🔥 Ensures all elements are evenly spaced */
+    justify-content: space-between;
     text-align: center;
     padding: 2rem;
     border-radius: 1.2rem;
@@ -88,17 +84,19 @@
     transition: all 0.3s ease-in-out;
 }
 
-.team-benefit-item p, .team-why-item p {
-    color: #d1d1d1; /* 🔥 Proper text color */
-    margin-top: 10px; /* 🔥 Ensures proper spacing under the title */
+.team-benefit-item p,
+.team-why-item p {
+    color: #d1d1d1;
+    margin-top: 10px;
 }
 
-.team-benefit-item:hover, .team-why-item:hover {
+.team-benefit-item:hover,
+.team-why-item:hover {
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* 🟢 Fixing Responsive Issues */
+
 @media (max-width: 768px) {
     .team-icon {
         width: 70px;
@@ -106,13 +104,14 @@
         font-size: 2rem;
     }
 
-    .team-benefit-item, .team-why-item {
+    .team-benefit-item,
+    .team-why-item {
         width: 100%;
         padding: 1.5rem;
     }
 }
 
-/* 🏆 Why Choose Us Section */
+
 .team-why-choose {
     margin-top: 80px;
 }
@@ -123,7 +122,6 @@
     margin-bottom: 30px;
 }
 
-/* 📦 Why Choose Us Grid */
 .team-why-grid {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +129,6 @@
     gap: 40px;
 }
 
-/* 🟢 Why Choose Us Cards */
 .team-why-item {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -141,11 +138,11 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 280px;
     max-width: 100%;
-    color: #ffffff;  /* 🔥 FIXED TEXT COLOR */
+    color: #ffffff;
 }
 
 .team-why-item p {
-    color: #d1d1d1;  /* 🔥 FIXED TEXT COLOR */
+    color: #d1d1d1;
 }
 
 .team-why-item:hover {
@@ -153,8 +150,6 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* 🚀 Call to Action */
-/* Call to Action */
 .cta-wrapper {
     margin-top: 60px;
 }
@@ -182,9 +177,11 @@
     transform: translateY(-3px);
 }
 
-/* 📱 RESPONSIVENESS */
+
 @media (max-width: 1024px) {
-    .team-benefits-grid, .team-why-grid {
+
+    .team-benefits-grid,
+    .team-why-grid {
         flex-direction: column;
         align-items: center;
     }
