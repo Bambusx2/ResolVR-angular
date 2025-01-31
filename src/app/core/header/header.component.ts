@@ -21,35 +21,24 @@ export class HeaderComponent {
     } else {
       navbar?.classList.remove('scrolled');
     }
-
-    const sections = ['home', 'about', 'services', 'careers'];
-    let found = false;
-
-    for (const section of sections) {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 80 && rect.bottom >= 80) {
-          this.activeSection = section;
-          found = true;
-          break;
-        }
-      }
-    }
-
-    // Ensure "Services" is active if any sub-service page is open
-    if (!found && window.location.pathname.includes('/services')) {
-      this.activeSection = 'services';
-    }
   }
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
-    const navLinks = document.querySelector('.menu-container');
-    if (this.menuOpen) {
-      navLinks?.classList.add('active');
-    } else {
-      navLinks?.classList.remove('active');
+    document.body.style.overflow = this.menuOpen ? 'hidden' : 'auto';
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+
+  toggleDropdown(event: Event): void {
+    event.stopPropagation();
+    const parent = (event.target as HTMLElement).closest('.dropdown');
+    if (parent) {
+      parent.classList.toggle('active');
+      this.closeMenu();
     }
   }
 }
