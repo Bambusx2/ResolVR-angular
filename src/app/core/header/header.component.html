@@ -14,10 +14,10 @@
   </div>
   <div class="menu-container" [class.active]="menuOpen">
     <ul class="nav-links">
-      <li><a href="#home" [class.active]="activeSection === 'home'">Home</a></li>
-      <li><a href="#about" [class.active]="activeSection === 'about'">About</a></li>
+      <li><a routerLink="/home" [class.active]="activeSection === 'home'">Home</a></li>
+      <li><a routerLink="/about" [class.active]="activeSection === 'about'">About</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle nav-item" [class.active]="activeSection === 'services'">Services</a>
+        <a routerLink="/services" class="dropdown-toggle nav-item" [class.active]="activeSection === 'services'">Services</a>
         <ul class="dropdown-menu">
           <li><a routerLink="/services/custom-software-development">Product Development</a></li>
           <li><a routerLink="/services/product-improvement">Product Improvement</a></li>

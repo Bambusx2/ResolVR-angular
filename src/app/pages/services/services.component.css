@@ -1,13 +1,14 @@
+/* Services Section */
 .services-section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   color: white;
   background: linear-gradient(135deg, #0d1b34, #1c3253);
 }
 
 .section-title {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #11c4b9;
   text-align: center;
   text-transform: uppercase;
@@ -25,24 +26,26 @@
 .services-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
+  width: 100%;
 }
 
 .service-row {
   display: flex;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
 }
 
 .service-row.reverse {
   flex-direction: row-reverse;
 }
 
-/* Content */
+/* Service Content */
 .service-content {
   flex: 1;
-  text-align: left;
-  position: relative;
+  max-width: 48%;
 }
 
 .service-title {
@@ -50,25 +53,61 @@
   font-weight: 700;
   margin-bottom: 20px;
   color: white;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.service-title i {
-  font-size: 2.5rem;
-  color: #11c4b9;
-}
-
-.teal-text {
-  color: #11c4b9;
 }
 
 .service-content p {
   font-size: 1.3rem;
-  color: #e6e6e6;
   line-height: 1.8;
   margin-bottom: 20px;
+  color: #e6e6e6;
+}
+
+/* Tags Container */
+.tags {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Purple Tags (for Teal Buttons) */
+.purple-tag {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(106, 27, 154, 0.2);
+  border: 1px solid rgba(106, 27, 154, 0.5);
+  color: #c4c4c4;
+}
+
+.purple-tag:hover {
+  background: #673ab7;
+  color: white;
+  border-color: #673ab7;
+}
+
+/* Teal Tags (for Purple Buttons) */
+.teal-tag {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(17, 196, 185, 0.2);
+  border: 1px solid rgba(17, 196, 185, 0.5);
+  color: #c4c4c4;
+}
+
+.teal-tag:hover {
+  background: #11c4b9;
+  color: white;
+  border-color: #11c4b9;
 }
 
 /* Buttons */
@@ -80,15 +119,15 @@
   text-decoration: none;
   color: white;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .purple-button {
-  background: #6a1b9a;
+  background: #673ab7;
 }
 
 .purple-button:hover {
-  background: #8e24aa;
+  background: #11c4b9;
 }
 
 .teal-button {
@@ -96,44 +135,74 @@
 }
 
 .teal-button:hover {
-  background: #0a998c;
+  background: #673ab7;
 }
 
-/* Images / Icons */
+/* Service Images */
 .service-image {
   flex: 1;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 48%
 }
 
 .service-image img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.service-image i {
-  font-size: 4rem;
-  color: #11c4b9;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1200px) {
   .service-row {
-    flex-direction: column;
-  }
-
-  .service-row.reverse {
-    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
   }
 
   .service-content {
+    max-width: 60%;
+  }
+
+  .service-image {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .service-content {
+    max-width: 100%;
     text-align: center;
   }
 
   .service-title {
     font-size: 2.5rem;
+  }
+
+  .service-content p {
+    font-size: 1.2rem;
+  }
+
+  .service-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-title {
+    font-size: 1.8rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+  }
+
+  .tags {
+    gap: 5px;
   }
 }

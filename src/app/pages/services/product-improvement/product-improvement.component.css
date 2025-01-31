@@ -4,7 +4,7 @@
   color: white;
   text-align: center;
   position: relative;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 /* Container */
@@ -15,6 +15,7 @@
   z-index: 1;
 }
 
+/* Title */
 .title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -23,65 +24,124 @@
   letter-spacing: -0.05em;
 }
 
+/* Description */
+.description {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #c4c4c4;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+/* Benefits List */
 .benefits-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #d9d9d9;
+  margin: 0 auto 40px;
+  max-width: 800px;
+  text-align: left;
 }
 
-.improvement-layout {
+.benefits-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+  padding: 8px 0;
+}
+
+.benefits-list li span {
+  color: #11c4b9;
+  margin-right: 12px;
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* Step Rows */
+.step-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Step Cards */
+.step {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 22%;
+  max-width: 320px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.improvement-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.improvement-item {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: 1.2rem;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 300px;
-}
-
-.improvement-item:hover {
+/* Hover Effect */
+.step:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
 }
 
+/* Icons */
 .icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: #11c4b9;
   color: white;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.2rem;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
 }
 
+/* Icon Hover Effect */
+.step:hover .icon {
+  background: #673ab7;
+  transform: scale(1.1);
+}
+
+/* Step Titles */
 .item-title {
   font-size: 1.5rem;
   color: #11c4b9;
   margin-bottom: 1rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+/* Title Hover Effect */
+.step:hover .item-title {
+  color: #673ab7;
+}
+
+/* Step Descriptions */
 .item-description {
   font-size: 1rem;
   color: #e6e6e6;
+  line-height: 1.6;
+}
+
+/* Center the last row properly */
+.center-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 /* Call to Action */
@@ -110,4 +170,38 @@
 .cta-button:hover {
   background: #673ab7;
   transform: translateY(-3px);
+}
+
+/* Responsive Fixes */
+@media (max-width: 1200px) {
+  .step {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .center-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .step {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem;
+  }
+
+  .center-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }

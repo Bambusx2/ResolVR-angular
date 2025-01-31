@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent {
   isScrolled = false;
   menuOpen = false;
-  activeSection: string = 'home';
+  activeSection: string = '';
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -23,15 +23,23 @@ export class HeaderComponent {
     }
 
     const sections = ['home', 'about', 'services', 'careers'];
+    let found = false;
+
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
         const rect = element.getBoundingClientRect();
         if (rect.top <= 80 && rect.bottom >= 80) {
           this.activeSection = section;
+          found = true;
           break;
         }
       }
+    }
+
+    // Ensure "Services" is active if any sub-service page is open
+    if (!found && window.location.pathname.includes('/services')) {
+      this.activeSection = 'services';
     }
   }
 
@@ -44,5 +52,4 @@ export class HeaderComponent {
       navLinks?.classList.remove('active');
     }
   }
-  
 }
