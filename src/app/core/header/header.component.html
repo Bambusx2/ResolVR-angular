@@ -1,6 +1,6 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   <div class="brand">
-    <a routerLink="/" class="logo-link">
+    <a routerLink="/home" class="logo-link">
       <div class="logo">
         <img src="assets/newLogoResolvr.png" alt="ResolVR Logo" />
       </div>
@@ -8,37 +8,79 @@
     </a>
   </div>
 
-  <!-- Burger Menu -->
-  <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen" [attr.aria-expanded]="menuOpen">
+  <!-- Burger Menu for Mobile -->
+  <div class="burger" [class.active]="menuOpen" (click)="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <!-- Full-Screen Menu -->
+  <!-- Navigation Links -->
   <div class="menu-container" [class.active]="menuOpen">
     <ul class="nav-links">
-      <li><a routerLink="/home" (click)="closeMenu()" [class.active]="activeSection === 'home'">Home</a></li>
-      <li><a routerLink="/about" (click)="closeMenu()" [class.active]="activeSection === 'about'">About</a></li>
-      
-      <li class="dropdown">
-        <a routerLink="/services" class="dropdown-toggle nav-item" 
-           (click)="toggleDropdown($event); closeMenu()" 
-           [class.active]="activeSection === 'services'">
-          Services
-        </a>
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="dropdown" [class.open]="dropdownOpen">
+        <a
+          routerLink="/services"
+          class="dropdown-toggle nav-item"
+          routerLinkActive="active"
+          (click)="toggleDropdown($event)"
+          >Services</a
+        >
         <ul class="dropdown-menu">
-          <li><a routerLink="/services/custom-software-development" (click)="closeMenu()">Product Development</a></li>
-          <li><a routerLink="/services/product-improvement" (click)="closeMenu()">Product Improvement</a></li>
-          <li><a routerLink="/services/team-augmentation" (click)="closeMenu()">Team Augmentation</a></li>
-          <li><a routerLink="/services/smart-iot-solutions" (click)="closeMenu()">Smart IoT Solutions</a></li>
+          <li>
+            <a
+              routerLink="/services/custom-software-development"
+              routerLinkActive="active"
+              >Product Development</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/services/product-improvement"
+              routerLinkActive="active"
+              >Product Improvement</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/services/team-augmentation"
+              routerLinkActive="active"
+              >Team Augmentation</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/services/smart-iot-solutions"
+              routerLinkActive="active"
+              >Smart IoT Solutions</a
+            >
+          </li>
         </ul>
       </li>
-
-      <li><a routerLink="/careers" (click)="closeMenu()" [class.active]="activeSection === 'careers'">Careers</a></li>
+      <li>
+        <a routerLink="/careers" routerLinkActive="active" class="nav-item"
+          >Careers</a
+        >
+      </li>
     </ul>
     <div class="cta">
-      <a routerLink="/contact-us" class="cta-button" (click)="closeMenu()">Let's Connect →</a>
+      <a
+        routerLink="/contact-us"
+        class="cta-button"
+        routerLinkActive="active"
+        >Let's Connect →</a
+      >
     </div>
   </div>
 </nav>
