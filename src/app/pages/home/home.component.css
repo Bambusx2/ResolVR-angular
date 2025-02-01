@@ -18,10 +18,12 @@
   color: white;
   background: linear-gradient(50deg, #00544f, #21003d);
   padding: 0 20px;
-  z-index: -1;
+  /* Removed negative z-index so that hero remains in the normal stacking context */
 }
 
 .hero-content {
+  position: relative; /* Ensure hero content is above the background */
+  z-index: 2;
   padding-top: 8%;
   max-width: 1000px;
   opacity: 0;
@@ -147,7 +149,6 @@
   letter-spacing: 1.2px;
 }
 
-/* --- Testimonials Grid & Cards --- */
 .testimonial-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -229,6 +230,8 @@
   margin-top: 10px;
 }
 
+/* --- Responsive Adjustments --- */
+
 /* For devices below 1200px */
 @media (max-width: 1200px) {
   .hero-content h1 {
@@ -260,12 +263,12 @@
 /* For devices below 768px */
 @media (max-width: 768px) {
   .hero {
-    /* Increase top padding to push the hero content down */
+    /* Increase top padding to push the hero content down so nothing is behind the fixed navbar */
     height: auto;
-    padding: 120px 20px; /* was 60px 20px, now increased to 120px top padding */
+    padding: 120px 20px;
   }
   .hero-content {
-    padding-top: 0; /* Ensure no extra top padding is added to hero-content */
+    padding-top: 0;
   }
   .hero-content h1 {
     font-size: 2.8rem;
@@ -284,7 +287,6 @@
     height: auto;
   }
 }
-
 
 /* For devices below 480px */
 @media (max-width: 480px) {
