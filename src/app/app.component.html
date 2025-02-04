@@ -1,4 +1,9 @@
 <app-particles></app-particles>
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+
+<button id="backToTop" class="back-to-top" [ngClass]="{ 'show': isScrolled }" (click)="scrollToTop()">
+    ⬆
+</button>  
+
 <app-footer></app-footer>

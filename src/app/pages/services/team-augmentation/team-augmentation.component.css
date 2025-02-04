@@ -3,58 +3,226 @@
     background: linear-gradient(135deg, #0d1b34, #1c3253);
     text-align: center;
     position: relative;
-}
-
-.title {
+  }
+  
+  /* Title in the intro */
+  .title {
     font-size: 3.5rem;
     font-weight: 800;
     color: #11c4b9;
     margin-bottom: 2rem;
     letter-spacing: -0.05em;
-}
-
-.team-description {
+  }
+  
+  .team-description {
     font-size: 1.4rem;
     line-height: 1.8;
     color: #c4c4c4;
     max-width: 850px;
     margin: 0 auto 40px;
-}
-
-.team-benefits-grid {
+  }
+  
+  /* Generic sections for new content blocks */
+  .what-is,
+  .how-it-works,
+  .benefits,
+  .reasons,
+  .pricing-transparency,
+  .team-member-profiles {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center; /* Adjust to 'left' if you prefer left-aligned text */
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    font-size: 2.4rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* Paragraphs in new sections */
+  .section-text {
+    font-size: 1.2rem;
+    color: #c4c4c4;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+  }
+  
+  /* Bullet lists for benefits and reasons */
+  .benefits-list {
+    list-style: none; /* remove default bullets */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .benefits-list li {
+    color: #d1d1d1;
+    margin-bottom: 10px;
+    display: flex;  /* so icon + text align nicely */
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .benefits-list li span {
+    color: #11c4b9; /* accent color for checkmark */
+    margin-right: 8px;
+    font-size: 1.3rem;
+  }
+  
+  /* "How It Works" steps */
+  .step-row {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
-    margin-top: 50px;
-}
-
-.team-benefit-item {
+    margin-top: 30px;
+  }
+  
+  .step {
     background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 250px;
     padding: 2rem;
     border-radius: 1.2rem;
     transition: all 0.3s ease-in-out;
-    text-align: center;
-    width: 280px;
-    max-width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #ffffff;
-}
-
-.team-benefit-item p {
-    color: #d1d1d1;
-}
-
-.team-benefit-item:hover {
+    text-align: left; /* steps often read better left-aligned */
+  }
+  
+  .step:hover {
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.2);
-}
-
-
-.team-icon {
+  }
+  
+  .step-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #12d7c4;
+  }
+  
+  .step-description {
+    color: #d1d1d1;
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  
+  /* "reasons-list" is similar to benefits-list but left-aligned */
+  .reasons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left; /* more natural for reading */
+  }
+  
+  .reasons-list li {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  /* Pricing section (optional to style differently if needed) */
+  .pricing-transparency {
+    /* inherits margins from the generic section rules above */
+  }
+  
+  /* Team Member Profiles Section */
+  .team-member-profiles {
+    /* inherits margins from the generic section rules above */
+  }
+  
+  .profiles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .profile-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 280px;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    text-align: left;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .profile-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .profile-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #12d7c4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-item li {
+    color: #d1d1d1;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Original grid for "why choose us" (team-why-choose) */
+  .team-why-choose {
+    margin-top: 80px;
+  }
+  
+  .team-why-title {
+    font-size: 2.8rem;
+    color: #12d7c4;
+    margin-bottom: 30px;
+  }
+  
+  .team-why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .team-why-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 280px;
+    max-width: 100%;
+    color: #ffffff;
+  }
+  
+  .team-why-item p {
+    color: #d1d1d1;
+  }
+  
+  .team-why-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Icon styling shared by "team-icon" */
+  .team-icon {
     font-size: 2.5rem;
     background: #12d7c4;
     color: white;
@@ -66,101 +234,21 @@
     justify-content: center;
     margin: 0 auto 1rem;
     flex-shrink: 0;
-}
-
-.team-benefit-item,
-.team-why-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 1.2rem;
-    width: 280px;
-    max-width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-.team-benefit-item p,
-.team-why-item p {
-    color: #d1d1d1;
-    margin-top: 10px;
-}
-
-.team-benefit-item:hover,
-.team-why-item:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-
-@media (max-width: 768px) {
-    .team-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
-    }
-
-    .team-benefit-item,
-    .team-why-item {
-        width: 100%;
-        padding: 1.5rem;
-    }
-}
-
-
-.team-why-choose {
-    margin-top: 80px;
-}
-
-.team-why-title {
-    font-size: 2.8rem;
-    color: #12d7c4;
-    margin-bottom: 30px;
-}
-
-.team-why-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.team-why-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 1.2rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 280px;
-    max-width: 100%;
-    color: #ffffff;
-}
-
-.team-why-item p {
-    color: #d1d1d1;
-}
-
-.team-why-item:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.cta-wrapper {
+  }
+  
+  /* CTA styles */
+  .cta-wrapper {
     margin-top: 60px;
-}
-
-.cta-text {
+    margin-bottom: 40px; /* Add more bottom spacing if desired */
+  }
+  
+  .cta-text {
     font-size: 1.4rem;
     color: #c4c4c4;
     margin-bottom: 30px;
-}
-
-.cta-button {
+  }
+  
+  .cta-button {
     display: inline-block;
     font-size: 1.3rem;
     font-weight: 600;
@@ -170,38 +258,60 @@
     border-radius: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.cta-button:hover {
+  }
+  
+  .cta-button:hover {
     background: #673ab7;
     transform: translateY(-3px);
-}
-
-
-@media (max-width: 1024px) {
-
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
     .team-benefits-grid,
     .team-why-grid {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .team-title {
-        font-size: 2.8rem;
+      font-size: 2.8rem;
     }
-
+  
     .team-description {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-
+  
     .team-why-title {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-
+  
     .team-cta-button {
-        font-size: 1.2rem;
-        padding: 12px 35px;
+      font-size: 1.2rem;
+      padding: 12px 35px;
     }
-}
+  
+    /* Make the step cards full-width on smaller screens */
+    .step-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .step {
+      width: 100%;
+      text-align: center; /* if you prefer centered text on mobile */
+    }
+  
+    /* Profile cards also stack on mobile */
+    .profiles-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,493 @@
+/* --- Font Import --- */
+@font-face {
+  font-family: 'DesMontilles';
+  src: url('/assets/fonts/font1.otf') format('opentype'),
+       url('/assets/fonts/font2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.product-development-section {
+  padding: 140px 20px 100px;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-development-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Intro / Title */
+.intro {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #11c4b9;
+  margin-bottom: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #c4c4c4;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.description .highlight {
+  color: #11c4b9;
+  font-weight: 600;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.benefits-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list li span {
+  color: #11c4b9;
+  margin-right: 12px;
+}
+
+/* Steps Grid */
+.step-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 22%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.step-icon {
+  font-size: 2rem;
+  background: #11c4b9;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.step:hover .step-icon {
+  background: #673ab7;
+  transform: scale(1.1);
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #11c4b9;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.step:hover .step-title {
+  color: #673ab7;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+.center-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cta-wrapper {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.4rem;
+  color: #c4c4c4;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  background: #11c4b9;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #673ab7;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(103, 58, 183, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .step {
+    width: 48%;
+  }
+  .center-row {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .step {
+    width: 100%;
+  }
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem;
+  }
+}
+
+.partner-carousel {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, #11c4b9, #0d1b34);
+  text-align: center;
+}
+
+.partner-carousel.technologies {
+  margin-bottom: 0;
+}
+
+.partner-carousel .section-title {
+  font-size: 2.8rem;
+  color: #11c4b9;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+.logo-track img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  filter: invert(100%) grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.logo-track img:hover {
+  transform: scale(1.05);
+  filter: invert(100%) grayscale(100%) brightness(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+  color: white;
+}
+
+.testimonials .section-title {
+  font-size: 3rem;
+  color: #11c4b9;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f9f9f9;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-logo {
+  max-width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 20px 0;
+  font-family: 'Georgia', serif;
+  text-align: justify;
+}
+
+.testimonial-text .quote {
+  font-size: 2.8rem;
+  color: #5a2ea6;
+  font-weight: bold;
+  line-height: 0.5;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.testimonial-author {
+  margin-top: 25px;
+  line-height: 1.4;
+}
+
+.testimonial-author .name {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #11c4b9;
+  font-family: 'DesMontilles', serif;
+  margin-bottom: 10px;
+}
+
+.testimonial-author .name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: #11c4b9;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.testimonial-author .position {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.faq-section {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #11c4b9;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: #11c4b9;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c4c4c4;
+  padding-top: 10px;
+  display: block;
+  max-width: 700px;
+}
+
+.faq-item.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+
+/* For devices below 1200px */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* For devices below 992px */
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+  }
+}
+
+/* For devices below 768px */
+@media (max-width: 768px) {
+  .product-development-section {
+    padding: 100px 20px;
+  }
+  .title {
+    font-size: 2.4rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  /* Steps stack vertically */
+  .step {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem;
+  }
+
+  /* Scale down logos in carousel */
+  .logo-track img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Testimonials */
+  .testimonials .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* For devices below 480px */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .logo-track img {
+    width: 80px;
+  }
+
+  .testimonials .section-title {
+    font-size: 1.8rem;
+  }
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+}

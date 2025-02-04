@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomSoftwareDevelopmentComponent } from './custom-software-development.component';
+import { ProductDevelopmentComponent } from './product-development.component';
 
 describe('CustomSoftwareDevelopmentComponent', () => {
-  let component: CustomSoftwareDevelopmentComponent;
-  let fixture: ComponentFixture<CustomSoftwareDevelopmentComponent>;
+  let component: ProductDevelopmentComponent;
+  let fixture: ComponentFixture<ProductDevelopmentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomSoftwareDevelopmentComponent]
+      imports: [ProductDevelopmentComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CustomSoftwareDevelopmentComponent);
+    fixture = TestBed.createComponent(ProductDevelopmentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
