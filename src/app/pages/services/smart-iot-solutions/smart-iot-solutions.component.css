@@ -13,6 +13,7 @@
     margin: 0 auto;
 }
 
+/* Section Title */
 .title {
     font-size: 3.5rem;
     font-weight: 800;
@@ -21,36 +22,44 @@
     letter-spacing: -0.05em;
 }
 
-/* Description */
+/* Section Description */
 .description {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #c4c4c4;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #e1e1e1;
+    max-width: 850px;
+    margin: 0 auto 50px;
+    font-weight: 400;
 }
 
-/* IoT Grid Layout */
+/* IoT Features Grid */
 .iot-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* IoT Items */
+/* IoT Feature Cards */
 .iot-item {
-    background: rgba(255, 255, 255, 0.12);
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 2.5rem;
     border-radius: 1.5rem;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
+    color: #ffffff;
+    font-weight: 500;
 }
 
+/* IoT Feature Hover Effect */
 .iot-item:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Icons */
@@ -65,33 +74,102 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.2rem;
+    transition: all 0.3s ease;
 }
 
-/* Titles */
+.iot-item:hover .icon {
+    background: #673ab7;
+    transform: scale(1.1);
+}
+
+/* IoT Feature Titles */
 .item-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #11c4b9;
     margin-bottom: 1rem;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Descriptions */
+.iot-item:hover .item-title {
+    color: #ffffff;
+}
+
+/* IoT Feature Descriptions */
 .item-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* IoT Use Cases Section */
+.iot-use-cases {
+    margin-top: 70px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.4rem;
+    color: #11c4b9;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Use Case Grid */
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Use Case Cards */
+.use-case {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Use Case Hover Effect */
+.use-case:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Use Case Titles */
+.use-case h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #11c4b9;
+    margin-bottom: 0.8rem;
+}
+
+/* Use Case Descriptions */
+.use-case p {
+    font-size: 1.1rem;
+    color: #e6e6e6;
+    line-height: 1.6;
 }
 
 /* Call to Action */
 .cta-wrapper {
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .cta-text {
-    font-size: 1.4rem;
-    color: #c4c4c4;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
     margin-bottom: 30px;
 }
 
+/* CTA Button */
 .cta-button {
     display: inline-block;
     font-size: 1.3rem;
@@ -112,6 +190,10 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .iot-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .use-case-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -122,7 +204,11 @@
     }
 
     .description {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+    }
+
+    .iot-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .iot-item {
