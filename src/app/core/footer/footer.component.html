@@ -22,18 +22,20 @@
 
         <!-- Footer Middle -->
         <div class="footer-middle">
-            <h4>Address</h4>
+            <h4>Our Offices</h4>
             <div class="address-section">
-                <p><strong>HQ</strong><br />Sremski Front 26/V Stip, Macedonia</p>
-                <p><strong>USA</strong><br />3660 B Test, test</p>
+                <p><strong>HQ</strong><br />Sremski Front 26/V, Stip, Macedonia</p>
+                <p><strong>USA</strong><br />3660 B Test, USA</p>
             </div>
         </div>
 
         <!-- Footer Right -->
-        <!-- Footer Right -->
         <div class="footer-right">
-            <h4>Interested in learning more about how we can collaborate?</h4>
-            <button class="cta-button" (click)="navigateToContact()">Let's Connect →</button>
+            <h4>Let’s collaborate on something amazing!</h4>
+            <!-- FIX: Changed `a` to `button` and used `(click)` for Angular Routing -->
+            <button class="cta-button" (click)="navigateToContact()" aria-label="Let's Connect">
+                Let's Connect →
+            </button>
         </div>
     </div>
 
@@ -41,7 +43,7 @@
     <div class="footer-bottom">
         <div class="legal-links">
             <a href="/privacy-policy" target="_blank">Privacy Policy</a> |
-            <a href="/cookies-consent" target="_blank">Cookies Consent</a>
+            <a href="/cookies-consent" target="_blank">Cookies Policy</a>
         </div>
         <p>&copy; 2024 ResolVR. All rights reserved.</p>
     </div>

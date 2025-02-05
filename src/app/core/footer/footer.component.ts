@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class FooterComponent {
   constructor(private router: Router) {}
 
-  navigateToContact(): void {
-    this.router.navigate(['/contact-us']);
+  navigateToContact() {
+    this.router.navigate(['/contact-us']).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 }

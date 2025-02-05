@@ -18,8 +18,10 @@
 
 /* Scrolled Navbar */
 .navbar.scrolled {
-  background: rgba(13, 19, 42, 0.9);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(13, 19, 42, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Brand */
@@ -84,7 +86,7 @@
   display: block;
   height: 2px;
   width: 0;
-  background-color: #11c4b9;
+  background: linear-gradient(90deg, #11c4b9, #673ab7);
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -93,10 +95,9 @@
 }
 
 /* Fixing active link underline */
-.nav-links li a.active::after,
-.nav-links li a.router-link-active::after,
-.nav-links li a:hover::after {
-  width: 100%;
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
 }
 
 /* Dropdown Menu */
@@ -105,17 +106,19 @@
 }
 
 .nav-links .dropdown-menu {
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
   background: rgba(5, 12, 39, 0.95);
-  list-style: none;
   border-radius: 8px;
   padding: 10px 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  min-width: 200px;
-  z-index: 999;
+  min-width: 220px;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  transform: translateY(10px);
 }
 
 .nav-links .dropdown-menu a {
@@ -128,10 +131,10 @@
   transition: all 0.3s ease;
 }
 
-.nav-links .dropdown-menu a:hover {
-  background: #11c4b9;
-  color: white;
-  border-radius: 5px;
+.nav-links .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Show dropdown on hover (PC only) */
@@ -145,18 +148,38 @@
 .cta .cta-button {
   text-decoration: none;
   color: white;
-  background-color: #11c4b9;
+  background: linear-gradient(135deg, #11c4b9, #673ab7);
   padding: 12px 35px;
   border-radius: 30px;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: transform 0.25s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(17, 196, 185, 0.3);
 }
 
+/* Hover Effect - Now Even Smoother */
 .cta .cta-button:hover {
-  background-color: #673ab7;
   transform: scale(1.05);
+  filter: brightness(1.15);
+  box-shadow: 0px 10px 25px rgba(17, 196, 185, 0.35);
 }
+
+/* Click Effect - Keeps It Responsive */
+.cta .cta-button:active {
+  transform: scale(0.98);
+  box-shadow: 0px 4px 10px rgba(17, 196, 185, 0.3);
+  transition: transform 0.15s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .cta .cta-button {
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 28px;
+  }
+}
+
 
 /* Burger Menu */
 .burger {
@@ -232,10 +255,17 @@
 
   .nav-links .dropdown.open .dropdown-menu {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .nav-links .dropdown-menu a {
     padding: 10px;
     display: block;
+  }
+
+  .dropdown-menu {
+    transition: opacity 0.3s ease, transform 0.2s ease;
   }
 }

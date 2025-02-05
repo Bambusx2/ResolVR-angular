@@ -4,7 +4,7 @@ import { Router, NavigationEnd, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule], // Make sure RouterModule is imported here
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
@@ -17,16 +17,20 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // Subscribe to router events to update the active section and close menus on navigation
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
+
+        // Determine the active section
         if (url.startsWith('/home')) {
           this.activeSection = 'home';
         } else if (url.startsWith('/about')) {
           this.activeSection = 'about';
         } else if (url.startsWith('/services')) {
           this.activeSection = 'services';
+
+          // ✅ Keep dropdown open if inside a services subpage
+          this.dropdownOpen = url !== '/services' && url !== '/services/';
         } else if (url.startsWith('/careers')) {
           this.activeSection = 'careers';
         } else if (url.startsWith('/contact-us')) {
@@ -34,11 +38,16 @@ export class HeaderComponent implements OnInit {
         } else {
           this.activeSection = '';
         }
-        // Close the mobile menu and dropdown (if open) on navigation
+
+        // Close the menu when navigating (but not dropdown for services subpages)
         this.menuOpen = false;
-        this.dropdownOpen = false;
       }
     });
+
+    // ✅ Auto-expand dropdown when page loads (if inside /services/*)
+    if (this.router.url.startsWith('/services') && this.router.url !== '/services') {
+      this.dropdownOpen = true;
+    }
   }
 
   @HostListener('window:scroll', [])
@@ -48,19 +57,26 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+
+    // If opening the menu and inside a sub-section, keep "Services" dropdown open
+    if (this.menuOpen && this.activeSection === 'services') {
+      this.dropdownOpen = this.router.url !== '/services' && this.router.url !== '/services/';
+    }
   }
 
-  /**
-   * Toggles the mobile dropdown for the "Services" menu.
-   * On mobile devices (width ≤ 768px) the click event is prevented
-   * from navigating immediately so that the dropdown can be expanded.
-   */
-  toggleDropdown(event?: Event): void {
-    if (window.innerWidth <= 768) {
-      if (event) {
-        event.preventDefault();
+  toggleDropdown(event: Event): void {
+    if (window.innerWidth <= 768) { // Mobile only
+      event.preventDefault(); // Prevent default link behavior on mobile
+
+      if (!this.dropdownOpen) {
+        // ✅ First click: Open dropdown instead of navigating
+        this.dropdownOpen = true;
+      } else {
+        // ✅ Second click: Navigate to /services
+        this.router.navigate(['/services']);
+        this.menuOpen = false; // Close the mobile menu
+        this.dropdownOpen = false; // Reset dropdown state
       }
-      this.dropdownOpen = !this.dropdownOpen;
     }
   }
 }

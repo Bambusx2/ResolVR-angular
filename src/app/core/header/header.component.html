@@ -19,68 +19,35 @@
   <div class="menu-container" [class.active]="menuOpen">
     <ul class="nav-links">
       <li>
-        <a
-          routerLink="/home"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Home</a
-        >
+        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       </li>
       <li>
         <a routerLink="/about" routerLinkActive="active">About</a>
       </li>
       <li class="dropdown" [class.open]="dropdownOpen">
-        <a
-          routerLink="/services"
-          class="dropdown-toggle nav-item"
-          routerLinkActive="active"
-          (click)="toggleDropdown($event)"
-          >Services</a
-        >
-        <ul class="dropdown-menu">
+        <a href="#" class="dropdown-toggle nav-item" routerLink="/services"
+          routerLinkActive="active" (click)="toggleDropdown($event)">Services</a>
+        <ul class="dropdown-menu" [class.show]="dropdownOpen">
           <li>
-            <a
-              routerLink="/services/product-development"
-              routerLinkActive="active"
-              >Product Development</a
-            >
+            <a routerLink="/services/product-development" routerLinkActive="active">Product Development</a>
           </li>
           <li>
-            <a
-              routerLink="/services/product-improvement"
-              routerLinkActive="active"
-              >Product Improvement</a
-            >
+            <a routerLink="/services/product-improvement" routerLinkActive="active">Product Improvement</a>
           </li>
           <li>
-            <a
-              routerLink="/services/team-augmentation"
-              routerLinkActive="active"
-              >Team Augmentation</a
-            >
+            <a routerLink="/services/team-augmentation" routerLinkActive="active">Team Augmentation</a>
           </li>
           <li>
-            <a
-              routerLink="/services/smart-iot-solutions"
-              routerLinkActive="active"
-              >Smart IoT Solutions</a
-            >
+            <a routerLink="/services/smart-iot-solutions" routerLinkActive="active">Smart IoT Solutions</a>
           </li>
         </ul>
       </li>
       <li>
-        <a routerLink="/careers" routerLinkActive="active" class="nav-item"
-          >Careers</a
-        >
+        <a routerLink="/careers" routerLinkActive="active" class="nav-item">Careers</a>
       </li>
     </ul>
     <div class="cta">
-      <a
-        routerLink="/contact-us"
-        class="cta-button"
-        routerLinkActive="active"
-        >Let's Connect →</a
-      >
+      <a routerLink="/contact-us" class="cta-button" routerLinkActive="active">Let's Connect →</a>
     </div>
   </div>
 </nav>
