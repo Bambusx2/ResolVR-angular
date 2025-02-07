@@ -307,3 +307,137 @@
     width: 80px;
   }
 }
+
+
+/* --- Services Overview Section --- */
+.services-overview {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+}
+
+.services-overview .section-title {
+  font-size: 2.8rem;
+  color: #11c4b9;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.services-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #c4c4c4;
+  max-width: 850px;
+  margin: 0 auto 30px;
+}
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+  color: white;
+}
+
+/* About Us Container */
+.about-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* About Us Content */
+.about-content {
+  margin-bottom: 60px;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #11c4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #c4c4c4;
+}
+
+.about-content .highlight {
+  color: #11c4b9;
+  font-weight: bold;
+}
+
+/* Stats Section */
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Stat Card */
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+/* Hover Effect on Stat Cards */
+.stat-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Stat Card Heading */
+.stat-card h3 {
+  font-size: 2.8rem;
+  color: #11c4b9;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Stat Card Description */
+.stat-card p {
+  font-size: 1rem;
+  color: #c4c4c4;
+  transition: color 0.3s ease;
+}
+
+/* Hover Text Color Change */
+.stat-card:hover h3,
+.stat-card:hover p {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}

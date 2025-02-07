@@ -37,28 +37,25 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-top: 50px;
     max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto 0;
 }
 
 /* IoT Feature Cards */
 .iot-item {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.12); /* Adjusted for better contrast */
     padding: 2.5rem;
     border-radius: 1.5rem;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Softened shadows */
     text-align: center;
     color: #ffffff;
-    font-weight: 500;
 }
 
 /* IoT Feature Hover Effect */
 .iot-item:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.18); /* Brighter contrast */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -73,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.2rem;
+    margin-bottom: 1.2rem;
     transition: all 0.3s ease;
 }
 
@@ -82,37 +79,19 @@
     transform: scale(1.1);
 }
 
-/* IoT Feature Titles */
-.item-title {
-    font-size: 1.5rem;
-    color: #11c4b9;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.iot-item:hover .item-title {
-    color: #ffffff;
-}
-
-/* IoT Feature Descriptions */
-.item-description {
-    font-size: 1.1rem;
-    color: #e6e6e6;
-    line-height: 1.6;
-}
-
-/* IoT Use Cases Section */
+/* IoT Use Cases */
 .iot-use-cases {
-    margin-top: 70px;
+    margin-top: 90px; /* Increased spacing */
 }
 
-/* Section Title */
+/* Section Title (Fixed Contrast) */
 .section-title {
     font-size: 2.4rem;
     color: #11c4b9;
     font-weight: 700;
     margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* Use Case Grid */
@@ -126,13 +105,13 @@
 
 /* Use Case Cards */
 .use-case {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.15); /* Improved visibility */
     padding: 2rem;
     border-radius: 1.2rem;
     text-align: center;
     transition: all 0.3s ease-in-out;
     color: #ffffff;
-    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 /* Use Case Hover Effect */
@@ -144,7 +123,7 @@
 
 /* Use Case Titles */
 .use-case h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #11c4b9;
     margin-bottom: 0.8rem;
@@ -152,16 +131,17 @@
 
 /* Use Case Descriptions */
 .use-case p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #e6e6e6;
     line-height: 1.6;
 }
 
 /* Call to Action */
 .cta-wrapper {
-    margin-top: 70px;
+    margin-top: 90px; /* More spacing */
 }
 
+/* CTA Text */
 .cta-text {
     font-size: 1.5rem;
     color: #ffffff;
@@ -172,19 +152,21 @@
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: white;
     background: #11c4b9;
-    padding: 15px 45px;
-    border-radius: 30px;
-    text-decoration: none;
+    padding: 18px 50px; /* Bigger button */
+    border-radius: 40px;
     transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* CTA Hover */
 .cta-button:hover {
     background: #673ab7;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
@@ -192,7 +174,6 @@
     .iot-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .use-case-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -200,29 +181,15 @@
 
 @media (max-width: 768px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
-
     .description {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
-
     .iot-grid {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .iot-item {
-        padding: 1.5rem;
-    }
-
-    .icon {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8rem;
-    }
-
-    .cta-button {
-        font-size: 1.2rem;
-        padding: 12px 35px;
+    .use-case-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
