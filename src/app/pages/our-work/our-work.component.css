@@ -1,0 +1,215 @@
+/* 🔥 Our Work Section */
+.our-work-section {
+    padding: 80px 40px; /* Slightly reduced padding */
+    background: linear-gradient(135deg, #0d1b34, #1c3253);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.our-work-header {
+    margin-bottom: 50px;
+}
+
+.our-work-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #11c4b9;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.our-work-header p {
+    font-size: 1.3rem;
+    color: #b4b4b4;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 🔥 Work Grid */
+.our-work-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🔥 Work Cards - Compact & Responsive */
+.work-card {
+    background: linear-gradient(135deg, #11243b, #1c3253);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+    max-width: 95%;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔥 Work Card Hover Effect - Slight Lift */
+.work-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(17, 196, 185, 0.4);
+    border-color: rgba(17, 196, 185, 0.4);
+}
+
+/* 🔥 Work Image Zoom on Hover */
+.work-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image Zoom Effect */
+.work-image {
+    max-width: 85%;
+    max-height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.4s ease-out;
+}
+
+/* Zoom on Hover */
+.work-card:hover .work-image {
+    transform: scale(1.08);
+}
+
+/* 🔥 Work Card Header (Logo & Shiny Line) */
+.work-card-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+/* 🔥 Shiny Line */
+.shiny-line {
+    width: 85%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(17, 196, 185, 0) 0%, 
+                                       rgba(17, 196, 185, 0.9) 50%, 
+                                       rgba(17, 196, 185, 0) 100%);
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 0px 0px 16px rgba(17, 196, 185, 0.7);
+    opacity: 0.95;
+    clip-path: polygon(0% 50%, 5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%);
+    border-radius: 0;
+}
+
+/* 🔥 Soft glow effect around the line */
+.shiny-line::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 200%;
+    top: 50%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(17, 196, 185, 0.3) 0%, 
+                                            rgba(17, 196, 185, 0) 80%);
+    transform: translateY(-50%);
+    filter: blur(14px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* 🔥 Logo Container */
+.client-logo-container {
+    position: relative;
+    /* background: rgba(0, 0, 0, 0.9); */
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
+    width: 200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔥 Logo Size */
+.client-logo {
+    width: 100%;
+    height: auto;
+    max-height: 55px;
+    object-fit: contain;
+}
+
+/* 🔥 Work Card Info */
+.work-card-info {
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 25%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🔥 Title Hover Effect */
+.work-card-info h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #11c4b9;
+    margin-bottom: 4px;
+    transition: color 0.3s ease-out;
+}
+
+.work-card:hover .work-card-info h2 {
+    color: #16f0e8;
+}
+
+/* 🔥 Client Name */
+.work-card-info p {
+    font-size: 1.1rem;
+    color: #c4c4c4;
+}
+
+/* 🔥 Mobile Optimization */
+@media (max-width: 768px) {
+    .our-work-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .our-work-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .our-work-header p {
+        font-size: 1.1rem;
+    }
+
+    .work-card {
+        height: 600px; /* Slightly taller on mobile */
+    }
+
+    .work-image {
+        height: 100%;
+    }
+
+    .client-logo-container {
+        width: 90px;
+        height: 90px;
+    }
+
+    .client-logo {
+        width: 75px;
+    }
+}
