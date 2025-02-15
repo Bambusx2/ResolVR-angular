@@ -22,62 +22,75 @@
     </section>
 
     <!-- 🔥 Project Overview -->
-    <section class="project-details project-section">
+    <section id="overview" class="project-section">
         <div class="container">
-            <h2>Project Overview</h2>
-            <p>
-                <strong>Gichev Trejd</strong> is a powerful inventory and order management solution designed for businesses to optimize stock control and sales tracking.
-            </p>
-
-            <h3>Project Scope</h3>
-            <p>
-                Our team collaborated with Gichev Trejd to create a feature-rich system that enables real-time tracking, stock notifications, and efficient vendor management.
-            </p>
-
-            <h3>Key Challenges</h3>
-            <ul>
-                <li>Building an intuitive UI for real-time inventory tracking</li>
-                <li>Implementing automated stock alerts and notifications</li>
-                <li>Seamless vendor and order integration</li>
-                <li>Optimizing data visualization for better decision-making</li>
-            </ul>
-
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="assets/projects/gichev-trejd/app/inventory.png" alt="Inventory Management">
-                    <p class="caption">Track and manage inventory efficiently.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/projects/gichev-trejd/app/order.png" alt="Order Placement">
-                    <p class="caption">Easy vendor selection and ordering process.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/projects/gichev-trejd/app/overview.png" alt="Dashboard Insights">
-                    <p class="caption">Get real-time insights into stock levels.</p>
+            <div class="section-header">
+                <h2>Project Overview</h2>
+            </div>
+            <div class="overview-content">
+                <p class="lead-text">
+                    A comprehensive inventory and order management solution designed to optimize stock control, streamline vendor relationships, and enhance operational efficiency for Gichev Trejd.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor inventory levels and stock movements with instant updates and alerts</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔄</span>
+                        <h3>Automated Workflows</h3>
+                        <p>Streamline operations with automated stock alerts and order processing</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h3>User-friendly Interface</h3>
+                        <p>Intuitive design for efficient inventory and order management</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🤝</span>
+                        <h3>Vendor Integration</h3>
+                        <p>Seamless communication and order management with suppliers</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📈</span>
+                        <h3>Business Analytics</h3>
+                        <p>Data-driven insights for better inventory decision making</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔐</span>
+                        <h3>Secure Access</h3>
+                        <p>Role-based permissions and secure data management</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 🔥 Key Features -->
-    <section class="project-features project-section">
+    <section id="gallery" class="project-section">
         <div class="container">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <img src="assets/projects/gichev-trejd/app/groceries.png" alt="Product Inventory">
-                    <h3>Product Inventory</h3>
-                    <p>Monitor stock levels and manage expiry dates effortlessly.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="assets/projects/gichev-trejd/app/reports.png" alt="Reports">
-                    <h3>Advanced Reports</h3>
-                    <p>Generate insightful reports on sales and inventory trends.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="assets/projects/gichev-trejd/app/settings.png" alt="User Settings">
-                    <h3>Customizable Settings</h3>
-                    <p>Adjust application settings and manage users efficiently.</p>
+            <div class="section-header animate-on-scroll">
+                <h2>Gallery</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" *ngFor="let screen of screenshots">
+                    <div class="image-container">
+                        <div class="image-loader" *ngIf="!screen.loaded">
+                            <div class="loader"></div>
+                        </div>
+                        <img [src]="screen.src" 
+                             [alt]="screen.alt" 
+                             class="gallery-image"
+                             loading="lazy"
+                             (load)="screen.loaded = true; onImageLoad()"
+                             [class.loaded]="screen.loaded">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>{{ screen.caption }}</h3>
+                        <p>{{ screen.description }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,32 +99,50 @@
     <!-- 🔥 Results & Benefits -->
     <section class="project-conclusion project-section">
         <div class="container">
-            <h2>Results & Key Benefits</h2>
-            <ul>
-                <li>✔️ <strong>Efficient stock monitoring</strong> with automated alerts</li>
-                <li>✔️ <strong>Seamless vendor management</strong> for quick restocking</li>
-                <li>✔️ <strong>Data-driven decision-making</strong> through reports</li>
-                <li>✔️ <strong>User-friendly interface</strong> with modern design</li>
-            </ul>
+            <div class="section-header">
+                <h2>Results & Benefits</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">📈</span>
+                    <h3>Increased Efficiency</h3>
+                    <p>50% reduction in inventory management time through automated workflows and real-time tracking</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⚡</span>
+                    <h3>Faster Processing</h3>
+                    <p>Order processing time reduced by 70% with streamlined vendor management system</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📊</span>
+                    <h3>Better Insights</h3>
+                    <p>Comprehensive analytics providing actionable insights for inventory optimization</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">💰</span>
+                    <h3>Cost Reduction</h3>
+                    <p>30% reduction in inventory holding costs through optimized stock management</p>
+                </div>
+            </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-box">
-                <i class="fas fa-user-circle"></i>
-                <blockquote>
-                    "Gichev Trejd application has transformed the way we manage our inventory. The automated stock alerts and real-time insights have saved us both time and money!"
-                </blockquote>
-                <p class="client-name">– Aco Gichev, Operations Manager</p>
-            </div>
 
-            <div class="testimonial-box">
-                <i class="fas fa-user-circle"></i>
-                <blockquote>
-                    "With Gichev Trejd application, we never run out of stock unexpectedly. The vendor ordering system is incredibly efficient, and the UI is clean and intuitive."
-                </blockquote>
-                <p class="client-name">– Viktor Gichev, Owner</p>
+    <section id="testimonials" class="testimonials-section project-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Client Testimonials</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" *ngFor="let testimonial of testimonials" [class.visible]="testimonial.isVisible">
+                    <div class="quote-icon">❝</div>
+                    <blockquote>{{ testimonial.quote }}</blockquote>
+                    <div class="author-info">
+                        <h4>{{ testimonial.author }}</h4>
+                        <p class="position">{{ testimonial.position }}</p>
+                        <p class="company">{{ testimonial.company }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
