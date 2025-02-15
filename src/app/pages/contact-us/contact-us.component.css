@@ -200,3 +200,41 @@ form textarea {
     width: 100%;
   }
 }
+
+
+/* Error Text Styling */
+.error-text {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.error-visible {
+  opacity: 1;
+}
+
+/* Highlight Invalid Fields */
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.8);
+}
+
+/* Smaller Inputs for Compact Form */
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+/* Reduced Button Size */
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
