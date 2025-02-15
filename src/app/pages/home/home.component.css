@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   background: linear-gradient(50deg, #00544f, #21003d);
   padding: 0 20px;
@@ -18,6 +18,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-in-out forwards;
+  will-change: transform, opacity;
 }
 
 @keyframes fadeInUp {
@@ -34,7 +35,7 @@
 .hero-content h1 {
   font-size: 4.5rem;
   line-height: 1.3;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
@@ -44,7 +45,7 @@
 
 .hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   color: #c4c4c4;
   font-weight: 300;
 }
@@ -58,11 +59,13 @@
   font-size: 1.3rem;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #673ab7;
-  transform: translateY(-2px);
+  margin-top: 25px;
+  &:hover, &:focus {
+    background-color: #673ab7;
+    transform: translateY(-2px);
+    outline: none;
+    box-shadow: 0 4px 15px rgba(17, 196, 185, 0.3);
+  }
 }
 
 /* --- Partner Carousel & Technologies Section --- */
@@ -338,31 +341,34 @@
   }
 }
 
-/* 🔥 Shiny Line */
+/* --- Fixed Shiny Line Style --- */
 .shiny-line {
-  width: 55%;
+  width: 60%;
   height: 4px;
+  margin: 0 auto 30px;
   background: linear-gradient(90deg, rgba(17, 196, 185, 0) 0%, 
                                      rgba(17, 196, 185, 0.9) 50%, 
                                      rgba(17, 196, 185, 0) 100%);
-  box-shadow: 0px 0px 16px rgba(17, 196, 185, 0.7);
+  box-shadow: 0px 0px 18px rgba(17, 196, 185, 0.75);
   opacity: 0.95;
   clip-path: polygon(0% 50%, 5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%);
-  border-radius: 0;
+  position: relative;
+  z-index: 2;
 }
 
-/* 🔥 Soft glow effect around the line */
+/* Soft glow effect - perfectly placed */
 .shiny-line::after {
   content: "";
   position: absolute;
   width: 120%;
-  height: 200%;
+  height: 180%;
   top: 50%;
   left: -10%;
   background: radial-gradient(circle, rgba(17, 196, 185, 0.3) 0%, 
                                           rgba(17, 196, 185, 0) 80%);
   transform: translateY(-50%);
-  filter: blur(14px);
-  opacity: 0.6;
+  filter: blur(12px);
+  opacity: 0.7;
+  z-index: -1;
   pointer-events: none;
 }
