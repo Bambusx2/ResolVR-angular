@@ -1,0 +1,53 @@
+<section class="testimonials" aria-label="Client Testimonials">
+    <!-- Add Particles Component -->
+    <app-particles></app-particles>
+
+    <div class="testimonials-header">
+        <h2 class="section-title" role="heading" aria-level="2">What Our Clients Say</h2>
+        <p class="section-subtitle" role="doc-subtitle">Trusted by Industry Leaders</p>
+    </div>
+
+    <div class="testimonials-grid">
+        <article class="testimonial-card" 
+                 *ngFor="let testimonial of testimonials; let i = index"
+                 [style.--card-index]="i"
+                 (mouseenter)="setActiveTestimonial(i)"
+                 (mouseleave)="clearActiveTestimonial()"
+                 [attr.aria-label]="'Testimonial from ' + testimonial.name">
+            <div class="card-header">
+                <div class="client-info">
+                    <div class="company-logo">
+                        <img [src]="testimonial.logo" [alt]="testimonial.alt" loading="lazy">
+                    </div>
+                    <div class="client-details">
+                        <h3 class="client-name">{{ testimonial.name }}</h3>
+                        <span class="client-position">{{ testimonial.position }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote class="testimonial-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <p>{{ testimonial.text }}</p>
+            </blockquote>
+
+            <div class="rating" aria-label="5 out of 5 stars rating">
+                <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]; let i = index" 
+                   [style.--i]="i"></i>
+            </div>
+        </article>
+    </div>
+
+    <div class="testimonials-nav">
+        <div class="nav-indicators">
+            <button *ngFor="let _ of testimonials; let i = index"
+                    class="indicator"
+                    [class.active]="i === currentIndex"
+                    (click)="setActiveTestimonial(i)"
+                    [attr.aria-label]="'View testimonial ' + (i + 1)">
+            </button>
+        </div>
+    </div>
+</section>

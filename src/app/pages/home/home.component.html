@@ -4,7 +4,8 @@
       Empowering Businesses with <span class="highlight">Elite Tech Talent</span>
       &amp; Scalable Solutions
     </h1>
-    <p>ResolVR – <i>"Your Partner in Offshore IT Success."</i></p>
+    <p class="partner-tagline">ResolVR – <i>"Your Partner in Offshore IT Success."</i></p>
+    <div class="shiny-line"></div>    
     <a href="/services" class="cta-button" aria-label="Explore ResolVR Services">Explore Our Services →</a>
   </div>
 </section>
@@ -117,86 +118,4 @@
   </div>
 </section>
 
-<section class="testimonials">
-  <h2 class="section-title">What Our Clients Say</h2>
-  <div class="testimonial-carousel" style="position: relative;">
-    <!-- Left Arrow -->
-    <button class="carousel-btn prev" [disabled]="isPrevDisabled()" (click)="moveSlide(-1)" aria-label="Previous Testimonial">
-      &#10094;
-    </button>
-    
-    <!-- Scrollable Container for Testimonial Cards -->
-    <div class="testimonial-container" #testimonialContainer>
-      <div class="testimonial-card">
-        <img src="assets/logos/spar.png" loading="lazy" alt="SPAR ICS Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR doesn’t just execute tasks—they take the time to understand the why behind them. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Michael Meike</span>
-          <span class="position">Head of Retail Technologies</span>
-        </p>
-      </div>
-      
-      <div class="testimonial-card">
-        <img src="assets/logos/kontron.png" loading="lazy" alt="Kontron Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR has expertly integrated with our team to develop key modules for our dealer management system. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Slobodan Jovanovski</span>
-          <span class="position">Head of Department</span>
-        </p>
-      </div>
-      
-      <div class="testimonial-card">
-        <img src="assets/logos/ugd.png" loading="lazy" alt="UGD Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR is a trusted resource. Their quality, responsiveness, and communication are unparalleled. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Tena Sijakova Ivanova</span>
-          <span class="position">Head of Department of Petrology and Mineralogy</span>
-        </p>
-      </div>
-      
-      <div class="testimonial-card">
-        <img src="assets/logos/hotel_park.jpg" loading="lazy" alt="Hotel Park Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR impressed us with their excellent execution, adaptability, and seamless integration into our processes. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Angel Bogdov</span>
-          <span class="position">Founder and CEO</span>
-        </p>
-      </div>
-      
-      <div class="testimonial-card">
-        <img src="assets/logos/hotel_park.jpg" loading="lazy" alt="Gichev Trejd Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR’s strategic insights and innovative solutions have driven transformative growth for our organization. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Viktor Gichev</span>
-          <span class="position">Founder and CEO</span>
-        </p>
-      </div>
-      
-      <div class="testimonial-card">
-        <img src="assets/logos/enbravia.png" loading="lazy" alt="Enbravia Logo" class="testimonial-logo" />
-        <p class="testimonial-text">
-          <span class="quote">“</span> ResolVR’s integration of cutting-edge solutions has revolutionized our business processes, driving efficiency and innovation. <span class="quote">”</span>
-        </p>
-        <p class="testimonial-author">
-          <span class="name">Alex Spasov</span>
-          <span class="position">Founder and CEO</span>
-        </p>
-      </div>
-    </div>
-    
-    <!-- Right Arrow -->
-    <button class="carousel-btn next" [disabled]="isNextDisabled()" (click)="moveSlide(1)" aria-label="Next Testimonial">
-      &#10095;
-    </button>
-  </div>
-</section>
+<app-testimonials></app-testimonials>

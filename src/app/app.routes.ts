@@ -8,6 +8,9 @@ import { ProductDevelopmentComponent } from './pages/services/product-developmen
 import { TeamAugmentationComponent } from './pages/services/team-augmentation/team-augmentation.component';
 import { ProductImprovementComponent } from './pages/services/product-improvement/product-improvement.component';
 import { SmartIotSolutionsComponent } from './pages/services/smart-iot-solutions/smart-iot-solutions.component';
+import { OurWorkComponent } from './pages/our-work/our-work.component';
+import { HotelParkComponent } from './pages/projects/hotel-park/hotel-park/hotel-park.component';
+import { GichevTrejdComponent } from './pages/projects/gichev-trejd/gichev-trejd.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,4 +23,7 @@ export const routes: Routes = [
   { path: 'services/smart-iot-solutions', component: SmartIotSolutionsComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'our-work', component: OurWorkComponent },
+  { path: 'our-work/hotel-park', component: HotelParkComponent },
+  { path: 'our-work/gichev-trejd', component: GichevTrejdComponent }
 ];

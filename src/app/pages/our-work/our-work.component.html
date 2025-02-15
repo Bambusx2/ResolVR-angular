@@ -1,0 +1,33 @@
+<section id="our-work" class="our-work-section">
+    <!-- Header -->
+    <div class="our-work-header">
+        <h1>Our Work</h1>
+        <p>Explore some of our client partnerships and transformative projects we're proud of.</p>
+    </div>
+
+    <!-- Work Grid -->
+    <div class="our-work-content">
+        <div *ngFor="let project of projects" class="work-card" (click)="navigateToProject(project.route)">
+
+            <!-- Work Card Header (Logo + Shiny Line) -->
+            <div class="work-card-header">              
+                <!-- Client Logo -->
+                <div class="client-logo-container">
+                    <img [src]="project.logo" [alt]="project.name + ' Logo'" class="client-logo" />
+                </div>
+                <div class="shiny-line"></div>
+            </div>
+
+            <!-- App Dashboard Image -->
+            <div class="work-image-container">
+                <img [src]="project.image" [alt]="project.name + ' Dashboard'" class="work-image" />
+            </div>
+
+            <!-- Project Info -->
+            <div class="work-card-info">
+                <h2>{{ project.name }}</h2>
+                <p>{{ project.client }}</p>
+            </div>
+        </div>
+    </div>
+</section>

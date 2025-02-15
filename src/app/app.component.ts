@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./core/header/header.component";
 import { FooterComponent } from "./core/footer/footer.component";
-import { ParticlesComponent } from './shared/particles/particles.component';
+import { ParticlesComponent } from './shared/particles/particles/particles.component';
 
 @Component({
   selector: 'app-root',
