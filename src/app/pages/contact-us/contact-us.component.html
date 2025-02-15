@@ -1,53 +1,119 @@
 <div class="contact-us-container">
-  <div class="contact-us-header">
+    <div class="contact-us-header">
       <h1>Let's Start <em>Building</em></h1>
       <p>
-          Looking to <strong>scale your development</strong>, <strong>enhance your product</strong>, 
-          or <strong>expand your team</strong> with <strong>top-tier talent</strong>?  
-          ResolVR specializes in <strong>team augmentation</strong>, <strong>offshore outsourcing</strong>,  
-          and <strong>product innovation</strong>. Let's <strong>collaborate</strong>  
-          and build something extraordinary together.  
-          <span class="rocket">🚀</span>
+        Looking to <strong>scale your development</strong>, <strong>enhance your product</strong>,
+        or <strong>expand your team</strong> with <strong>top-tier talent</strong>? ResolVR specializes
+        in <strong>team augmentation</strong>, <strong>offshore outsourcing</strong>, and
+        <strong>product innovation</strong>. Let's <strong>collaborate</strong> and build something extraordinary
+        together. <span class="rocket"><i class="fa-solid fa-rocket"></i></span>
       </p>
-  </div>
-
-  <div class="contact-form-container">
-      <form>
-          <div class="form-row">
-              <div class="form-group">
-                  <label for="name">Your Name</label>
-                  <input type="text" id="name" placeholder="John Doe" required />
-              </div>
-              <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input type="email" id="email" placeholder="example@domain.com" required />
-              </div>
-          </div>
-          <div class="form-row">
-              <div class="form-group">
-                  <label for="company">Company Name (Optional)</label>
-                  <input type="text" id="company" placeholder="Your Company" />
-              </div>
-              <div class="form-group">
-                  <label for="service">Services You Are Interested In</label>
-                  <select id="service" required>
-                      <option value="" disabled selected>Select a service</option>
-                      <option value="team-augmentation">Team Augmentation</option>
-                      <option value="outsourcing">Offshore Outsourcing</option>
-                      <option value="product-development">Product Development</option>
-                      <option value="product-improvement">Product Improvement</option>
-                      <option value="consulting">Consulting</option>
-                      <option value="uiux">UI/UX Design</option>
-                      <option value="web-development">Web Development</option>
-                      <option value="mobile-development">Mobile App Development</option>
-                  </select>
-              </div>          
-          </div>
+    </div>
+  
+    <div class="contact-form-container">
+      <form #form="ngForm" (ngSubmit)="submitForm(form)">
+        <div class="form-row">
+          <!-- Name Field -->
           <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" rows="4" placeholder="Tell us about your needs or project goals"></textarea>
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="John Doe"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+              minlength="2"
+              pattern="[a-zA-Z\s]*"
+              #nameField="ngModel"
+            />
+            <p class="error-text" [class.error-visible]="nameField.invalid && nameField.touched">
+              Invalid Name: Only letters & spaces (min 2 chars).
+            </p>
           </div>
-          <button type="submit" class="cta-button">Send Message →</button>
+  
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@domain.com"
+              [(ngModel)]="formData.email"
+              name="email"
+              required
+              #emailField="ngModel"
+            />
+            <p class="error-text" [class.error-visible]="emailField.invalid && emailField.touched">
+              Invalid Email: Please enter a valid email address.
+            </p>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <!-- Company Field -->
+          <div class="form-group">
+            <label for="company">Company Name (Optional)</label>
+            <input
+              type="text"
+              id="company"
+              placeholder="Your Company"
+              [(ngModel)]="formData.company"
+              name="company"
+            />
+          </div>
+  
+          <!-- Service Field -->
+          <div class="form-group">
+            <label for="service">Services You Are Interested In</label>
+            <select
+              id="service"
+              [(ngModel)]="formData.service"
+              name="service"
+              required
+              #serviceField="ngModel"
+            >
+              <option value="" disabled selected>Select a service</option>
+              <option value="team-augmentation">Team Augmentation</option>
+              <option value="outsourcing">Offshore Outsourcing</option>
+              <option value="product-development">Product Development</option>
+              <option value="product-improvement">Product Improvement</option>
+              <option value="consulting">Consulting</option>
+              <option value="uiux">UI/UX Design</option>
+              <option value="web-development">Web Development</option>
+              <option value="mobile-development">Mobile App Development</option>
+            </select>
+            <p class="error-text" [class.error-visible]="serviceField.invalid && serviceField.touched">
+              Please select a service before submitting.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Message Field -->
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Tell us about your needs or project goals"
+            [(ngModel)]="formData.message"
+            name="message"
+            required
+            minlength="10"
+            #messageField="ngModel"
+          ></textarea>
+          <p class="error-text" [class.error-visible]="messageField.invalid && messageField.touched">
+            Message must be at least 10 characters long.
+          </p>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="cta-button" [disabled]="!validateForm()">Send Message →</button>
       </form>
+  
+      <!-- Success/Error Messages -->
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      <!-- <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> -->
+    </div>
   </div>
-</div>
+  

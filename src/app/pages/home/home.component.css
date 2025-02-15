@@ -1,23 +1,35 @@
+/* --- Font Import --- */
+@font-face {
+  font-family: 'DesMontilles';
+  src: url('/assets/fonts/font1.otf') format('opentype'),
+       url('/assets/fonts/font2.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* --- Hero Section --- */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   background: linear-gradient(50deg, #00544f, #21003d);
   padding: 0 20px;
+  background-attachment: fixed;
 }
 
 .hero-content {
-  position: relative; 
+  position: relative;
   z-index: 2;
   padding-top: 8%;
   max-width: 1000px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-in-out forwards;
+  will-change: transform, opacity;
 }
 
 @keyframes fadeInUp {
@@ -32,19 +44,20 @@
 }
 
 .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
   line-height: 1.3;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .hero-content h1 .highlight {
   color: #11c4b9;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   color: #c4c4c4;
   font-weight: 300;
 }
@@ -58,11 +71,13 @@
   font-size: 1.3rem;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #673ab7;
-  transform: translateY(-2px);
+  margin-top: 25px;
+  &:hover, &:focus {
+    background-color: #673ab7;
+    transform: translateY(-2px);
+    outline: none;
+    box-shadow: 0 4px 15px rgba(17, 196, 185, 0.3);
+  }
 }
 
 /* --- Partner Carousel & Technologies Section --- */
@@ -72,6 +87,14 @@
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, #11c4b9, #0d1b34);
+}
+
+.partner-carousel h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #11c4b9;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .partner-carousel h2.section-title {
@@ -338,31 +361,34 @@
   }
 }
 
-/* 🔥 Shiny Line */
+/* --- Fixed Shiny Line Style --- */
 .shiny-line {
-  width: 55%;
+  width: 60%;
   height: 4px;
+  margin: 0 auto 30px;
   background: linear-gradient(90deg, rgba(17, 196, 185, 0) 0%, 
                                      rgba(17, 196, 185, 0.9) 50%, 
                                      rgba(17, 196, 185, 0) 100%);
-  box-shadow: 0px 0px 16px rgba(17, 196, 185, 0.7);
+  box-shadow: 0px 0px 18px rgba(17, 196, 185, 0.75);
   opacity: 0.95;
   clip-path: polygon(0% 50%, 5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%);
-  border-radius: 0;
+  position: relative;
+  z-index: 2;
 }
 
-/* 🔥 Soft glow effect around the line */
+/* Soft glow effect - perfectly placed */
 .shiny-line::after {
   content: "";
   position: absolute;
   width: 120%;
-  height: 200%;
+  height: 180%;
   top: 50%;
   left: -10%;
   background: radial-gradient(circle, rgba(17, 196, 185, 0.3) 0%, 
                                           rgba(17, 196, 185, 0) 80%);
   transform: translateY(-50%);
-  filter: blur(14px);
-  opacity: 0.6;
+  filter: blur(12px);
+  opacity: 0.7;
+  z-index: -1;
   pointer-events: none;
 }
