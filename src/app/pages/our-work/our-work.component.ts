@@ -17,11 +17,11 @@ export class OurWorkComponent {
       route: 'hotel-park' 
     },
     { 
-      name: 'SPAR ICS', 
-      client: 'SPAR ICS', 
-      image: 'assets/screens/spar_dashboard.png', 
-      logo: 'assets/logos/spar.png', 
-      route: 'spar-ics' 
+      name: 'Mineral Explorer', 
+      client: 'University of Goce Delchev', 
+      image: 'assets/projects/ugd-mineral/app/overview.png', 
+      logo: 'assets/logos/ugd.png', 
+      route: 'ugd-mineral' 
     },
     { 
       name: 'Kontron', 
