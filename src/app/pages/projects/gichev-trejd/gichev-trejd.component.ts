@@ -1,14 +1,51 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
+import { trigger, transition, style, animate, stagger, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-gichev-trejd',
   templateUrl: './gichev-trejd.component.html',
   styleUrls: ['./gichev-trejd.component.css'],
-  imports: [CommonModule],
-  standalone: true
+  standalone: true,
+  imports: [
+    CommonModule, 
+    RouterLink, 
+    NgOptimizedImage
+  ],
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)' 
+        }),
+        animate('0.5s cubic-bezier(0.23, 1, 0.32, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)' 
+          })
+        )
+      ])
+    ]),
+    trigger('staggerFade', [
+      transition(':enter', [
+        query('.metric', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(100, [
+            animate('0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', 
+              style({ opacity: 1, transform: 'translateY(0)' })
+            )
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class GichevTrejdComponent implements OnInit {
+  @ViewChildren('animatedElement') animatedElements!: QueryList<ElementRef>;
+  
   imagesLoaded = 0;
   totalImages = 4;
   loading = true;
@@ -16,84 +53,83 @@ export class GichevTrejdComponent implements OnInit {
 
   features = [
     {
-      icon: '📊',
-      title: 'Real-time Tracking',
-      description: 'Monitor inventory levels and stock movements with instant updates and alerts',
-      isHovered: false
+      icon: 'fas fa-chart-line',
+      title: 'Smart Analytics',
+      description: 'AI-powered insights and predictive analytics for optimal inventory management'
     },
     {
-      icon: '🔄',
-      title: 'Automated Workflows',
-      description: 'Streamline operations with automated stock alerts and order processing',
-      isHovered: false
+      icon: 'fas fa-bolt',
+      title: 'Real-time Updates',
+      description: 'Instant stock tracking and automated alerts for seamless operations'
     },
     {
-      icon: '📱',
-      title: 'User-friendly Interface',
-      description: 'Intuitive design for efficient inventory and order management',
-      isHovered: false
+      icon: 'fas fa-robot',
+      title: 'AI Automation',
+      description: 'Intelligent automation of routine tasks and inventory optimization'
     },
     {
-      icon: '🤝',
-      title: 'Vendor Integration',
-      description: 'Seamless communication and order management with suppliers',
-      isHovered: false
+      icon: 'fas fa-shield-alt',
+      title: 'Enterprise Security',
+      description: 'Advanced security protocols with role-based access control'
     },
     {
-      icon: '📈',
-      title: 'Business Analytics',
-      description: 'Data-driven insights for better inventory decision making',
-      isHovered: false
+      icon: 'fas fa-sync',
+      title: 'Smart Integration',
+      description: 'Seamless integration with existing systems and third-party services'
     },
     {
-      icon: '🔐',
-      title: 'Secure Access',
-      description: 'Role-based permissions and secure data management',
-      isHovered: false
+      icon: 'fas fa-mobile-alt',
+      title: 'Mobile Ready',
+      description: 'Full-featured mobile access for management on the go'
     }
   ];
 
   screenshots = [
     {
+      src: 'assets/projects/gichev-trejd/app/overview.png',
+      alt: 'Dashboard Overview',
+      caption: 'Intuitive Dashboard',
+      description: 'Real-time inventory tracking and analytics dashboard',
+      loaded: false
+    },
+    {
       src: 'assets/projects/gichev-trejd/app/inventory.png',
-      alt: 'Inventory Management Interface',
-      caption: 'Inventory Management',
-      description: 'Comprehensive inventory tracking system with real-time stock level monitoring and automated alerts.',
+      alt: 'Inventory Management',
+      caption: 'Smart Inventory Control',
+      description: 'Automated stock management with predictive analytics',
       loaded: false
     },
     {
       src: 'assets/projects/gichev-trejd/app/order.png',
-      alt: 'Order Management System',
-      caption: 'Order Processing',
-      description: 'Streamlined order management interface with vendor selection and efficient processing workflows.',
-      loaded: false
-    },
-    {
-      src: 'assets/projects/gichev-trejd/app/overview.png',
-      alt: 'Analytics Dashboard',
-      caption: 'Analytics Dashboard',
-      description: 'Data-driven insights dashboard providing real-time analytics and inventory performance metrics.',
+      alt: 'Order Processing',
+      caption: 'Streamlined Orders',
+      description: 'Efficient order processing and tracking system',
       loaded: false
     }
   ];
 
   testimonials = [
     {
-      quote: 'The Gichev Trejd system has completely transformed our inventory management. We\'ve seen a 90% reduction in stockouts and our order fulfillment rate has improved dramatically. The real-time alerts and automated tracking have made our operations significantly more efficient.',
-      author: 'Aco Gichev',
-      position: 'Operations Director',
-      company: 'Gichev Trejd',
-      isVisible: false,
-      delay: 0
+      quote: "The system has revolutionized our inventory management. We've seen a 40% increase in efficiency.",
+      author: "Aco Gichev",
+      position: "Operations Director",
+      company: "Gichev Trejd",
+      isVisible: false
     },
     {
-      quote: 'This platform has revolutionized how we make business decisions. The analytics dashboard provides crystal-clear insights, and the automated workflows have streamlined our entire operation. It\'s been a game-changer for our inventory control and vendor management.',
-      author: 'Viktor Gichev',
-      position: 'Chief Executive Officer',
-      company: 'Gichev Trejd',
-      isVisible: false,
-      delay: 200
+      quote: "ResolVR's solution helped us reduce stockouts by 90% and improve customer satisfaction.",
+      author: "Viktor Gichev",
+      position: "CEO",
+      company: "Gichev Trejd",
+      isVisible: false
     }
+  ];
+
+  metrics = [
+    { value: '40%', label: 'Efficiency Increase' },
+    { value: '90%', label: 'Reduced Stockouts' },
+    { value: '60%', label: 'Faster Processing' },
+    { value: '45%', label: 'Cost Reduction' }
   ];
 
   constructor(private el: ElementRef) { }
@@ -140,7 +176,7 @@ export class GichevTrejdComponent implements OnInit {
       if (isVisible && !this.testimonials[index].isVisible) {
         setTimeout(() => {
           this.testimonials[index].isVisible = true;
-        }, this.testimonials[index].delay);
+        }, 200);
       }
     });
   }
