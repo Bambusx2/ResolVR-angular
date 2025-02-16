@@ -1,6 +1,6 @@
-<section id="about-details" class="about-us">
+<section class="about-section">
+  <!-- Hero Section -->
   <div class="about-container">
-    
     <!-- Left: Team Image -->
     <div class="about-image" data-aos="fade-right">
       <img src="assets/team.webp" alt="Our Expert Team at Work" />
@@ -8,17 +8,18 @@
 
     <!-- Right: About Content -->
     <div class="about-content" data-aos="fade-left">
-      <h2 class="about-title">
-        <i class="fa-solid fa-rocket"></i> Powering Businesses with <span class="highlight">Future-Ready Tech</span>
-      </h2>
+      <h1 class="about-title">
+        <i class="fa-solid fa-rocket"></i> Powering Businesses with 
+        <span class="highlight">Future-Ready Tech</span>
+      </h1>
       
       <p class="about-text">
-        <strong>From vision to reality.</strong> We don’t just develop software—we create transformative digital solutions that fuel innovation and growth.
+        <strong>From vision to reality.</strong> We don't just develop software—we create transformative digital solutions that fuel innovation and growth.
       </p>
       
       <p class="about-text">
-        With <strong>7+ years of expertise</strong>, we specialize in  
-        <strong>AI-powered cloud integration</strong>, custom software development, and  
+        With <strong>7+ years of expertise</strong>, we specialize in 
+        <strong>AI-powered cloud integration</strong>, custom software development, and 
         next-gen system architectures—turning bold ideas into impactful realities.
       </p>
 
@@ -29,37 +30,23 @@
     </div>
   </div>
 
-  <!-- Why ResolVR Section -->
-  <div class="about-list-container">
-    <h3 class="about-list-title"><i class="fa-solid fa-star"></i> Why Industry Leaders Choose ResolVR</h3>
+  <!-- Features Grid -->
+  <div class="features-container">
+    <h2 class="features-title">
+      <i class="fa-solid fa-star"></i> Why Industry Leaders Choose ResolVR
+    </h2>
     
-    <div class="about-list-grid">
-      <div class="about-list-item" data-aos="fade-up">
-        <div class="list-icon"><i class="fa-solid fa-rocket"></i></div>
-        <h4>Innovation That Drives Results</h4>
-        <p>Leading-edge solutions with measurable business impact.</p>
-      </div>
-  
-      <div class="about-list-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="list-icon"><i class="fa-solid fa-chart-simple"></i></div>
-        <h4>AI-Powered Scalability</h4>
-        <p>Future-proof technology designed for sustainable growth.</p>
-      </div>
-  
-      <div class="about-list-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="list-icon"><i class="fa-solid fa-globe"></i></div>
-        <h4>Global Expertise</h4>
-        <p>Delivering proven success across diverse industries.</p>
-      </div>
-  
-      <div class="about-list-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="list-icon"><i class="fa-solid fa-lock"></i></div>
-        <h4>Enterprise-Grade Security</h4>
-        <p>Robust compliance, security, and risk mitigation.</p>
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of stats" data-aos="fade-up">
+        <div class="feature-icon">
+          <i class="fa-solid {{feature.icon}}"></i>
+        </div>
+        <h3>{{feature.title}}</h3>
+        <p>{{feature.description}}</p>
       </div>
     </div>
   </div>
-  
+
   <!-- Call to Action Button -->
   <div class="cta-container">
     <a href="/contact-us" class="cta-button"><i class="fa-solid fa-star"></i> Build the Future With Us →</a>
@@ -73,7 +60,7 @@
         At ResolVR, we go beyond software—we craft intelligent, scalable, and secure tech solutions that redefine industries.
       </p>
       <p class="about-text">
-        Whether you’re a startup disrupting markets or a global enterprise streamlining operations,  
+        Whether you're a startup disrupting markets or a global enterprise streamlining operations,  
         <strong>we empower your success</strong> through transformative technology.
       </p>
     </div>
@@ -87,7 +74,7 @@
   <div class="quote-card" data-aos="fade-up">
     <blockquote>
       <p>
-        "At <span class="highlight">ResolVR</span>, we don’t just solve problems—we create opportunities.  
+        "At <span class="highlight">ResolVR</span>, we don't just solve problems—we create opportunities.  
         Innovation, collaboration, and results are at the core of everything we do."
       </p>
       <cite>— Vlatko Ivanov, CEO, ResolVR</cite>
