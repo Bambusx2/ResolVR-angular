@@ -3,8 +3,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #11c4b9, #673ab7);
-    color: white;
+    background: linear-gradient(135deg, #11c4b9, #00ffcc);
+    color: #0d1b34;
     border: none;
     padding: 16px;
     font-size: 20px;
@@ -24,10 +24,9 @@
 
 /* Hover effect */
 .back-to-top:hover {
-    background: linear-gradient(135deg, #673ab7, #11c4b9);
     transform: scale(1.12);
-    box-shadow: 0px 10px 20px rgba(103, 58, 183, 0.3);
-}
+    box-shadow: 0 12px 25px rgba(17, 196, 185, 0.3);
+    background: linear-gradient(135deg, #00ffcc, #11c4b9);}
 
 /* When the button is visible */
 .show {
