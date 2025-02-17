@@ -19,13 +19,6 @@ export class TestimonialsComponent implements AfterViewInit {
   currentIndex = 0;
 
   testimonials = [
-    { 
-      logo: 'assets/logos/spar.png',
-      alt: 'SPAR ICS Logo',
-      text: "ResolVR doesn't just execute tasks—they take the time to understand the why behind them.",
-      name: 'Michael Meike',
-      position: 'Head of Retail Technologies'
-    },
     {
       logo: 'assets/logos/kontron.png',
       alt: 'Kontron Logo',
@@ -60,6 +53,13 @@ export class TestimonialsComponent implements AfterViewInit {
       text: "ResolVR's integration of cutting-edge solutions has revolutionized our business processes, driving efficiency and innovation.",
       name: 'Alex Spasov',
       position: 'Founder and CEO'
+    },
+    { 
+      logo: 'assets/logos/spar.png',
+      alt: 'SPAR ICS Logo',
+      text: "ResolVR doesn't just execute tasks—they take the time to understand the why behind them.",
+      name: 'Michael Meike',
+      position: 'Head of Retail Technologies'
     }
   ];
 

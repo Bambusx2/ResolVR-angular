@@ -1,161 +1,86 @@
-<div class="ugd-mineral-container">
-    <!-- Header Section -->
-    <section class="project-header">
+<div class="project-container">
+    <!-- Hero Section -->
+    <header class="hero">
         <div class="container">
-            <h1>MineralExplorer</h1>
-            <p class="subtitle">
-                Advanced mineral data analysis and visualization platform
-            </p>
-        </div>
-    </section>
-
-    <!-- Hero Image Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-image-container">
-                <img src="assets/projects/ugd-mineral/hero/ugd-hero.webp" alt="MineralExplorer Platform Overview" class="hero-image">
+            <h1>UGD MineralExplorer
+                <span class="accent">Research Platform</span>
+            </h1>
+            <p class="subtitle">  <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
+                actual system.</p>
+            <div class="hero-image">
+                <img 
+                    [ngSrc]="'assets/projects/ugd-mineral/hero/ugd-hero.webp'"
+                    priority
+                    alt="UgdMineral System Overview"
+                    width="1518"
+                    height="927">
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Project Overview -->
-    <section class="project-overview project-section">
+    <!-- Metrics Section -->
+    <section class="metrics">
         <div class="container">
-            <div class="section-header">
-                <h2>Project Overview</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="overview-content">
-                <p class="lead-text">
-                    <strong>MineralExplorer</strong> revolutionizes how professionals analyze and manage mineral data, combining powerful analysis tools with an intuitive interface.
-                </p>
-                <p>
-                    Our platform addresses the growing need for sophisticated mineral analysis tools in the mining industry, providing a unified solution for visualization, comparison, and reporting.
-                </p>
+            <div class="metric" *ngFor="let metric of metrics">
+                <span class="metric-value">{{metric.value}}</span>
+                <p>{{metric.label}}</p>
             </div>
         </div>
     </section>
 
-    <!-- Key Features -->
-    <section class="features-section project-section">
+    <!-- Features -->
+    <section class="features">
         <div class="container">
-            <div class="section-header">
-                <h2>Key Features</h2>
-                <div class="section-line"></div>
-            </div>
+            <h2>Platform Features</h2>
             <div class="features-grid">
-                <div class="feature-card" *ngFor="let feature of features">
-                    <div class="feature-icon">{{ feature.icon }}</div>
-                    <h3>{{ feature.title }}</h3>
-                    <p>{{ feature.description }}</p>
+                <div class="feature" *ngFor="let feature of features">
+                    <i [class]="feature.icon"></i>
+                    <h3>{{feature.title}}</h3>
+                    <p>{{feature.description}}</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Screenshot Gallery -->
-    <section class="gallery-section project-section">
+    <!-- Screenshots -->
+    <section class="screenshots">
         <div class="container">
-            <div class="section-header">
-                <h2>Platform Overview</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" *ngFor="let screen of screenshots">
-                    <div class="image-container">
-                        <img [src]="screen.src" [alt]="screen.alt" class="gallery-image">
+            <h2>Platform Overview</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot" *ngFor="let screen of screenshots">
+                    <img [src]="screen.src" [alt]="screen.alt" loading="lazy">
+                    <div class="caption">
+                        <h3>{{screen.caption}}</h3>
+                        <p>{{screen.description}}</p>
                     </div>
-                    <div class="gallery-content">
-                        <h3>{{ screen.caption }}</h3>
-                        <p>{{ screen.description }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Implementation -->
-    <section class="technical-details project-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Implementation</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <span class="tech-icon">✨</span>
-                    <strong>Real-time Data Processing</strong>
-                    <p>Advanced algorithms for instant mineral property analysis</p>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">📊</span>
-                    <strong>Interactive Visualizations</strong>
-                    <p>Modern charting libraries for clear data representation</p>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">📱</span>
-                    <strong>Responsive Design</strong>
-                    <p>Optimized for both desktop and mobile devices</p>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🔄</span>
-                    <strong>Efficient Data Management</strong>
-                    <p>Robust database system for handling large mineral datasets</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="project-section">
+    <section class="testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2>Client Testimonials</h2>
-                <div class="section-line"></div>
-            </div>
+            <h2>Client Testimonial</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card" *ngFor="let testimonial of testimonials">
-                    <div class="quote-icon">❝</div>
-                    <p class="quote">{{ testimonial.quote }}</p>
-                    <div class="author-info">
-                        <h4>{{ testimonial.author }}</h4>
-                        <p class="position">{{ testimonial.position }}</p>
-                        <p class="company">{{ testimonial.company }}</p>
-                    </div>
+                <div class="testimonial" *ngFor="let testimonial of testimonials">
+                    <p>{{testimonial.quote}}</p>
+                    <footer>
+                        <cite>{{testimonial.author}}</cite>
+                        <span>{{testimonial.position}}</span>
+                    </footer>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results & Benefits -->
-    <section class="project-conclusion project-section">
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
-            <div class="section-header">
-                <h2>Results & Benefits</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <span class="benefit-icon">🎯</span>
-                    <strong>Enhanced Analysis Capabilities</strong>
-                    <p>Powerful tools for understanding mineral properties and trends</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="benefit-icon">💡</span>
-                    <strong>Improved Decision Making</strong>
-                    <p>Data-driven insights for mining operations and research</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="benefit-icon">⚡</span>
-                    <strong>Time Efficiency</strong>
-                    <p>Automated reporting and analysis processes</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="benefit-icon">🤝</span>
-                    <strong>Better Collaboration</strong>
-                    <p>Shared platform for teams to analyze and compare mineral data</p>
-                </div>
-            </div>
+            <h2>Transform Your Research Today</h2>
+            <a routerLink="/contact-us" class="btn-primary">
+                <span>Contact Us →</span>
+            </a>
         </div>
     </section>
 </div>
