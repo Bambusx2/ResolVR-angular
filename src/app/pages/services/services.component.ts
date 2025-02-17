@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface ServiceItem {
@@ -19,7 +19,7 @@ interface ServiceItem {
   imports: [CommonModule],
 })
 export class ServicesComponent implements OnInit {
-  @ViewChildren('serviceRow') serviceRows!: QueryList<ElementRef>;
+  constructor(private elementRef: ElementRef) {}
 
   services: ServiceItem[] = [
     {
@@ -41,21 +41,23 @@ export class ServicesComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.observeServiceRows();
+    // Make sure elements exist before observing
+    const serviceRows = this.elementRef.nativeElement.querySelectorAll('.service-row');
+    if (serviceRows?.length) {
+      this.observeServiceRows(serviceRows);
+    }
   }
 
-  private observeServiceRows() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  private observeServiceRows(rows: NodeListOf<Element>) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-    this.serviceRows.forEach(row => observer.observe(row.nativeElement));
+    rows.forEach(row => observer.observe(row));
   }
 }
