@@ -1,7 +1,5 @@
 /* Main Section */
 .about-section {
-/* Main Section */
-.about-section {
   background: linear-gradient(135deg, #0d1b34, #1c3253);
   color: white;
   padding: clamp(80px, 10vw, 120px) clamp(16px, 4vw, 40px);
