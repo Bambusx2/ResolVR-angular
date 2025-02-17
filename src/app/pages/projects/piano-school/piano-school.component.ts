@@ -1,65 +1,99 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-piano-school',
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './piano-school.component.html',
-  styleUrls: ['./piano-school.component.css']
+  styleUrls: ['./piano-school.component.css'],
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)',
+          boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
+        }),
+        animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)',
+            boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+          })
+        )
+      ])
+    ]),
+    trigger('staggerFade', [
+      transition(':enter', [
+        query('.metric, img', [
+          style({ 
+            opacity: 0, 
+            transform: 'translateY(20px)',
+            boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
+          }),
+          stagger(100, [
+            animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+              style({ 
+                opacity: 1, 
+                transform: 'translateY(0)',
+                boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+              })
+            )
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
 export class PianoSchoolComponent {
   metrics = [
-    { value: '30+', label: 'Active Students' },
-    { value: '500+', label: 'Piano Lessons' },
-    { value: '50+', label: 'Awards Won' },
-    { value: '100%', label: 'Happy Parents' }
+    { value: '30+', label: 'Students Taught' },
+    { value: '500+', label: 'Piano Lessons Given' },
+    { value: '10+', label: 'Years Experience' },
+    { value: '100%', label: 'Student Satisfaction' }
   ];
 
   features = [
     {
       "icon": "fas fa-music",
       "title": "Interactive Lessons",
-      "description": "Fun, engaging piano lessons designed specifically for children."
+      "description": "Professor Gorgieva's engaging piano lessons, now digitally accessible to all students."
     },
     {
       "icon": "fas fa-star",
       "title": "Progress Tracking",
-      "description": "Stay connected with a built-in chat system for instant support and guidance."
+      "description": "Direct communication with Professor Gorgieva for personalized guidance and support."
     },
     {
       "icon": "fas fa-gamepad",
-      "title": "Gamified Learning",
-      "description": "Turn piano practice into an exciting game with rewards and achievements."
+      "title": "Engaging Learning",
+      "description": "Professor's proven teaching methods combined with modern digital tools."
     },
     {
       "icon": "fas fa-graduation-cap",
-      "title": "Structured Curriculum",
-      "description": "Professional curriculum designed by expert piano teachers."
+      "title": "Expert Curriculum",
+      "description": "Professional curriculum developed by Professor Gorgieva based on years of teaching experience."
     },
     {
       "icon": "fas fa-mobile-alt",
-      "title": "Practice Anytime, Anywhere",
-      "description": "Access lessons and exercises on any device for flexible learning."
+      "title": "Flexible Learning",
+      "description": "Access Professor Gorgieva's lessons and exercises anytime, anywhere."
     },
     {
       "icon": "fas fa-users",
-      "title": "Personalized Assistance",
-      "description": "Get real-time feedback and personalized tips to improve your piano skills."
+      "title": "Personal Guidance",
+      "description": "Receive direct feedback and tips from Professor Gorgieva to improve your piano skills."
     }
   ];
 
   testimonials = [
     {
-      quote: "My daughter loves practicing piano now! The app makes it fun and engaging.",
-      author: "Sarah Johnson",
-      position: "Parent of Amy, 8"
-    },
-    {
-      quote: "The best investment in my child's musical education. Simple yet effective.",
-      author: "Michael Chen",
-      position: "Parent of Kevin, 10"
+      quote: "This platform has revolutionized how I connect with my students. It allows me to provide personalized guidance while making piano learning more accessible and engaging for everyone.",
+      author: "Professor Bisera Ivanova Gorgieva",
+      position: "Piano Instructor & Music Educator"
     }
   ];
 
@@ -67,20 +101,20 @@ export class PianoSchoolComponent {
     {
       src: 'assets/projects/piano-school/app/learn.png',
       alt: 'Interactive Learning Interface',
-      caption: 'Smart Learning System',
-      description: 'Interactive piano lessons with real-time feedback and step-by-step guidance'
+      caption: 'Smart Learning Platform',
+      description: "'Professor Gorgieva's interactive piano lessons with real-time guidance'"
     },
     {
       src: 'assets/projects/piano-school/app/listen.png',
       alt: 'Sheet Music Player',
-      caption: 'Listen & Practice',
-      description: 'Listen to compositions, follow along with highlighted notes, and practice at your own pace'
+      caption: 'Practice & Learn',
+      description: "'Follow along with Professor Gorgieva's curated compositions and instructions'"
     },
     {
       src: 'assets/projects/piano-school/app/chat.png',
       alt: 'Professor Chat Interface',
-      caption: 'Expert Guidance',
-      description: 'Direct communication with professional piano teachers for personalized feedback and support'
+      caption: 'Direct Communication',
+      description: 'Instant connection with Professor Gorgieva for personalized feedback and support'
     }
   ];
 

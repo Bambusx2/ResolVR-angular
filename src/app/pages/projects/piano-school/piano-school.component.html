@@ -7,37 +7,27 @@
             </h1>
             <p class="subtitle">  <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
                 actual system.</p>
-        </div>
-        <div class="container">
-            <div class="image-row">
-                <div class="image-column">
-                    <img src="assets/projects/piano-school/hero/hero1.png" alt="Welcome to MusicSheetKids">
-                </div>
-                <div class="image-column">
-                    <img src="assets/projects/piano-school/hero/hero2.png" alt="Explore piano sheets">
-                </div>
-                <div class="image-column">
-                    <img src="assets/projects/piano-school/hero/hero3.png" alt="Piano Collection">
-                </div>
-                <div class="image-column">
-                    <img src="assets/projects/piano-school/hero/hero4.png" alt="Learning Page">
-                </div>
-                <div class="image-column">
-                    <img src="assets/projects/piano-school/hero/hero5.png" alt="Support Chat">
-                </div>
+            <div class="hero-image" [@staggerFade]>
+                <img src="assets/projects/piano-school/hero/hero1.png" 
+                     alt="Welcome to MusicSheetKids">
+                <img src="assets/projects/piano-school/hero/hero2.png" 
+                     alt="Explore piano sheets">
+                <img src="assets/projects/piano-school/hero/hero3.png" 
+                     alt="Piano Collection">
+                <img src="assets/projects/piano-school/hero/hero4.png" 
+                     alt="Learning Page">
+                <img src="assets/projects/piano-school/hero/hero5.png" 
+                     alt="Support Chat">
             </div>
         </div>        
     </header>
 
-
     <!-- Metrics Section -->
-    <section class="metrics">
+    <section class="metrics" [@staggerFade]>
         <div class="container">
             <div class="metric" *ngFor="let metric of metrics">
-                <div class="metric-content">
-                    <span class="metric-value">{{metric.value}}</span>
-                    <p>{{metric.label}}</p>
-                </div>
+                <span class="metric-value">{{metric.value}}</span>
+                <p>{{metric.label}}</p>
             </div>
         </div>
     </section>
@@ -45,7 +35,7 @@
     <!-- Features -->
     <section class="features">
         <div class="container">
-            <h2>Why Kids Love Our App</h2>
+            <h2>Professor Gorgieva's Teaching Platform</h2>
             <div class="features-grid">
                 <div class="feature" *ngFor="let feature of features">
                     <i [class]="feature.icon"></i>
@@ -59,7 +49,7 @@
     <!-- Screenshots -->
     <section class="screenshots">
         <div class="container">
-            <h2>App Overview</h2>
+            <h2>Platform Overview</h2>
             <div class="screenshots-grid">
                 <div class="screenshot" *ngFor="let screen of screenshots">
                     <img [src]="screen.src" [alt]="screen.alt" loading="lazy">
@@ -75,13 +65,13 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2>What Parents Say</h2>
+            <h2>Professor's Perspective</h2>
             <div class="testimonials-grid">
-                <div class="testimonial" *ngFor="let testimonial of testimonials">
-                    <p>{{testimonial.quote}}</p>
+                <div class="testimonial">
+                    <p>{{testimonials[0].quote}}</p>
                     <footer>
-                        <cite>{{testimonial.author}}</cite>
-                        <span>{{testimonial.position}}</span>
+                        <cite>{{testimonials[0].author}}</cite>
+                        <span>{{testimonials[0].position}}</span>
                     </footer>
                 </div>
             </div>
@@ -91,9 +81,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Start Your Child's Musical Journey Today</h2>
+            <h2>Want to Build Your Own Educational Platform?</h2>
             <a routerLink="/contact-us" class="btn-primary">
-                <span>Get Started →</span>
+                <span>Let's Connect →</span>
             </a>
         </div>
     </section>

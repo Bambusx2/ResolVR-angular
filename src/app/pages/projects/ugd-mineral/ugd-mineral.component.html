@@ -11,15 +11,15 @@
                 <img 
                     [ngSrc]="'assets/projects/ugd-mineral/hero/ugd-hero.webp'"
                     priority
-                    alt="UgdMineral System Overview"
-                    width="1518"
-                    height="927">
+                    alt="UGD MineralExplorer Platform Overview"
+                    width="1643"
+                    height="1098">
             </div>
         </div>
     </header>
 
     <!-- Metrics Section -->
-    <section class="metrics">
+    <section class="metrics" [@staggerFade]>
         <div class="container">
             <div class="metric" *ngFor="let metric of metrics">
                 <span class="metric-value">{{metric.value}}</span>
@@ -33,7 +33,9 @@
         <div class="container">
             <h2>Platform Features</h2>
             <div class="features-grid">
-                <div class="feature" *ngFor="let feature of features">
+                <div class="feature" *ngFor="let feature of features; let i = index" 
+                     [@fadeInUp]
+                     [style.animation-delay]="i * 100 + 'ms'">
                     <i [class]="feature.icon"></i>
                     <h3>{{feature.title}}</h3>
                     <p>{{feature.description}}</p>
@@ -47,7 +49,7 @@
         <div class="container">
             <h2>Platform Overview</h2>
             <div class="screenshots-grid">
-                <div class="screenshot" *ngFor="let screen of screenshots">
+                <div class="screenshot" *ngFor="let screen of screenshots" @fadeInUp>
                     <img [src]="screen.src" [alt]="screen.alt" loading="lazy">
                     <div class="caption">
                         <h3>{{screen.caption}}</h3>
@@ -63,7 +65,7 @@
         <div class="container">
             <h2>Client Testimonial</h2>
             <div class="testimonials-grid">
-                <div class="testimonial" *ngFor="let testimonial of testimonials">
+                <div class="testimonial" *ngFor="let testimonial of testimonials" @fadeInUp>
                     <p>{{testimonial.quote}}</p>
                     <footer>
                         <cite>{{testimonial.author}}</cite>

@@ -2,13 +2,48 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
+import { trigger, transition, style, animate, stagger, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-ugd-mineral',
   standalone: true,
   imports: [CommonModule, RouterLink, NgOptimizedImage],
   templateUrl: './ugd-mineral.component.html',
-  styleUrls: ['./ugd-mineral.component.css']
+  styleUrls: ['./ugd-mineral.component.css'],
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)',
+          boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
+        }),
+        animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)',
+            boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+          })
+        )
+      ])
+    ]),
+    trigger('staggerFade', [
+      transition(':enter', [
+        query('.metric', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(100, [
+            animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+              style({ 
+                opacity: 1, 
+                transform: 'translateY(0)',
+                boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+              })
+            )
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class UgdMineralComponent {
   metrics = [
