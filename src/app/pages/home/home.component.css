@@ -62,22 +62,24 @@
   font-weight: 300;
 }
 
+/* Global Button Style */
 .cta-button {
-  text-decoration: none;
-  color: white;
-  background-color: #11c4b9;
-  padding: 20px 45px;
+  display: inline-block;
+  padding: 16px 42px;
+  background: linear-gradient(135deg, #11c4b9, #00ffcc);
+  color: #0d1b34;
   border-radius: 30px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 25px;
-  &:hover, &:focus {
-    background-color: #673ab7;
-    transform: translateY(-2px);
-    outline: none;
-    box-shadow: 0 4px 15px rgba(17, 196, 185, 0.3);
-  }
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(17, 196, 185, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(17, 196, 185, 0.4);
+  background: linear-gradient(135deg, #13ddd1, #00ffcc);
 }
 
 /* --- Partner Carousel & Technologies Section --- */
@@ -196,8 +198,10 @@
     font-size: 1.2rem;
   }
   .cta-button {
-    padding: 12px 30px;
-    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 16px 32px;
   }
   /* Scale down logos in the carousel */
   .logo-track img {
@@ -250,117 +254,141 @@
   margin: 0 auto 30px;
 }
 
-/* About Us Section */
+/* About Section */
 .about-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 40px;
   background: linear-gradient(135deg, #0d1b34, #1c3253);
   color: white;
 }
 
-/* About Us Container */
+/* Container */
 .about-container {
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0 20px;
 }
 
-/* About Us Content */
+/* Content Area */
 .about-content {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .about-content h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
+  margin-bottom: 30px;
   color: #11c4b9;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .about-content p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.8;
-  margin-bottom: 20px;
-  color: #c4c4c4;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-content .highlight {
   color: #11c4b9;
-  font-weight: bold;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-/* Stats Section */
+/* Stats Grid */
 .about-stats {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 
-/* Stat Card */
+/* Stat Cards */
 .stat-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 35px;
+  width: 220px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover Effect on Stat Cards */
 .stat-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px);
+  background: rgba(17, 196, 185, 0.08);
+  border-color: rgba(17, 196, 185, 0.2);
+  box-shadow: 0 15px 40px rgba(17, 196, 185, 0.2);
 }
 
-/* Stat Card Heading */
 .stat-card h3 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #11c4b9;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1;
 }
 
-/* Stat Card Description */
 .stat-card p {
-  font-size: 1rem;
-  color: #c4c4c4;
-  transition: color 0.3s ease;
-}
-
-/* Hover Text Color Change */
-.stat-card:hover h3,
-.stat-card:hover p {
-  color: #ffffff;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
   .about-stats {
-    flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+  }
+  
+  .about-content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 100px 20px;
   }
 
   .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    letter-spacing: 1.5px;
+  }
+
+  .about-content p {
+    font-size: 1.15rem;
   }
 
   .stat-card {
     width: 100%;
+    max-width: 280px;
+    padding: 30px;
+  }
+
+  .stat-card h3 {
+    font-size: 2.8rem;
+  }
+
+  .about-us .cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 16px 32px;
   }
 }
-
 /* --- Fixed Shiny Line Style --- */
 .shiny-line {
   width: 60%;

@@ -1,5 +1,14 @@
+/* --- Font Import --- */
+@font-face {
+  font-family: 'DesMontilles';
+  src: url('/assets/fonts/font1.otf') format('opentype'),
+       url('/assets/fonts/font2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .product-improvement-section {
-  padding: 140px 20px 100px;
+  padding: 120px 20px;
   background: linear-gradient(135deg, #0d1b34, #1c3253);
   color: white;
   text-align: center;
@@ -15,25 +24,32 @@
   z-index: 1;
 }
 
-/* Title */
-.title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #11c4b9;
+/* Intro / Title */
+.intro {
   margin-bottom: 2rem;
-  letter-spacing: -0.05em;
 }
 
-/* Description */
+.title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #11c4b9;
+  font-weight: 800;
+  margin-bottom: clamp(20px, 3vw, 30px);
+  text-transform: uppercase;
+  letter-spacing: clamp(2px, 0.5vw, 3px);
+  line-height: 1.3;
+  text-shadow: 0 2px 15px rgba(17, 196, 185, 0.15);
+}
+
 .description {
-  font-size: 1.25rem;
-  line-height: 1.75;
-  color: #c4c4c4;
-  max-width: 760px;
-  margin: 0 auto 40px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto clamp(30px, 5vw, 50px);
+  padding: 0 16px;
 }
 
-/* Benefits List */
+/* Benefits List Styling - Enhanced */
 .benefits-list {
   list-style: none;
   padding: 0;
@@ -43,195 +59,217 @@
 }
 
 .benefits-list li {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #e6e6e6;
-  padding: 10px 0;
   display: flex;
   align-items: center;
+  padding: clamp(12px, 2vw, 16px) clamp(16px, 2vw, 20px);
+  background: rgba(13, 27, 52, 0.4);
+  border: 1px solid rgba(17, 196, 185, 0.1);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.benefits-list li:hover {
+  transform: translateY(-5px);
+  border-color: rgba(17, 196, 185, 0.3);
+  box-shadow: 0 10px 30px rgba(17, 196, 185, 0.2);
 }
 
 .benefits-list li span {
   color: #11c4b9;
-  font-size: 1.5rem;
-  margin-right: 12px;
-}
-
-/* Steps Container */
-.steps-container {
+  margin-right: 15px;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 50px;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-/* Step Cards */
+.benefits-list li:hover span {
+  transform: scale(1.05);
+  color: #00ffcc;
+}
+
+.benefits-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Steps Grid */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 30px);
+  margin: 60px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
 .step {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 2rem;
-  border-radius: 1.25rem;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  width: 22%;
-  max-width: 320px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(13, 27, 52, 0.4);
+  border: 1px solid rgba(17, 196, 185, 0.1);
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-/* Hover Effect */
 .step:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  background: rgba(13, 27, 52, 0.6);
+  border-color: rgba(17, 196, 185, 0.2);
+  box-shadow: 0 10px 20px rgba(17, 196, 185, 0.15);
 }
 
-/* Icons */
-.icon {
-  font-size: 2rem;
-  background: #11c4b9;
-  color: white;
-  border-radius: 50%;
+.step-icon {
   width: 80px;
   height: 80px;
+  background: #11c4b9;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.2rem;
-  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #0d1b34;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Icon Hover Effect */
-.step:hover .icon {
-  background: #673ab7;
+.step:hover .step-icon {
   transform: scale(1.1);
+  background: linear-gradient(135deg, #11c4b9, #00ffcc);
+  box-shadow: 0 8px 15px rgba(17, 196, 185, 0.3);
 }
 
-/* Step Titles */
-.item-title {
-  font-size: 1.5rem;
+.step-title {
   color: #11c4b9;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: clamp(8px, 2vw, 10px);
+  line-height: 1.2;
+  min-height: unset;
 }
 
-/* Title Hover Effect */
-.step:hover .item-title {
-  color: #673ab7;
+.step:hover .step-title {
+  color: #00ffcc;
+  transform: translateY(-2px);
 }
 
-/* Step Descriptions */
-.item-description {
-  font-size: 1.1rem;
-  color: #e6e6e6;
+.step-description {
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin: 0;
 }
 
-/* CTA Section */
+.step:hover .step-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .steps-container {
+    gap: 20px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-improvement-section {
+    padding: 100px 16px 40px;
+  }
+
+  .step {
+    padding: clamp(16px, 3vw, 20px);
+  }
+
+  .step-icon {
+    width: clamp(60px, 10vw, 80px);
+    height: clamp(60px, 10vw, 80px);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(16px, 3vw, 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  .product-improvement-section {
+    padding: 80px 12px 32px;
+  }
+
+  .benefits-list {
+    padding: 0 12px;
+  }
+}
+
+/* CTA styles */
 .cta-wrapper {
   margin-top: 60px;
   text-align: center;
 }
 
-/* CTA Text */
 .cta-text {
-  font-size: 1.6rem;
-  color: white;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: clamp(20px, 3vw, 30px);
 }
 
-/* CTA Button */
 .cta-button {
   display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: white;
-  background: #11c4b9;
-  padding: 15px 40px;
+  padding: clamp(12px, 2vw, 16px) clamp(30px, 4vw, 42px);
+  background: linear-gradient(135deg, #11c4b9, #00ffcc);
+  color: #0d1b34;
   border-radius: 30px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(17, 196, 185, 0.2);
 }
 
 .cta-button:hover {
-  background: #673ab7;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(103, 58, 183, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(17, 196, 185, 0.3);
+  background: linear-gradient(135deg, #00ffcc, #11c4b9);
 }
 
-/* Responsive Fixes */
-@media (max-width: 1200px) {
-  .step {
-    width: 48%;
-    margin-bottom: 20px;
-  }
-
-  .center-row {
-    justify-content: center;
-  }
+.cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(17, 196, 185, 0.2);
 }
 
-@media (max-width: 992px) {
-  .title {
-    font-size: 3rem;
-  }
-  .description {
-    font-size: 1.15rem;
-  }
-  .cta-button {
-    padding: 15px 40px;
-    font-size: 1.2rem;
-  }
+/* Animation */
+.step {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
-  }
+.step:nth-child(1) { animation-delay: 0.1s; }
+.step:nth-child(2) { animation-delay: 0.2s; }
+.step:nth-child(3) { animation-delay: 0.3s; }
+.step:nth-child(4) { animation-delay: 0.4s; }
 
-  .step {
-    width: 100%;
-    margin-bottom: 30px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
-  .icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
-  }
-
-  .center-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-text {
-    font-size: 1.4rem;
-  }
-
-  .cta-button {
-    font-size: 1.2rem;
-    padding: 15px 35px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2.2rem;
-  }
-  .description {
-    font-size: 1rem;
-  }
-  .cta-text {
-    font-size: 1.2rem;
-  }
-  .cta-button {
-    padding: 12px 30px;
-    font-size: 1.1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

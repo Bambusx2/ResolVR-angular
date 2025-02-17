@@ -1,118 +1,187 @@
 <!-- PRODUCT DEVELOPMENT SECTION -->
-<section class="product-development-section">
+<section 
+  class="product-development-section" 
+  role="main" 
+  aria-label="Product Development Services"
+  itemscope 
+  itemtype="http://schema.org/Service">
   <div class="container">
     <!-- Introduction -->
     <div class="intro">
-      <h1 class="title">Full-Cycle Product Development & Scalable Software Engineering</h1>
+      <!-- SEO optimized heading -->
+      <h1 class="title" itemprop="name">
+        Enterprise Software Development & Cloud-Native Solutions
+      </h1>
+      
+      <!-- Meta description -->
+      <meta itemprop="description" content="ResolVR delivers enterprise-grade software development, from MVP to full-scale solutions. Specializing in cloud-native applications, AI integration, and scalable architectures.">
+      
       <p class="description">
-        At <strong>ResolVR</strong>, we engineer <strong>scalable, high-performance digital solutions</strong> that bring your ideas to life.
-        Whether you're launching a new product or optimizing an existing one, we deliver 
-        <span class="highlight">agile, future-ready,</span> and <span class="highlight">cost-efficient</span> software solutions.
+        At <strong itemprop="provider">ResolVR</strong>, we engineer 
+        <strong>enterprise-grade digital solutions</strong> powered by 
+        <span class="highlight">cloud-native architecture</span> and 
+        <span class="highlight">AI-driven technologies</span>.
       </p>
-      <ul class="benefits-list">
-        <li><span>✔</span> <strong>End-to-End Software Development:</strong> From ideation to deployment</li>
-        <li><span>✔</span> <strong>Agile MVP Development:</strong> Rapid prototyping and market validation</li>
-        <li><span>✔</span> <strong>Data-Driven Decision-Making:</strong> AI-powered insights and analytics</li>
-        <li><span>✔</span> <strong>24/7 Live Monitoring:</strong> Performance tracking and system health alerts</li>
-    </ul>
-    
+      <div class="benefits-list" itemscope itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span>✓</span> 
+          <div class="benefit-content">
+            <strong itemprop="name">Full-Stack Enterprise Development</strong>
+            <p itemprop="description">Cloud-native architecture and microservices deployment</p>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span>✓</span>
+          <div class="benefit-content">
+            <strong itemprop="name">Agile MVP Development</strong>
+            <p itemprop="description">Rapid prototyping and iterative market validation</p>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span>✓</span>
+          <div class="benefit-content">
+            <strong itemprop="name">Data-Driven Decision-Making</strong>
+            <p itemprop="description">AI-powered insights and advanced analytics</p>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span>✓</span>
+          <div class="benefit-content">
+            <strong itemprop="name">24/7 Enterprise Monitoring</strong>
+            <p itemprop="description">Real-time performance tracking and system health alerts</p>
+          </div>
+        </li>
+      </div>
     </div>
 
     <!-- Steps Row 1 -->
-    <div class="step-row">
-      <div class="step">
+    <div class="step-row" itemscope itemtype="http://schema.org/ItemList">
+      <div class="step skeleton" *ngIf="loading">
+        <div class="step-icon-skeleton"></div>
+        <div class="title-skeleton"></div>
+        <div class="description-skeleton"></div>
+      </div>
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="1">
         <div class="step-icon"><i class="fas fa-search"></i></div>
-        <h3 class="step-title">Market Research</h3>
-        <p class="step-description">
-          Analyze market trends and define your product’s competitive edge.
+        <h3 class="step-title" itemprop="name">Strategic Market Analysis</h3>
+        <p class="step-description" itemprop="description">
+          Data-driven market research and competitive analysis for optimal product positioning.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="2">
         <div class="step-icon"><i class="fas fa-file-alt"></i></div>
-        <h3 class="step-title">Technical Planning</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Technical Planning</h3>
+        <p class="step-description" itemprop="description">
           Outline system architecture, tech stack, and scalability strategy.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="3">
         <div class="step-icon"><i class="fas fa-users"></i></div>
-        <h3 class="step-title">User Feedback & Prototyping</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">User Feedback & Prototyping</h3>
+        <p class="step-description" itemprop="description">
           Validate concepts through wireframes, interactive prototypes, and early user testing.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="4">
         <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
-        <h3 class="step-title">UI/UX Design</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">UI/UX Design</h3>
+        <p class="step-description" itemprop="description">
           Design an intuitive, user-friendly interface that drives engagement.
         </p>
       </div>
     </div>
 
     <!-- Steps Row 2 -->
-    <div class="step-row">
-      <div class="step">
+    <div class="step-row" itemscope itemtype="http://schema.org/ItemList">
+      <div class="step skeleton" *ngIf="loading">
+        <div class="step-icon-skeleton"></div>
+        <div class="title-skeleton"></div>
+        <div class="description-skeleton"></div>
+      </div>
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="5">
         <div class="step-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3 class="step-title">MVP Development</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">MVP Development</h3>
+        <p class="step-description" itemprop="description">
           Build a functional prototype for quick market validation and iterations.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="6">
         <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-        <h3 class="step-title">Live Monitoring & Insights</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Live Monitoring & Insights</h3>
+        <p class="step-description" itemprop="description">
           Track <strong>real-time performance, user behavior, and system health</strong> with advanced analytics.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="7">
         <div class="step-icon"><i class="fas fa-code"></i></div>
-        <h3 class="step-title">Full-Scale Development</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Full-Scale Development</h3>
+        <p class="step-description" itemprop="description">
           Develop robust, <strong>scalable, cloud-native software solutions</strong>.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="8">
         <div class="step-icon"><i class="fas fa-rocket"></i></div>
-        <h3 class="step-title">Seamless Deployment</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Seamless Deployment</h3>
+        <p class="step-description" itemprop="description">
           Deploy with <strong>zero downtime</strong> and full cloud integration.
         </p>
       </div>
     </div>
 
     <!-- Steps Row 3 -->
-    <div class="step-row center-row">
-      <div class="step">
+    <div class="step-row center-row" itemscope itemtype="http://schema.org/ItemList">
+      <div class="step skeleton" *ngIf="loading">
+        <div class="step-icon-skeleton"></div>
+        <div class="title-skeleton"></div>
+        <div class="description-skeleton"></div>
+      </div>
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="9">
         <div class="step-icon"><i class="fas fa-vial"></i></div>
-        <h3 class="step-title">Quality Assurance</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Quality Assurance</h3>
+        <p class="step-description" itemprop="description">
           Ensure <strong>top-tier security, performance, and stability</strong> before launch.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="10">
         <div class="step-icon"><i class="fas fa-tools"></i></div>
-        <h3 class="step-title">Post-Launch Support</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Post-Launch Support</h3>
+        <p class="step-description" itemprop="description">
           Maintain smooth operations with real-time monitoring and fixes.
         </p>
       </div>
-      <div class="step">
+      <div class="step" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="11">
         <div class="step-icon"><i class="fas fa-sync-alt"></i></div>
-        <h3 class="step-title">Growth & Scaling</h3>
-        <p class="step-description">
+        <h3 class="step-title" itemprop="name">Growth & Scaling</h3>
+        <p class="step-description" itemprop="description">
           Optimize performance and scale seamlessly as your business grows.
         </p>
       </div>
     </div>
-  </div>
 
-  <!-- CTA -->
-  <div class="cta-wrapper">
-    <p class="cta-text">
-      <strong>Need an expert software development partner?</strong> Let's build, launch, and optimize your product together!
-    </p>
-    <a href="/contact-us" class="cta-button">Let's Build Your Product →</a>
+    <!-- CTA -->
+    <div class="cta-wrapper">
+      <p class="cta-text">
+        <strong>Ready to build your enterprise solution?</strong> Partner with our expert development team.
+      </p>
+      <a href="/contact-us" 
+         class="cta-button" 
+         aria-label="Start your software development project"
+         itemprop="potentialAction" 
+         itemscope 
+         itemtype="http://schema.org/ContactAction">
+        Start Your Digital Transformation →
+      </a>
+    </div>
   </div>
 </section>

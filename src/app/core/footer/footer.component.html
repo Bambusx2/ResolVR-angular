@@ -1,50 +1,70 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer-container">
-        <!-- Footer Left -->
+        <!-- Brand Section -->
         <div class="footer-left">
-            <h3>ResolVR</h3>
-            <p>
-                ResolVR specializes in creating innovative software solutions tailored
-                for startups and enterprises. Your reliable tech partner since 2023.
+            <h3 itemprop="name">ResolVR</h3>
+            <p itemprop="description">
+                Empowering businesses with innovative software solutions. 
+                Specializing in AI-driven development, cloud architecture, 
+                and enterprise-grade applications since 2023.
             </p>
-            <div class="social-icons">
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+            <div class="social-icons" itemscope itemtype="http://schema.org/Organization">
+                <a href="https://linkedin.com/company/resolvr" target="_blank" rel="noopener" 
+                   aria-label="Follow us on LinkedIn" itemprop="sameAs">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+                <a href="https://instagram.com/resolvr.dev" target="_blank" rel="noopener" 
+                   aria-label="Follow us on Instagram" itemprop="sameAs">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://facebook.com/resolvr.dev" target="_blank" rel="noopener" 
+                   aria-label="Follow us on Facebook" itemprop="sameAs">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
 
-        <!-- Footer Middle -->
-        <div class="footer-middle">
-            <h4>Our Offices</h4>
+        <!-- Contact Section -->
+        <div class="footer-middle" itemscope itemtype="http://schema.org/Organization">
+            <h4>Our Global Offices</h4>
             <div class="address-section">
-                <p><strong>HQ</strong><br />Sremski Front 26/V, Stip, Macedonia</p>
-                <p><strong>USA</strong><br />3660 B Test, USA</p>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p>
+                        <strong>Headquarters</strong><br>
+                        <span itemprop="streetAddress">Sremski Front 26/V</span><br>
+                        <span itemprop="addressLocality">Stip</span>,
+                        <span itemprop="addressCountry">Macedonia</span>
+                    </p>
+                </div>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p>
+                        <strong>US Office</strong><br>
+                        <span itemprop="streetAddress">3660 B Test</span><br>
+                        <span itemprop="addressCountry">USA</span>
+                    </p>
+                </div>
             </div>
         </div>
 
-        <!-- Footer Right -->
+        <!-- CTA Section -->
         <div class="footer-right">
-            <h4>Let’s collaborate on something amazing!</h4>
-            <!-- FIX: Changed `a` to `button` and used `(click)` for Angular Routing -->
-            <button class="cta-button" (click)="navigateToContact()" aria-label="Let's Connect">
-                Let's Connect →
+            <h4>Ready to Transform Your Business?</h4>
+            <button class="cta-button" (click)="navigateToContact()" 
+                    aria-label="Contact us to discuss your project">
+                <span>Let's Connect</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </button>
         </div>
     </div>
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
-        <div class="legal-links">
-            <a href="/privacy-policy" target="_blank">Privacy Policy</a> |
-            <a href="/cookies-consent" target="_blank">Cookies Policy</a>
-        </div>
-        <p>&copy; 2024 ResolVR. All rights reserved.</p>
+        <nav class="legal-links" aria-label="Legal links">
+            <a href="/privacy-policy" itemprop="publishingPrinciples">Privacy Policy</a>
+            <a href="/terms-of-service" itemprop="publishingPrinciples">Terms of Service</a>
+            <a href="/cookies-policy" itemprop="publishingPrinciples">Cookie Policy</a>
+        </nav>
+        <p>&copy; <span itemprop="copyrightYear">2024</span> 
+           <span itemprop="copyrightHolder">ResolVR</span>. All rights reserved.</p>
     </div>
 </footer>
