@@ -103,20 +103,4 @@ export class HotelParkComponent {
   ];
 
   constructor(private el: ElementRef) {}
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const scrollButton = this.el.nativeElement.querySelector('.scroll-top');
-    if (scrollButton) {
-      if (window.scrollY > 300) {
-        scrollButton.classList.add('visible');
-      } else {
-        scrollButton.classList.remove('visible');
-      }
-    }
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 }

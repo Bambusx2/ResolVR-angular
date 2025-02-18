@@ -2,20 +2,24 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <h1>UGD Mineral
-                <span class="accent">Mineral Exploration Platform</span>
+            <h1>CityGym
+                <span class="accent">Fitness tracking app</span>
             </h1>
-            <p class="subtitle">A specialized research platform developed for <strong>University of Goce Delchev</strong>.
-                <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the actual system.</p>
-            <div class="hero-image">
-                <img 
-                    [ngSrc]="'assets/projects/ugd-mineral/hero/ugd-hero.webp'"
-                    priority
-                    alt="UGD MineralExplorer Platform Overview"
-                    width="1643"
-                    height="1098">
+            <p class="subtitle"><br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
+                actual system.</p>
+            <div class="hero-image" [@staggerFade]>
+                <img src="assets/projects/city-gym/hero/hero1.png" 
+                     alt="Workout Tracking">
+                <img src="assets/projects/city-gym/hero/hero2.png" 
+                     alt="Activity Dashboard">
+                <img src="assets/projects/city-gym/hero/hero3.png" 
+                     alt="Progress Tracking">
+                <img src="assets/projects/city-gym/hero/hero4.png" 
+                     alt="Exercise Library">
+                <img src="assets/projects/city-gym/hero/hero5.png" 
+                     alt="Community Features">
             </div>
-        </div>
+        </div>        
     </header>
 
     <!-- Metrics Section -->
@@ -31,11 +35,9 @@
     <!-- Features -->
     <section class="features">
         <div class="container">
-            <h2>Platform Features</h2>
+            <h2>Solution Features</h2>
             <div class="features-grid">
-                <div class="feature" *ngFor="let feature of features; let i = index" 
-                     [@fadeInUp]
-                     [style.animation-delay]="i * 100 + 'ms'">
+                <div class="feature" *ngFor="let feature of features">
                     <i [class]="feature.icon"></i>
                     <h3>{{feature.title}}</h3>
                     <p>{{feature.description}}</p>
@@ -47,9 +49,9 @@
     <!-- Screenshots -->
     <section class="screenshots">
         <div class="container">
-            <h2>Platform Overview</h2>
+            <h2>Application Overview</h2>
             <div class="screenshots-grid">
-                <div class="screenshot" *ngFor="let screen of screenshots" @fadeInUp>
+                <div class="screenshot" *ngFor="let screen of screenshots">
                     <img [src]="screen.src" [alt]="screen.alt" loading="lazy">
                     <div class="caption">
                         <h3>{{screen.caption}}</h3>
@@ -63,13 +65,13 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2>Client Testimonial</h2>
+            <h2>Client's Feedback</h2>
             <div class="testimonials-grid">
-                <div class="testimonial" *ngFor="let testimonial of testimonials" @fadeInUp>
-                    <p>{{testimonial.quote}}</p>
+                <div class="testimonial">
+                    <p>"Working with the development team was an outstanding experience. They understood our vision perfectly and delivered a solution that exceeded our expectations. The app has significantly improved how our members track their fitness journey and engage with our gym."</p>
                     <footer>
-                        <cite>{{testimonial.author}}</cite>
-                        <span>{{testimonial.position}}</span>
+                        <cite>Bill Moore</cite>
+                        <span>CityGym Owner</span>
                     </footer>
                 </div>
             </div>
@@ -79,9 +81,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Transform Your Research Today</h2>
+            <h2>Want to Build Your Own Custom Solution?</h2>
             <a routerLink="/contact-us" class="btn-primary">
-                <span>Contact Us →</span>
+                <span>Let's Connect →</span>
             </a>
         </div>
     </section>

@@ -109,34 +109,12 @@ export class UgdMineralComponent {
 
   testimonials = [
     {
-      quote: "MineralExplorer has revolutionized our research capabilities at UGD. The platform's advanced analysis tools and intuitive interface have significantly improved our research workflow.",
+      quote: "The mineral exploration platform developed by the team has significantly enhanced our research capabilities. Their expertise in handling complex geological data and creating intuitive visualization tools has made our work much more efficient.",
       author: "Prof. Dr. Tena Sijakova Ivanova",
-      position: "Faculty of Natural and Technical Sciences"
+      position: "Head of Minerology at UGD"
     }
   ];
 
   constructor(private el: ElementRef) {}
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const scrollButton = this.el.nativeElement.querySelector('.scroll-top');
-    if (scrollButton) {
-      if (window.scrollY > 300) {
-        scrollButton.classList.add('visible');
-      } else {
-        scrollButton.classList.remove('visible');
-      }
-    }
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }

@@ -13,6 +13,9 @@ import { HotelParkComponent } from './pages/projects/hotel-park/hotel-park/hotel
 import { GichevTrejdComponent } from './pages/projects/gichev-trejd/gichev-trejd.component';
 import { UgdMineralComponent } from './pages/projects/ugd-mineral/ugd-mineral.component';
 import { PianoSchoolComponent } from './pages/projects/piano-school/piano-school.component';
+import { CityGymComponent } from './pages/projects/city-gym/city-gym.component';
+import { KontronComponent } from './pages/projects/kontron/kontron.component';
+import { IskratelComponent } from './pages/projects/iskratel/iskratel.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,5 +32,8 @@ export const routes: Routes = [
   { path: 'our-work/hotel-park', component: HotelParkComponent },
   { path: 'our-work/gichev-trejd', component: GichevTrejdComponent },
   { path: 'our-work/ugd-mineral', component: UgdMineralComponent },
-  { path: 'our-work/piano-school', component: PianoSchoolComponent }
+  { path: 'our-work/piano-school', component: PianoSchoolComponent },
+  { path: 'our-work/city-gym', component: CityGymComponent },
+  { path: 'our-work/iskratel', component: IskratelComponent },
+  { path: 'our-work/kontron', component: KontronComponent }
 ];
