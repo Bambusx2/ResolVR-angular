@@ -38,11 +38,11 @@ export class OurWorkComponent {
       route: 'gichev-trejd' 
     },
     { 
-      name: 'Enbravia', 
-      client: 'Enbravia', 
-      image: 'assets/screens/enbravia_dashboard.png', 
+      name: 'CityGym', 
+      client: 'City Gym Australia', 
+      image: 'assets/projects/city-gym/hero/hero1.png', 
       logo: 'assets/logos/enbravia.png', 
-      route: 'enbravia' 
+      route: 'city-gym' 
     },
   ];
 

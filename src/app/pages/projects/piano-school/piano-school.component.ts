@@ -91,9 +91,9 @@ export class PianoSchoolComponent {
 
   testimonials = [
     {
-      quote: "This platform has revolutionized how I connect with my students. It allows me to provide personalized guidance while making piano learning more accessible and engaging for everyone.",
+      quote: "Working with the team was a fantastic experience. They perfectly captured our vision for music education and created an intuitive platform that both teachers and students love using. The sheet music management features are exactly what we needed.",
       author: "Professor Bisera Ivanova Gorgieva",
-      position: "Piano Instructor & Music Educator"
+      position: "SEO of BIG Piano School"
     }
   ];
 
@@ -119,20 +119,4 @@ export class PianoSchoolComponent {
   ];
 
   constructor(private el: ElementRef) {}
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const scrollButton = this.el.nativeElement.querySelector('.scroll-top');
-    if (scrollButton) {
-      if (window.scrollY > 300) {
-        scrollButton.classList.add('visible');
-      } else {
-        scrollButton.classList.remove('visible');
-      }
-    }
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 }
