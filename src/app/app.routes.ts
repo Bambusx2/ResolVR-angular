@@ -12,6 +12,7 @@ import { OurWorkComponent } from './pages/our-work/our-work.component';
 import { HotelParkComponent } from './pages/projects/hotel-park/hotel-park/hotel-park.component';
 import { GichevTrejdComponent } from './pages/projects/gichev-trejd/gichev-trejd.component';
 import { UgdMineralComponent } from './pages/projects/ugd-mineral/ugd-mineral.component';
+import { PianoSchoolComponent } from './pages/projects/piano-school/piano-school.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,5 +28,6 @@ export const routes: Routes = [
   { path: 'our-work', component: OurWorkComponent },
   { path: 'our-work/hotel-park', component: HotelParkComponent },
   { path: 'our-work/gichev-trejd', component: GichevTrejdComponent },
-  { path: 'our-work/ugd-mineral', component: UgdMineralComponent }
+  { path: 'our-work/ugd-mineral', component: UgdMineralComponent },
+  { path: 'our-work/piano-school', component: PianoSchoolComponent }
 ];

@@ -1,0 +1,90 @@
+<div class="project-container">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>MusicSheetKids
+                <span class="accent">Piano Learning App</span>
+            </h1>
+            <p class="subtitle">  <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
+                actual system.</p>
+            <div class="hero-image" [@staggerFade]>
+                <img src="assets/projects/piano-school/hero/hero1.png" 
+                     alt="Welcome to MusicSheetKids">
+                <img src="assets/projects/piano-school/hero/hero2.png" 
+                     alt="Explore piano sheets">
+                <img src="assets/projects/piano-school/hero/hero3.png" 
+                     alt="Piano Collection">
+                <img src="assets/projects/piano-school/hero/hero4.png" 
+                     alt="Learning Page">
+                <img src="assets/projects/piano-school/hero/hero5.png" 
+                     alt="Support Chat">
+            </div>
+        </div>        
+    </header>
+
+    <!-- Metrics Section -->
+    <section class="metrics" [@staggerFade]>
+        <div class="container">
+            <div class="metric" *ngFor="let metric of metrics">
+                <span class="metric-value">{{metric.value}}</span>
+                <p>{{metric.label}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Professor Gorgieva's Teaching Platform</h2>
+            <div class="features-grid">
+                <div class="feature" *ngFor="let feature of features">
+                    <i [class]="feature.icon"></i>
+                    <h3>{{feature.title}}</h3>
+                    <p>{{feature.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>Platform Overview</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot" *ngFor="let screen of screenshots">
+                    <img [src]="screen.src" [alt]="screen.alt" loading="lazy">
+                    <div class="caption">
+                        <h3>{{screen.caption}}</h3>
+                        <p>{{screen.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Professor's Perspective</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>{{testimonials[0].quote}}</p>
+                    <footer>
+                        <cite>{{testimonials[0].author}}</cite>
+                        <span>{{testimonials[0].position}}</span>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Want to Build Your Own Educational Platform?</h2>
+            <a routerLink="/contact-us" class="btn-primary">
+                <span>Let's Connect →</span>
+            </a>
+        </div>
+    </section>
+</div>

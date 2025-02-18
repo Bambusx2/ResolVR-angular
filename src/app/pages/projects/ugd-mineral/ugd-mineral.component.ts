@@ -1,14 +1,120 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
+import { trigger, transition, style, animate, stagger, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-ugd-mineral',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, NgOptimizedImage],
   templateUrl: './ugd-mineral.component.html',
-  styleUrls: ['./ugd-mineral.component.css']
+  styleUrls: ['./ugd-mineral.component.css'],
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)',
+          boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
+        }),
+        animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)',
+            boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+          })
+        )
+      ])
+    ]),
+    trigger('staggerFade', [
+      transition(':enter', [
+        query('.metric', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(100, [
+            animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+              style({ 
+                opacity: 1, 
+                transform: 'translateY(0)',
+                boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+              })
+            )
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class UgdMineralComponent {
+  metrics = [
+    { value: '500+', label: 'Research Samples' },
+    { value: '50+', label: 'Published Papers' },
+    { value: '100%', label: 'Analysis Accuracy' },
+    { value: '24/7', label: 'Platform Availability' }
+  ];
+
+  features = [
+    {
+      icon: "fas fa-microscope",
+      title: "Advanced Analysis",
+      description: "State-of-the-art mineral analysis tools developed specifically for UGD's research requirements."
+    },
+    {
+      icon: "fas fa-chart-line",
+      title: "Data Visualization",
+      description: "Custom-built visualization tools for comprehensive mineral data analysis and research."
+    },
+    {
+      icon: "fas fa-database",
+      title: "Sample Management",
+      description: "Specialized database system for organizing and tracking UGD's mineral research samples."
+    },
+    {
+      icon: "fas fa-flask",
+      title: "Research Tools",
+      description: "Advanced tools tailored for academic research and mineral property analysis at UGD."
+    },
+    {
+      icon: "fas fa-file-alt",
+      title: "Report Generation",
+      description: "Automated reporting system designed for UGD's research documentation requirements."
+    },
+    {
+      icon: "fas fa-users",
+      title: "Collaboration",
+      description: "Enhanced team collaboration features for UGD's research groups and faculty members."
+    }
+  ];
+
+  screenshots = [
+    {
+      src: 'assets/projects/ugd-mineral/app/overview.png',
+      alt: 'Analysis Dashboard',
+      caption: 'Research Dashboard',
+      description: 'Custom-built mineral analysis dashboard for UGD research requirements.'
+    },
+    {
+      src: 'assets/projects/ugd-mineral/app/operations.png',
+      alt: 'Sample Management',
+      caption: 'Sample Management',
+      description: "Comprehensive system for managing UGD's mineral samples and research data."
+      },
+    {
+      src: 'assets/projects/ugd-mineral/app/comparison.png',
+      alt: 'Data Comparison',
+      caption: 'Analysis Tools',
+      description: "Specialized tools for comparing and analyzing mineral properties in UGD's research."
+    }
+  ];
+
+  testimonials = [
+    {
+      quote: "MineralExplorer has revolutionized our research capabilities at UGD. The platform's advanced analysis tools and intuitive interface have significantly improved our research workflow.",
+      author: "Prof. Dr. Tena Sijakova Ivanova",
+      position: "Faculty of Natural and Technical Sciences"
+    }
+  ];
+
   constructor(private el: ElementRef) {}
 
   @HostListener('window:scroll', ['$event'])
@@ -33,73 +139,4 @@ export class UgdMineralComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-  screenshots = [
-    {
-      src: 'assets/projects/ugd-mineral/app/overview.png',
-      alt: 'Trend Analysis Dashboard',
-      caption: 'Interactive trend analysis dashboard showing mineral data patterns over time',
-      description: 'Our advanced dashboard provides real-time insights into mineral trends and patterns, enabling data-driven decision making for mining operations.'
-    },
-    {
-      src: 'assets/projects/ugd-mineral/app/operations.png',
-      alt: 'Mineral Data Management',
-      caption: 'Comprehensive mineral data table with filtering and management capabilities',
-      description: 'Efficiently manage and organize mineral data with our powerful filtering and sorting tools, designed for optimal workflow management.'
-    },
-    {
-      src: 'assets/projects/ugd-mineral/app/comparison.png',
-      alt: 'Mineral Properties Comparison',
-      caption: 'Advanced comparison tool for analyzing mineral characteristics and properties',
-      description: 'Compare multiple minerals side by side, analyzing their properties, composition, and market values with our intuitive comparison interface.'
-    },
-    {
-      src: 'assets/projects/ugd-mineral/app/reports.png',
-      alt: 'Mining Reports Generation',
-      caption: 'Detailed reporting system for mineral extraction and analysis data',
-      description: 'Generate comprehensive reports with customizable templates, perfect for stakeholder presentations and regulatory compliance.'
-    }
-  ];
-
-  features = [
-    {
-      title: 'Interactive Data Analysis',
-      description: 'Real-time trend analysis and data visualization tools for monitoring mineral properties and market values.',
-      icon: '📊'
-    },
-    {
-      title: 'Advanced Comparison Tools',
-      description: 'Side-by-side comparison of mineral properties including hardness, density, and chemical composition.',
-      icon: '🔍'
-    },
-    {
-      title: 'Comprehensive Reports',
-      description: 'Generate detailed reports on mineral extraction rates, regional analysis, and mining operations across Europe.',
-      icon: '📑'
-    },
-    {
-      title: 'Data Management System',
-      description: 'Efficient database system for managing mineral information, locations, and historical data.',
-      icon: '💾'
-    },
-    {
-      title: 'Research Integration',
-      description: 'Seamless integration with research methodologies and academic standards for mineral analysis.',
-      icon: '🔬'
-    },
-    {
-      title: 'Collaborative Platform',
-      description: 'Enhanced collaboration tools for research teams and industry professionals working on mineral studies.',
-      icon: '🤝'
-    }
-  ];
-
-  testimonials = [
-    {
-      quote: "MineralExplorer represents a significant advancement in mineral analysis technology. Its comprehensive features and intuitive interface make it an invaluable tool for both academic research and industry applications.",
-      author: "Prof. Dr. Tena Sijakova Ivanova",
-      position: "Full Professor",
-      company: "Faculty of Natural and Technical Sciences"
-    }
-  ];
 }

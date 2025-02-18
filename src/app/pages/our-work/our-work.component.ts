@@ -24,11 +24,11 @@ export class OurWorkComponent {
       route: 'ugd-mineral' 
     },
     { 
-      name: 'Kontron', 
-      client: 'Kontron', 
-      image: 'assets/screens/kontron_dashboard.png', 
+      name: 'MusicSheetKids', 
+      client: 'BIG Piano School', 
+      image: 'assets/projects/piano-school/app/overview.png', 
       logo: 'assets/logos/kontron.png', 
-      route: 'kontron' 
+      route: 'piano-school' 
     },
     { 
       name: 'Warehouse Management', 
