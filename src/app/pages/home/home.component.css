@@ -89,30 +89,41 @@
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, #11c4b9, #0d1b34);
+  position: relative;
+  overflow: hidden;
 }
 
-.partner-carousel h2 {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  color: #11c4b9;
-  margin-bottom: 30px;
-  font-weight: 700;
-  text-align: center;
+/* Add subtle gradient overlays for smooth edge fading */
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.partner-carousel h2.section-title {
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0d1b34 0%, transparent 100%);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0d1b34 0%, transparent 100%);
+}
+
+.section-title {
   font-size: 2.8rem;
   color: #11c4b9;
   margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
-}
-
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
+  text-shadow: 0 0 20px rgba(17, 196, 185, 0.3);
   position: relative;
 }
 
@@ -121,22 +132,23 @@
   gap: 30px;
   animation: scroll 40s linear infinite;
   width: max-content;
+  padding: 10px 0;
 }
 
 .logo-track img {
   width: 150px;
   height: 80px;
   object-fit: contain;
-  filter: invert(100%) grayscale(100%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
 }
 
 .logo-track img:hover {
-  transform: scale(1.05);
-  filter: invert(100%) grayscale(100%) brightness(1.1);
+  transform: translateY(-5px);
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(17, 196, 185, 0.4));
 }
 
 @keyframes scroll {
@@ -148,7 +160,19 @@
   }
 }
 
+/* Optimize performance */
+@media (prefers-reduced-motion: no-preference) {
+  .logo-track {
+    animation: scroll 40s linear infinite;
+  }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  .logo-track {
+    animation: none;
+    transform: translateX(0);
+  }
+}
 
 /* --- Responsive Adjustments --- */
 

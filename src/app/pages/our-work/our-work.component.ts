@@ -27,7 +27,7 @@ export class OurWorkComponent {
       name: 'MusicSheetKids', 
       client: 'BIG Piano School', 
       image: 'assets/projects/piano-school/app/overview.png', 
-      logo: 'assets/logos/kontron.png', 
+      logo: 'assets/logos/pianoSchool.png', 
       route: 'piano-school' 
     },
     { 
@@ -41,9 +41,23 @@ export class OurWorkComponent {
       name: 'CityGym', 
       client: 'City Gym Australia', 
       image: 'assets/projects/city-gym/hero/hero1.png', 
-      logo: 'assets/logos/enbravia.png', 
+      logo: 'assets/logos/cityGym.png', 
       route: 'city-gym' 
     },
+    { 
+      name: 'Team augmentation', 
+      client: 'Iskratel', 
+      image: 'assets/projects/iskratel/iskratel-team.jpg', 
+      logo: 'assets/logos/iskratel.png', 
+      route: 'iskratel' 
+    },
+    { 
+      name: 'Team augmentation', 
+      client: 'Kontron', 
+      image: 'assets/projects/kontron/kontron-team.webp', 
+      logo: 'assets/logos/kontron.png', 
+      route: 'kontron' 
+    }
   ];
 
   navigateToProject(route: string) {

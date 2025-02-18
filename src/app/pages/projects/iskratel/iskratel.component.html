@@ -1,0 +1,65 @@
+<div class="project-container">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Iskratel
+                <span class="accent">Team Augmentation & Development</span>
+            </h1>
+            <p class="subtitle">Strategic partnership providing skilled development teams and custom software solutions
+                <br>🔹 <strong>Delivering</strong> excellence through dedicated team augmentation.</p>
+        </div>
+    </header>
+
+    <!-- Metrics Section -->
+    <section class="metrics" [@staggerFade]>
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card" *ngFor="let metric of metrics">
+                    <div class="metric-value">{{metric.value}}</div>
+                    <div class="metric-label">{{metric.label}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+   <section class="features">
+        <div class="container">
+            <h2>Partnership Benefits</h2>
+            <div class="features-grid">
+                <div class="feature" *ngFor="let feature of features; let i = index" 
+                     [@fadeInUp]
+                     [style.animation-delay]="i * 100 + 'ms'">
+                    <i [class]="feature.icon"></i>
+                    <h3>{{feature.title}}</h3>
+                    <p>{{feature.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Testimonial</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial" *ngFor="let testimonial of testimonials" @fadeInUp>
+                    <p>{{testimonial.quote}}</p>
+                    <footer>
+                        <cite>{{testimonial.author}}</cite>
+                        <span>{{testimonial.position}}</span>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- CTA Section -->
+      <section class="cta">
+        <div class="container">
+            <h2>Ready to transform your team?</h2>
+            <a routerLink="/contact-us" class="btn-primary">
+                <span>Contact Us →</span>
+            </a>
+        </div>
+    </section>
+</div>
