@@ -16,6 +16,7 @@ import { PianoSchoolComponent } from './pages/projects/piano-school/piano-school
 import { CityGymComponent } from './pages/projects/city-gym/city-gym.component';
 import { KontronComponent } from './pages/projects/kontron/kontron.component';
 import { IskratelComponent } from './pages/projects/iskratel/iskratel.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,5 +36,10 @@ export const routes: Routes = [
   { path: 'our-work/piano-school', component: PianoSchoolComponent },
   { path: 'our-work/city-gym', component: CityGymComponent },
   { path: 'our-work/iskratel', component: IskratelComponent },
-  { path: 'our-work/kontron', component: KontronComponent }
+  { path: 'our-work/kontron', component: KontronComponent },
+  {
+    path: 'privacy-policy',
+    component: PrivacyComponent,
+    title: 'Privacy Policy - ResolVR'
+  }
 ];
