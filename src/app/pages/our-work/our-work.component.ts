@@ -38,6 +38,13 @@ export class OurWorkComponent {
       route: 'gichev-trejd' 
     },
     { 
+      name: 'Rima Term Control System', 
+      client: 'Rima Term', 
+      image: 'assets/projects/rima-term/hero/hero.png', 
+      logo: 'assets/logos/rima-hero.webp', 
+      route: 'rimaterm' 
+    },
+    { 
       name: 'CityGym', 
       client: 'City Gym Australia', 
       image: 'assets/projects/city-gym/hero/hero1.png', 
