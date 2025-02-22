@@ -1,0 +1,166 @@
+<div class="project-container">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Rima-Term
+                <span class="accent">Warehouse Management System</span>
+            </h1>
+            <p class="subtitle">A comprehensive warehouse and production management solution for <strong>Rima-Term</strong>, 
+                a leading producer of sunflower oil, seeds, and agricultural products since 1995.</p>
+            <div class="hero-image">
+                <img 
+                    [ngSrc]="'assets/projects/rima-term/hero/rima-hero.webp'"
+                    priority
+                    alt="Rima-Term System Overview"
+                    width="1518"
+                    height="927">
+            </div>
+        </div>
+    </header>
+
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Project Overview</span>
+                <h2>Transforming Warehouse Operations</h2>
+                <p class="overview-subtitle">A comprehensive digital transformation project for one of Macedonia's leading food producers</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>Rima-Term</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Food Production</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Warehouse Management System</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Project Duration</h3>
+                        <p>1.5+ years</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Headquarters</h3>
+                        <p>Skopje, Macedonia</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team</h3>
+                        <div class="team-members">
+                            <span>Solution Architect</span>
+                            <span>Frontend Developer</span>
+                            <span>Backend Developer</span>
+                            <span>QA Engineer</span>
+                            <span>Project Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>About the Project</h3>
+                        <p>
+                            Rima-Term, established in 1995, has grown into a leading producer of sunflower oil, seeds, and agricultural products. 
+                            Our collaboration began in 2022 with the goal of modernizing their warehouse and production management processes.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>The Challenge</h3>
+                        <p>
+                            The challenge was to create a unified system that could handle their diverse product range while maintaining precise 
+                            inventory control across multiple warehouses. Our solution streamlined their operations from raw material procurement 
+                            to finished product distribution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics" [@staggerFade]>
+        <div class="container">
+            <div class="metric" *ngFor="let metric of metrics">
+                <span class="metric-value">{{metric.value}}</span>
+                <p>{{metric.label}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature" *ngFor="let feature of features; let i = index" 
+                     [@fadeInUp]
+                     [style.animation-delay]="i * 100 + 'ms'">
+                    <i [class]="feature.icon"></i>
+                    <h3>{{feature.title}}</h3>
+                    <p>{{feature.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial" *ngFor="let testimonial of testimonials" @fadeInUp>
+                    <p>{{testimonial.quote}}</p>
+                    <footer>
+                        <cite>{{testimonial.author}}</cite>
+                        <span>{{testimonial.position}}</span>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <a routerLink="/contact-us" class="btn-primary">
+                <span>Get Started →</span>
+            </a>
+        </div>
+    </section>
+</div>
