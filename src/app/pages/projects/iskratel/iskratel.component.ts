@@ -88,7 +88,7 @@ export class IskratelComponent {
   testimonials = [
     {
       quote: "The team has consistently delivered high-quality results and demonstrated exceptional technical expertise. Their commitment to excellence and ability to integrate seamlessly with our internal teams has made them an invaluable partner.",
-      author: "Project Manager",
+      author: "Darko Vidinikj - Project Manager",
       position: "Iskratel"
     }
   ];

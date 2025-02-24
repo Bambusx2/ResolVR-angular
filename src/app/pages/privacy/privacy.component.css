@@ -218,4 +218,94 @@
     font-size: 1.1rem;
   }
 }
+
+/* Contact CTA Section */
+.contact-cta {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background: rgba(17, 196, 185, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(17, 196, 185, 0.1);
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 1.2s;
+}
+
+.contact-cta h2 {
+  font-size: 2.2rem;
+  color: #11c4b9;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-cta p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-cta .cta-button {
+  display: inline-block;
+  padding: 16px 42px;
+  background: linear-gradient(135deg, #11c4b9, #00ffcc);
+  color: #0d1b34;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(17, 196, 185, 0.2);
+}
+
+.contact-cta .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(17, 196, 185, 0.3);
+  background: linear-gradient(135deg, #00ffcc, #11c4b9);
+}
+
+.contact-cta .cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(17, 196, 185, 0.2);
+}
+
+.contact-cta .cta-button:focus-visible {
+  outline: 3px solid #11c4b9;
+  outline-offset: 2px;
+}
+
+/* Update responsive styles for contact CTA */
+@media (max-width: 768px) {
+  .contact-cta {
+    margin-top: 40px;
+    padding: 30px 20px;
+  }
+
+  .contact-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-cta p {
+    font-size: 1rem;
+  }
+
+  .contact-cta .cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-cta,
+  .contact-cta .cta-button {
+    animation: none;
+    transition: none;
+  }
+
+  .contact-cta .cta-button:hover {
+    transform: none;
+  }
+}
   

@@ -148,9 +148,70 @@
   }
 }
 
+/* Technologies Section */
+.technologies {
+  background: linear-gradient(135deg, #0d1b34, #1c3253);
+  padding: 100px 0 0 0;
+}
 
+.technologies .carousel-container {
+  background: radial-gradient(circle, #11c4b9, #0d1b34);
+  padding: 40px 0;
+  width: 100%;
+}
 
-/* --- Responsive Adjustments --- */
+.technologies .title-section {
+  position: relative;
+  padding: 0 20px 60px;
+  margin: 0 auto;
+  max-width: 800px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.technologies .title-section::before {
+  display: none;
+}
+
+.technologies .section-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #11c4b9;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(17, 196, 185, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.technologies .shiny-line {
+  width: 200px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(17, 196, 185, 0.8) 50%, 
+    transparent 100%);
+  position: relative;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.technologies .logo-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 50s linear infinite;
+  width: max-content;
+  padding: 0 20px;
+}
+
+.technologies .shiny-line::before,
+.technologies .title-section::after {
+  display: none;
+}
+
 
 /* For devices below 1200px */
 @media (max-width: 1200px) {
@@ -207,6 +268,10 @@
   .logo-track img {
     width: 100px;
     height: auto;
+  }
+  .technologies .title-section {
+    margin: 0 20px 40px;
+    padding: 30px 20px;
   }
 }
 
