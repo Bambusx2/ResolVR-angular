@@ -77,10 +77,10 @@
   <div class="container">
     <h2 class="section-title">Expert Software Development & IT Solutions</h2>
     <p class="services-text">
-      We provide <strong>scalable</strong>, <strong>custom</strong>, and <strong>high-performance</strong> software solutions tailored to your business needs.
+      We provide <span class="highlight">scalable</span>, <span class="highlight">custom</span>, and  <span class="highlight">high-performance</span> software solutions tailored to your business needs.
       Whether you need dedicated developers, system architecture, or full-scale product development, we've got you covered.
     </p>
-    <a href="/services" class="cta-button">Discover More →</a>
+    <a href="/services" class="cta-button">Discover More →</a>`
   </div>
 </section>
 
@@ -92,32 +92,31 @@
   
   <div class="carousel-container">
     <div class="logo-track">
-      <img src="assets/tech/kafka.webp" loading="lazy" alt="Kafka Logo" />
-      <img src="assets/tech/java.webp" loading="lazy" alt="Java Logo" />
-      <img src="assets/tech/spring.webp" loading="lazy" alt="Spring Boot Logo" />
-      <img src="assets/tech/angular.webp" loading="lazy" alt="Angular Logo" />
-      <img src="assets/tech/docker.webp" loading="lazy" alt="Docker Logo" />
-      <img src="assets/tech/kubernetes.webp" loading="lazy" alt="Kubernetes Logo" />
-      <img src="assets/tech/postgresql.webp" loading="lazy" alt="PostgreSQL Logo" />
-      <img src="assets/tech/react.webp" loading="lazy" alt="React Logo" />
-      <img src="assets/tech/mongo.webp" loading="lazy" alt="MongoDB Logo" />
-      <img src="assets/tech/redis.webp" loading="lazy" alt="Redis Logo" />
-      <img src="assets/tech/activemq.webp" loading="lazy" alt="ActiveMq Logo" />
-      <img src="assets/tech/rabbitmq.webp" loading="lazy" alt="RabbitMq Logo" />
-
+      <div class="tech-icon" *ngFor="let tech of techStack" [attr.title]="tech.title">
+        <svg 
+          role="img" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+          [attr.aria-label]="tech.title + ' icon'"
+        >
+          <title>{{tech.title}}</title>
+          <path [attr.d]="tech.icon.path"/>
+        </svg>
+        <span class="tech-name">{{tech.title}}</span>
+      </div>
       <!-- Duplicate for infinite scrolling -->
-      <img src="assets/tech/kafka.webp" loading="lazy" alt="Kafka Logo" />
-      <img src="assets/tech/java.webp" loading="lazy" alt="Java Logo" />
-      <img src="assets/tech/spring.webp" loading="lazy" alt="Spring Boot Logo" />
-      <img src="assets/tech/angular.webp" loading="lazy" alt="Angular Logo" />
-      <img src="assets/tech/docker.webp" loading="lazy" alt="Docker Logo" />
-      <img src="assets/tech/kubernetes.webp" loading="lazy" alt="Kubernetes Logo" />
-      <img src="assets/tech/postgresql.webp" loading="lazy" alt="PostgreSQL Logo" />
-      <img src="assets/tech/react.webp" loading="lazy" alt="React Logo" />
-      <img src="assets/tech/mongodb.png" loading="lazy" alt="MongoDB Logo" />
-      <img src="assets/tech/redis.webp" loading="lazy" alt="Redis Logo" />
-      <img src="assets/tech/activemq.webp" loading="lazy" alt="ActiveMq Logo" />
-      <img src="assets/tech/rabbitmq.webp" loading="lazy" alt="RabbitMq Logo" />
+      <div class="tech-icon" *ngFor="let tech of techStack" [attr.title]="tech.title">
+        <svg 
+          role="img" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+          [attr.aria-label]="tech.title + ' icon'"
+        >
+          <title>{{tech.title}}</title>
+          <path [attr.d]="tech.icon.path"/>
+        </svg>
+        <span class="tech-name">{{tech.title}}</span>
+      </div>
     </div>
   </div>
 </section>
