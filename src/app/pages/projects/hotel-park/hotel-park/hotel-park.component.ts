@@ -2,11 +2,12 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
+import { ProjectCardsComponent } from '../../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-hotel-park',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProjectCardsComponent],
   templateUrl: './hotel-park.component.html',
   styleUrls: ['./hotel-park.component.css'],
   animations: [
@@ -28,6 +29,20 @@ import { trigger, transition, style, animate, stagger, query } from '@angular/an
             )
           ])
         ], { optional: true })
+      ])
+    ]),
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)' 
+        }),
+        animate('0.5s cubic-bezier(0.23, 1, 0.32, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)' 
+          })
+        )
       ])
     ])
   ]
@@ -98,8 +113,16 @@ export class HotelParkComponent {
       src: 'assets/projects/hotel-park/app/overview.png',
       alt: 'System Overview',
       caption: 'System Overview',
-      description: 'Real-time monitoring and analytics dashboard'
+      description: 'Complete overview of hotel operations and status'
     }
+  ];
+
+  projectTeam = [
+    'Solution Architect',
+    'Frontend Developer',
+    'Backend Developer',
+    'IoT Specialist',
+    'Project Manager'
   ];
 
   constructor(private el: ElementRef) {}

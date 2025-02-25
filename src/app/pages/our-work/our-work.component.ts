@@ -37,12 +37,12 @@ export class OurWorkComponent {
       logo: 'assets/logos/gichevTrejd.webp', 
       route: 'gichev-trejd' 
     },
-    {
-      name: 'Rima Term Control System',
-      client: 'Rima Term',
-      image: 'assets/projects/rima-term/hero/rima-hero.webp',
-      logo: 'assets/logos/rimaTerm.png',
-      route: 'rimaterm'
+    { 
+      name: 'Rima Term Control System', 
+      client: 'Rima Term', 
+      image: 'assets/projects/rima-term/hero/rima-hero.webp', 
+      logo: 'assets/logos/rimaTerm.png', 
+      route: 'rimaterm' 
     },
     { 
       name: 'CityGym', 

@@ -4,8 +4,8 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 import { ViewportScroller } from '@angular/common';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
-// Declare gtag for Google Analytics
 declare const gtag: Function;
 
 interface Testimonial {
@@ -22,7 +22,8 @@ interface Testimonial {
   imports: [
     CommonModule, 
     RouterLink, 
-    NgOptimizedImage
+    NgOptimizedImage,
+    ProjectCardsComponent
   ],
   animations: [
     trigger('fadeInUp', [
@@ -105,6 +106,15 @@ export class RimaTermComponent implements OnInit {
     { value: '85%', label: 'Reduced Errors', ariaLabel: 'Errors reduced by 85 percent' },
     { value: '50%', label: 'Faster Processing', ariaLabel: 'Processing speed improved by 50 percent' },
     { value: '40%', label: 'Cost Reduction', ariaLabel: 'Costs reduced by 40 percent' }
+  ];
+
+  projectTeam = [
+    'Solution Architect',
+    'Frontend Developer',
+    'Backend Developer',
+    'QA Engineer',
+    'Project Manager',
+    'UX Designer'
   ];
 
   ngOnInit() {

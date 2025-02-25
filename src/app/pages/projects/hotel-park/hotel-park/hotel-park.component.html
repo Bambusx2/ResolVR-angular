@@ -5,8 +5,7 @@
             <h1>Hotel Park
                 <span class="accent">Smart Hotel Management</span>
             </h1>
-            <p class="subtitle">  <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
-                actual system.</p>
+            <p class="subtitle">A comprehensive smart hotel management solution transforming guest experience and operational efficiency.</p>
             <div class="hero-image" [@staggerFade]>
                 <img src="assets/projects/hotel-park/hero/image1.png" 
                      alt="Start Tracking">
@@ -21,6 +20,104 @@
             </div>
         </div>        
     </header>
+
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Project Overview</span>
+                <h2>Smart Hotel Innovation</h2>
+                <p class="overview-subtitle">A digital transformation project revolutionizing hotel operations and guest experience</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>Hotel Park</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Hospitality</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Smart Hotel Management System</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Project Duration</h3>
+                        <p>1+ year</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Skopje, Macedonia</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team</h3>
+                        <div class="team-members">
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>About the Project</h3>
+                        <p>
+                            Hotel Park sought to modernize their operations through smart technology integration. Our collaboration 
+                            focused on developing a comprehensive system that would enhance both operational efficiency and guest experience.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>The Challenge</h3>
+                        <p>
+                            The hotel needed a unified system to manage room automation, energy consumption, and guest services. 
+                            The challenge was to create an intuitive platform that would seamlessly integrate various IoT devices 
+                            while providing powerful management tools.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Our Solution</h3>
+                        <p>
+                            We developed a smart hotel management system that combines IoT integration, mobile accessibility, 
+                            and comprehensive analytics. The solution enables automated room control, energy optimization, 
+                            and real-time monitoring of hotel operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Metrics Section -->
     <section class="metrics" [@staggerFade]>
@@ -81,10 +178,13 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Want to Build Your Own Management Platform?</h2>
+            <h2>Ready to transform your hotel?</h2>
             <a routerLink="/contact-us" class="btn-primary">
-                <span>Let's Connect →</span>
+                <span>Contact Us →</span>
             </a>
         </div>
     </section>
+
+    <!-- Project Cards -->
+    <app-project-cards [currentProjectRoute]="'hotel-park'"></app-project-cards>
 </div>

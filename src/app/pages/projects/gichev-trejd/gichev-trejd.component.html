@@ -18,6 +18,102 @@
         </div>
     </header>
 
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Project Overview</span>
+                <h2>Warehouse Management System</h2>
+                <p class="overview-subtitle">A comprehensive digital solution for efficient warehouse operations and inventory management</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>Gichev Trejd</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Wholesale & Distribution</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Warehouse Management System</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Project Duration</h3>
+                        <p>8 months</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Skopje, Macedonia</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team</h3>
+                        <div class="team-members">
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>About the Project</h3>
+                        <p>
+                            Gichev Trejd needed a modern warehouse management system to streamline their operations and improve efficiency. 
+                            Our collaboration focused on developing a comprehensive digital solution that would enhance inventory tracking, order processing, and logistics management.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>The Challenge</h3>
+                        <p>
+                            The company was struggling with manual inventory processes, leading to inefficiencies, stockouts, and order fulfillment delays. 
+                            The challenge was to create an integrated system that would automate workflows while providing real-time visibility into warehouse operations.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Our Solution</h3>
+                        <p>
+                            We developed a custom warehouse management system with AI-powered analytics, real-time inventory tracking, and automated order processing. 
+                            The solution integrates with existing systems and provides mobile access for management on the go, resulting in significant operational improvements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Metrics Section -->
     <section class="metrics" [@staggerFade]>
         <div class="container">
@@ -85,4 +181,5 @@
             </a>
         </div>
     </section>
+    <app-project-cards [currentProjectRoute]="'gichev-trejd'"></app-project-cards>
 </div>

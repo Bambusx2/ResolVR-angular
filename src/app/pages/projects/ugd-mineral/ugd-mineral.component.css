@@ -315,10 +315,179 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* Responsive Design */
+/* Project Overview */
+.project-overview {
+    padding: 6rem 0;
+    position: relative;
+    background: rgba(13, 27, 52, 0.5);
+}
+
+.project-overview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/constellation.svg') center/cover no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.overview-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.project-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(17, 196, 185, 0.1);
+    border: 1px solid rgba(17, 196, 185, 0.2);
+    border-radius: 2rem;
+    color: #11c4b9;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.overview-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.overview-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.overview-item {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.overview-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(17, 196, 185, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.item-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(17, 196, 185, 0.2), rgba(103, 58, 183, 0.2));
+    border-radius: 1rem;
+}
+
+.item-icon i {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #11c4b9, #673ab7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.overview-item h3 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+.overview-item p {
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.team-members span {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.project-description {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.description-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.description-item {
+    text-align: left;
+}
+
+.description-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.description-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 2px;
+    background: linear-gradient(135deg, #11c4b9, #673ab7);
+}
+
+.description-item p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 @media (max-width: 1024px) {
     .features-grid,
     .screenshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-grid,
+    .project-description {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -344,6 +513,27 @@ h2 {
     .testimonial {
         padding: 2rem;
         margin: 0 1rem;
+    }
+
+    .overview-grid,
+    .project-description {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-item {
+        padding: 1.25rem;
+    }
+
+    .description-item {
+        padding: 1.5rem;
+    }
+
+    .project-overview {
+        padding: 3rem 0;
+    }
+
+    .project-overview h1 {
+        font-size: 2rem;
     }
 }
 

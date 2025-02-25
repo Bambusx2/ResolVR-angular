@@ -1,12 +1,18 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-city-gym',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [
+    CommonModule,
+    RouterLink,
+    NgOptimizedImage,
+    ProjectCardsComponent
+  ],
   templateUrl: './city-gym.component.html',
   styleUrls: ['./city-gym.component.css'],
   animations: [
@@ -29,10 +35,31 @@ import { trigger, transition, style, animate, stagger, query } from '@angular/an
           ])
         ], { optional: true })
       ])
+    ]),
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)'
+        }),
+        animate('0.5s cubic-bezier(0.4, 0, 0.2, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)'
+          })
+        )
+      ])
     ])
   ]
 })
 export class CityGymComponent {
+  projectTeam = [
+    'Lead Developer',
+    'UI/UX Designer',
+    'Mobile Developer',
+    'QA Specialist'
+  ];
+
   metrics = [
     { value: '1000+', label: 'Active Members' },
     { value: '50+', label: 'Custom Programs' },
