@@ -3,11 +3,17 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 import { trigger, transition, style, animate, stagger, query, group } from '@angular/animations';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-ugd-mineral',
   standalone: true,
-  imports: [CommonModule, RouterLink, NgOptimizedImage],
+  imports: [
+    CommonModule, 
+    RouterLink, 
+    NgOptimizedImage,
+    ProjectCardsComponent
+  ],
   templateUrl: './ugd-mineral.component.html',
   styleUrls: ['./ugd-mineral.component.css'],
   animations: [
@@ -15,28 +21,25 @@ import { trigger, transition, style, animate, stagger, query, group } from '@ang
       transition(':enter', [
         style({ 
           opacity: 0, 
-          transform: 'translateY(20px)',
-          boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
+          transform: 'translateY(20px)'
         }),
-        animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+        animate('0.5s ease-out', 
           style({ 
             opacity: 1, 
-            transform: 'translateY(0)',
-            boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+            transform: 'translateY(0)'
           })
         )
       ])
     ]),
     trigger('staggerFade', [
       transition(':enter', [
-        query('.metric', [
+        query('.overview-item', [
           style({ opacity: 0, transform: 'translateY(20px)' }),
           stagger(100, [
-            animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
+            animate('0.5s ease-out', 
               style({ 
                 opacity: 1, 
-                transform: 'translateY(0)',
-                boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
+                transform: 'translateY(0)'
               })
             )
           ])
@@ -46,6 +49,17 @@ import { trigger, transition, style, animate, stagger, query, group } from '@ang
   ]
 })
 export class UgdMineralComponent {
+  projectTeam = [
+    'Solution Architect',
+    'Frontend Developer',
+    'Backend Developer',
+    'Data Scientist',
+    'Project Manager',
+    'UX/UI Designer',
+    'DevOps Engineer',
+    'Quality Assurance Engineer'
+  ];
+
   metrics = [
     { value: '500+', label: 'Research Samples' },
     { value: '50+', label: 'Published Papers' },

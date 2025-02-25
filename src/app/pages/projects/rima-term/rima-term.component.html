@@ -78,13 +78,9 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="item-content">
-                        <h3>Team</h3>
+                        <h3>Team Composition</h3>
                         <div class="team-members">
-                            <span>Solution Architect</span>
-                            <span>Frontend Developer</span>
-                            <span>Backend Developer</span>
-                            <span>QA Engineer</span>
-                            <span>Project Manager</span>
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
                         </div>
                     </div>
                 </div>
@@ -105,6 +101,14 @@
                             The challenge was to create a unified system that could handle their diverse product range while maintaining precise 
                             inventory control across multiple warehouses. Our solution streamlined their operations from raw material procurement 
                             to finished product distribution.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Our Solution</h3>
+                        <p>
+                            We developed a custom warehouse management system with integrated production planning capabilities, 
+                            focusing on user-friendly interfaces and robust backend architecture. The solution was designed to scale 
+                            with the company's growth and adapt to changing business requirements.
                         </p>
                     </div>
                 </div>
@@ -163,4 +167,6 @@
             </a>
         </div>
     </section>
+
+    <app-project-cards [currentProjectRoute]="'rima-term'"></app-project-cards>
 </div>

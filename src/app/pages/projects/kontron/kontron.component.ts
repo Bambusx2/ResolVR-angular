@@ -2,11 +2,12 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-kontron',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProjectCardsComponent],
   templateUrl: './kontron.component.html',
   styleUrls: ['./kontron.component.css'],
   animations: [
@@ -52,14 +53,24 @@ export class KontronComponent {
       description: 'Robust Java/Spring Boot backend implementations.'
     },
     {
-      icon: 'fas fa-cloud',
-      title: 'Cloud Solutions',
-      description: 'Advanced cloud integration and optimization.'
-    },
-    {
       icon: 'fas fa-users-cog',
       title: 'Agile Practices',
       description: 'Scrum methodology and efficient CI/CD processes.'
+    },
+    {
+      icon: "fas fa-cogs",
+      title: "Process Optimization",
+      description: "Streamlined development processes and improved efficiency."
+    },
+    {
+      icon: "fas fa-shield-alt",
+      title: "Quality Assurance",
+      description: "Comprehensive testing and quality control procedures."
+    },
+    {
+      icon: "fas fa-chart-line",
+      title: "Scalable Solutions",
+      description: "Flexible resource allocation based on project requirements."
     }
   ];
 
@@ -69,6 +80,15 @@ export class KontronComponent {
       author: "Slobodan Jovanovski",
       position: "CEO at Kontron"
     }
+  ];
+
+  projectTeam = [
+    'Frontend Developer', 
+    'Backend Developer', 
+    'DevOps Engineer', 
+    'UI/UX Designer', 
+    'Project Manager',
+    'QA Engineer'
   ];
 
   overview = {

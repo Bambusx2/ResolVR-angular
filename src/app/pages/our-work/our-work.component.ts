@@ -40,8 +40,8 @@ export class OurWorkComponent {
     { 
       name: 'Rima Term Control System', 
       client: 'Rima Term', 
-      image: 'assets/projects/rima-term/hero/hero.png', 
-      logo: 'assets/logos/rima-hero.webp', 
+      image: 'assets/projects/rima-term/hero/rima-hero.webp', 
+      logo: 'assets/logos/rimaTerm.png', 
       route: 'rimaterm' 
     },
     { 

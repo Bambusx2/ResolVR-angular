@@ -6,9 +6,105 @@
                 <span class="accent">Team Augmentation & Development</span>
             </h1>
             <p class="subtitle">Strategic partnership providing skilled development teams and custom software solutions
-                <br>🔹 <strong>Delivering</strong> excellence through dedicated team augmentation.</p>
+                <br> <strong>Delivering</strong> excellence through dedicated team augmentation.</p>
         </div>
     </header>
+
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Partnership Overview</span>
+                <h2>Long-term Development Partnership</h2>
+                <p class="overview-subtitle">A strategic 5+ year collaboration providing dedicated development teams and specialized expertise</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>Iskratel</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Telecommunications</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Team Augmentation</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Partnership Duration</h3>
+                        <p>5+ years</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Remote & On-site</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team Composition</h3>
+                        <div class="team-members">
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Partnership Overview</h3>
+                        <p>
+                            Our long-term collaboration with Iskratel spans over 5 years, providing dedicated development teams and specialized expertise in telecommunications software. 
+                            We've integrated seamlessly with their internal teams, becoming a trusted extension of their development capabilities.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Technical Expertise</h3>
+                        <p>
+                            Our team has contributed expertise in Java, Spring Boot, microservices architecture, and cloud solutions. 
+                            We've played a key role in optimizing software infrastructure and enhancing digital services for Iskratel's telecommunications systems.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Collaboration Model</h3>
+                        <p>
+                            We've implemented a flexible collaboration model that scales according to project needs. 
+                            Our dedicated teams work in close coordination with Iskratel's product owners, ensuring alignment with business objectives while maintaining technical excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Metrics Section -->
     <section class="metrics" [@staggerFade]>
@@ -37,6 +133,7 @@
             </div>
         </div>
     </section>
+
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -53,8 +150,8 @@
         </div>
     </section>
 
-      <!-- CTA Section -->
-      <section class="cta">
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
             <h2>Ready to transform your team?</h2>
             <a routerLink="/contact-us" class="btn-primary">
@@ -62,4 +159,7 @@
             </a>
         </div>
     </section>
+
+    <!-- Project Cards -->
+    <app-project-cards [currentProjectRoute]="'iskratel'"></app-project-cards>
 </div>

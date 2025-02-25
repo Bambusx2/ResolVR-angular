@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-iskratel',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProjectCardsComponent],
   templateUrl: './iskratel.component.html',
   styleUrls: ['./iskratel.component.css'],
   animations: [
@@ -45,6 +46,14 @@ import { trigger, transition, style, animate, stagger, query } from '@angular/an
   ]
 })
 export class IskratelComponent {
+  projectTeam = [
+    'Project Manager',
+    'Senior Developers',
+    'QA Engineers',
+    'DevOps Specialists',
+    'UI/UX Designers'
+  ];
+
   metrics = [
     { value: '50+', label: 'Team Members' },
     { value: '5+', label: 'Years Partnership' },
@@ -88,8 +97,8 @@ export class IskratelComponent {
   testimonials = [
     {
       quote: "The team has consistently delivered high-quality results and demonstrated exceptional technical expertise. Their commitment to excellence and ability to integrate seamlessly with our internal teams has made them an invaluable partner.",
-      author: "Project Manager",
-      position: "Iskratel"
+      author: "Darko Vidinikj",
+      position: "Product Owner at Iskratel"
     }
   ];
 

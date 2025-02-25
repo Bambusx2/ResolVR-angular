@@ -8,8 +8,12 @@
             <p class="subtitle"><br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
                 actual system.</p>
             <div class="hero-image" [@staggerFade]>
-                <img src="assets/projects/city-gym/hero/hero1.png" 
-                     alt="Workout Tracking">
+                <img 
+                    [ngSrc]="'assets/projects/city-gym/hero/hero1.png'"
+                    priority
+                    alt="City Gym App Overview"
+                    width="1518"
+                    height="927">
                 <img src="assets/projects/city-gym/hero/hero2.png" 
                      alt="Activity Dashboard">
                 <img src="assets/projects/city-gym/hero/hero3.png" 
@@ -21,6 +25,102 @@
             </div>
         </div>        
     </header>
+
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Project Overview</span>
+                <h2>Fitness Tracking Solution</h2>
+                <p class="overview-subtitle">A comprehensive mobile application for gym members to track workouts and engage with the community</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>CityGym</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Fitness & Wellness</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Mobile Fitness App</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Project Duration</h3>
+                        <p>5 months</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Skopje, Macedonia</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team</h3>
+                        <div class="team-members">
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>About the Project</h3>
+                        <p>
+                            CityGym wanted to enhance member engagement and retention through a custom mobile application. 
+                            Our collaboration focused on developing a comprehensive fitness tracking solution that would align with their brand and training philosophy.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>The Challenge</h3>
+                        <p>
+                            The gym needed a way to digitize their workout programs and create a stronger community among members. 
+                            The challenge was to create an intuitive app that would appeal to users of all fitness levels while providing valuable data to the gym.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Our Solution</h3>
+                        <p>
+                            We developed a custom fitness app with workout tracking, goal setting, and community features. 
+                            The solution includes leaderboards, progress visualization, and social sharing capabilities, resulting in increased member engagement and retention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Metrics Section -->
     <section class="metrics" [@staggerFade]>
@@ -87,4 +187,5 @@
             </a>
         </div>
     </section>
+    <app-project-cards [currentProjectRoute]="'city-gym'"></app-project-cards>
 </div>

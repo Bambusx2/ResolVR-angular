@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { NgOptimizedImage } from '@angular/common';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 // Add interface for testimonial type
@@ -19,7 +19,8 @@ interface Testimonial {
   imports: [
     CommonModule, 
     RouterLink, 
-    NgOptimizedImage
+    NgOptimizedImage,
+    ProjectCardsComponent
   ],
   animations: [
     trigger('fadeInUp', [
@@ -51,6 +52,13 @@ interface Testimonial {
   ]
 })
 export class GichevTrejdComponent {
+  projectTeam = [
+    'Lead Developer',
+    'UI/UX Designer',
+    'Backend Developer',
+    'DevOps Engineer'
+  ];
+
   features = [
     {
       icon: 'fas fa-chart-line',

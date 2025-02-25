@@ -8,19 +8,115 @@
             <p class="subtitle">  <br>🔹 <strong>Note:</strong> The images below are <strong>mockups</strong> and do not represent the
                 actual system.</p>
             <div class="hero-image" [@staggerFade]>
-                <img src="assets/projects/piano-school/hero/hero1.png" 
+                <img src="assets/projects/piano-school/hero/hero1.png"
                      alt="Welcome to MusicSheetKids">
-                <img src="assets/projects/piano-school/hero/hero2.png" 
+                <img src="assets/projects/piano-school/hero/hero2.png"
                      alt="Explore piano sheets">
-                <img src="assets/projects/piano-school/hero/hero3.png" 
+                <img src="assets/projects/piano-school/hero/hero3.png"
                      alt="Piano Collection">
-                <img src="assets/projects/piano-school/hero/hero4.png" 
+                <img src="assets/projects/piano-school/hero/hero4.png"
                      alt="Learning Page">
-                <img src="assets/projects/piano-school/hero/hero5.png" 
+                <img src="assets/projects/piano-school/hero/hero5.png"
                      alt="Support Chat">
             </div>
-        </div>        
+        </div>
     </header>
+
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="container">
+            <div class="overview-header">
+                <span class="section-tag">Project Overview</span>
+                <h2>Piano Learning Innovation</h2>
+                <p class="overview-subtitle">A digital transformation project revolutionizing piano education and student experience</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Client</h3>
+                        <p>BIG Piano School</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Industry</h3>
+                        <p>Music Education</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Solution</h3>
+                        <p>Piano Learning Platform</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Project Duration</h3>
+                        <p>6 months</p>
+                    </div>
+                </div>
+                <div class="overview-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Location</h3>
+                        <p>Skopje, Macedonia</p>
+                    </div>
+                </div>
+                <div class="overview-item team-item" [@fadeInUp]>
+                    <div class="item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="item-content">
+                        <h3>Team</h3>
+                        <div class="team-members">
+                            <span *ngFor="let member of projectTeam">{{member}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <div class="description-grid">
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>About the Project</h3>
+                        <p>
+                            Professor Gorgieva sought to modernize her piano teaching methods through digital technology integration. 
+                            Our collaboration focused on developing a comprehensive platform that would enhance both teaching efficiency and student learning experience.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>The Challenge</h3>
+                        <p>
+                            The piano school needed a unified system to manage sheet music, track student progress, and provide interactive learning tools. 
+                            The challenge was to create an intuitive platform that would preserve the personal teaching approach while leveraging digital advantages.
+                        </p>
+                    </div>
+                    <div class="description-item" [@fadeInUp]>
+                        <h3>Our Solution</h3>
+                        <p>
+                            We developed a piano learning platform that combines interactive lessons, progress tracking, and direct communication with the professor. 
+                            The solution enables personalized learning paths, real-time feedback, and comprehensive music education resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Metrics Section -->
     <section class="metrics" [@staggerFade]>
@@ -87,4 +183,7 @@
             </a>
         </div>
     </section>
+
+     <!-- Project Cards -->
+     <app-project-cards [currentProjectRoute]="'hotel-park'"></app-project-cards>
 </div>

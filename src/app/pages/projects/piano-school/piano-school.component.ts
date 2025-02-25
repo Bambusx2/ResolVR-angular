@@ -2,30 +2,15 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
+import { ProjectCardsComponent } from '@shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-piano-school',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProjectCardsComponent],
   templateUrl: './piano-school.component.html',
   styleUrls: ['./piano-school.component.css'],
   animations: [
-    trigger('fadeInUp', [
-      transition(':enter', [
-        style({ 
-          opacity: 0, 
-          transform: 'translateY(20px)',
-          boxShadow: '0 0 0 rgba(17, 196, 185, 0)'
-        }),
-        animate('0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
-          style({ 
-            opacity: 1, 
-            transform: 'translateY(0)',
-            boxShadow: '0 15px 30px rgba(17, 196, 185, 0.15)'
-          })
-        )
-      ])
-    ]),
     trigger('staggerFade', [
       transition(':enter', [
         query('.metric, img', [
@@ -45,10 +30,31 @@ import { trigger, transition, style, animate, stagger, query } from '@angular/an
           ])
         ], { optional: true })
       ])
+    ]),
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(20px)' 
+        }),
+        animate('0.5s cubic-bezier(0.23, 1, 0.32, 1)', 
+          style({ 
+            opacity: 1, 
+            transform: 'translateY(0)' 
+          })
+        )
+      ])
     ])
   ]
 })
 export class PianoSchoolComponent {
+  projectTeam = [
+    'Lead Developer',
+    'UI/UX Designer',
+    'Backend Developer',
+    'QA Engineer'
+  ];
+
   metrics = [
     { value: '30+', label: 'Students Taught' },
     { value: '500+', label: 'Piano Lessons Given' },
@@ -119,4 +125,16 @@ export class PianoSchoolComponent {
   ];
 
   constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const elements = this.el.nativeElement.querySelectorAll('.feature, .metric');
+    elements.forEach((element: any) => {
+      const rect = element.getBoundingClientRect();
+      const isVisible = rect.top <= window.innerHeight * 0.8;
+      if (isVisible) {
+        element.classList.add('visible');
+      }
+    });
+  }
 }

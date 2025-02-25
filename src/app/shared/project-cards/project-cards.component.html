@@ -1,0 +1,34 @@
+<section class="other-projects">
+    <div class="container">
+        <h2>Explore More Projects</h2>
+        <div class="projects-grid">
+            <div *ngFor="let project of randomProjects" 
+                 class="project-card" 
+                 [routerLink]="['/our-work', project.route]"
+                 [@fadeInUp]>
+                <!-- Project Card Header -->
+                <div class="card-header">              
+                    <div class="logo-container">
+                        <img [src]="project.logo" 
+                             [alt]="project.client + ' Logo'" 
+                             class="client-logo" />
+                    </div>
+                    <div class="shiny-line"></div>
+                </div>
+
+                <!-- Project Preview -->
+                <div class="preview-container">
+                    <img [src]="project.image" 
+                         [alt]="project.name + ' Preview'" 
+                         class="preview-image" />
+                </div>
+
+                <!-- Project Info -->
+                <div class="project-info">
+                    <h3>{{project.name}}</h3>
+                    <p>{{project.client}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
