@@ -60,9 +60,10 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
         <nav class="legal-links" aria-label="Legal links">
-            <a href="/privacy-policy" itemprop="publishingPrinciples">Privacy Policy</a>
-            <a href="/terms-of-service" itemprop="publishingPrinciples">Terms of Service</a>
-            <a href="/cookies-policy" itemprop="publishingPrinciples">Cookie Policy</a>
+            <a [routerLink]="['/privacy-policy']" 
+               routerLinkActive="active"
+               class="legal-link"
+               aria-label="View Privacy Policy">Privacy Policy</a>
         </nav>
         <p>&copy; <span itemprop="copyrightYear">2024</span> 
            <span itemprop="copyrightHolder">ResolVR</span>. All rights reserved.</p>
