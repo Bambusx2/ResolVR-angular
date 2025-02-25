@@ -11,31 +11,28 @@
 </section>
 
 <section class="partner-carousel">
+  <div class="title-section">
+    <h2 class="section-title">Trusted by Industry Leaders</h2>
+    <div class="shiny-line"></div>
+  </div>
+  
   <div class="carousel-container">
     <div class="logo-track">
-      <img src="assets/logos/iskratel.png" loading="lazy" alt="Iskratel - A Leading European ICT Provider" />
-      <img src="assets/logos/kontron.png" loading="lazy" alt="Kontron Logo" />
-      <img src="assets/logos/gazprom.png" loading="lazy" alt="Gazprom Logo" />
-      <img src="assets/logos/hotel_park.jpg" loading="lazy" alt="Hotel Park Logo" />
-      <img src="assets/logos/rimac.svg" loading="lazy" alt="Rimac Logo" />
-      <img src="assets/logos/spar.png" loading="lazy" alt="SPAR ICS Logo" />
-      <img src="assets/logos/mm.svg" loading="lazy" alt="Meyer & Meyer Logo" />
-      <img src="assets/logos/ugd.png" loading="lazy" alt="University of Goce Delchev Logo" />
-      <img src="assets/logos/elj.svg" loading="lazy" alt="Elektro Ljubljana Logo" />
-      <img src="assets/logos/makpetrol.png" loading="lazy" alt="Makpetrol Logo" />
-      <img src="assets/logos/unicef.png" loading="lazy" alt="Unicef Logo" />
-      <!-- Repeat for seamless scrolling -->
-      <img src="assets/logos/iskratel.png" loading="lazy" alt="Iskratel Logo" />
-      <img src="assets/logos/kontron.png" loading="lazy" alt="Kontron Logo" />
-      <img src="assets/logos/gazprom.png" loading="lazy" alt="Gazprom Logo" />
-      <img src="assets/logos/hotel_park.jpg" loading="lazy" alt="Hotel Park Logo" />
-      <img src="assets/logos/rimac.svg" loading="lazy" alt="Rimac Logo" />
-      <img src="assets/logos/spar.png" loading="lazy" alt="SPAR ICS Logo" />
-      <img src="assets/logos/mm.svg" loading="lazy" alt="Meyer & Meyer Logo" />
-      <img src="assets/logos/ugd.png" loading="lazy" alt="University of Goce Delchev Logo" />
-      <img src="assets/logos/elj.svg" loading="lazy" alt="Elektro Ljubljana Logo" />
-      <img src="assets/logos/makpetrol.png" loading="lazy" alt="Makpetrol Logo" />
-      <img src="assets/logos/unicef.png" loading="lazy" alt="Unicef Logo" />
+      <div class="partner-icon" *ngFor="let partner of partners" [attr.title]="partner.name">
+        <a [href]="partner.website" target="_blank" rel="noopener noreferrer" class="partner-link" [attr.aria-label]="'Visit ' + partner.name + '\'s website'">
+          <div class="partner-logo">
+            <img [src]="partner.logo" [alt]="partner.alt" loading="lazy">
+          </div>
+        </a>
+      </div>
+      <!-- Duplicate for infinite scrolling -->
+      <div class="partner-icon" *ngFor="let partner of partners" [attr.title]="partner.name">
+        <a [href]="partner.website" target="_blank" rel="noopener noreferrer" class="partner-link" [attr.aria-label]="'Visit ' + partner.name + '\'s website'">
+          <div class="partner-logo">
+            <img [src]="partner.logo" [alt]="partner.alt" loading="lazy">
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
