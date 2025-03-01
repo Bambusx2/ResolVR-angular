@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 interface Project {
@@ -16,7 +16,7 @@ interface Project {
   templateUrl: './project-cards.component.html',
   styleUrls: ['./project-cards.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterModule],
   animations: [
     trigger('fadeInUp', [
       transition(':enter', [
@@ -43,28 +43,28 @@ export class ProjectCardsComponent implements OnInit {
     {
       name: 'Smart Hotel',
       client: 'Hotel Park',
-      image: 'assets/projects/hotel-park/app/overview.png',
-      logo: 'assets/logos/hotel_park.jpg',
+      image: 'assets/projects/hotel-park/app/overview.webp',
+      logo: 'assets/logos/hotel_park1.webp',
       route: 'hotel-park'
     },
     {
       name: 'Mineral Explorer',
       client: 'University of Goce Delchev',
-      image: 'assets/projects/ugd-mineral/app/overview.png',
-      logo: 'assets/logos/ugd.png',
+      image: 'assets/projects/ugd-mineral/app/overview.webp',
+      logo: 'assets/logos/ugd.webp',
       route: 'ugd-mineral'
     },
     {
       name: 'MusicSheetKids',
       client: 'BIG Piano School',
-      image: 'assets/projects/piano-school/app/overview.png',
-      logo: 'assets/logos/pianoSchool.png',
+      image: 'assets/projects/piano-school/app/overview.webp',
+      logo: 'assets/logos/pianoSchool.webp',
       route: 'piano-school'
     },
     {
       name: 'Warehouse Management',
       client: 'Gichev Trejd',
-      image: 'assets/projects/gichev-trejd/app/overview.png',
+      image: 'assets/projects/gichev-trejd/app/overview.webp',
       logo: 'assets/logos/gichevTrejd.webp',
       route: 'gichev-trejd'
     },
@@ -72,28 +72,28 @@ export class ProjectCardsComponent implements OnInit {
       name: 'Rima Term Control System',
       client: 'Rima Term',
       image: 'assets/projects/rima-term/hero/rima-hero.webp',
-      logo: 'assets/logos/rimaTerm.png',
+      logo: 'assets/logos/rimaTerm.webp',
       route: 'rimaterm'
     },
     {
       name: 'CityGym',
       client: 'City Gym Australia',
-      image: 'assets/projects/city-gym/hero/hero1.png',
-      logo: 'assets/logos/cityGym.png',
+      image: 'assets/projects/city-gym/hero/hero1.webp',
+      logo: 'assets/logos/cityGym.webp',
       route: 'city-gym'
     },
     {
       name: 'Team augmentation',
       client: 'Iskratel',
-      image: 'assets/projects/iskratel/iskratel-team.jpg',
-      logo: 'assets/logos/iskratel.png',
+      image: 'assets/projects/iskratel/iskratel-team.webp',
+      logo: 'assets/logos/iskratel.webp',
       route: 'iskratel'
     },
     {
       name: 'Team augmentation',
       client: 'Kontron',
       image: 'assets/projects/kontron/kontron-team.webp',
-      logo: 'assets/logos/kontron.png',
+      logo: 'assets/logos/kontron.webp',
       route: 'kontron'
     }
   ];;

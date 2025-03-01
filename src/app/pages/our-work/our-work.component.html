@@ -13,14 +13,14 @@
             <div class="work-card-header">              
                 <!-- Client Logo -->
                 <div class="client-logo-container">
-                    <img [src]="project.logo" [alt]="project.name + ' Logo'" class="client-logo" />
+                    <img [src]="project.logo" [alt]="project.name + ' Logo'" class="client-logo" style="max-width: 100%; object-fit: contain;" />
                 </div>
                 <div class="shiny-line"></div>
             </div>
 
             <!-- App Dashboard Image -->
             <div class="work-image-container">
-                <img [src]="project.image" [alt]="project.name + ' Dashboard'" class="work-image" />
+                <img [src]="project.image" [alt]="project.name + ' Dashboard'" class="work-image" style="object-fit: contain; max-width: 85%; max-height: 100%;" />
             </div>
 
             <!-- Project Info -->

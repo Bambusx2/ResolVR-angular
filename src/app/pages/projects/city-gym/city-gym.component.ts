@@ -1,5 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
@@ -10,7 +10,6 @@ import { ProjectCardsComponent } from '../../../shared/project-cards/project-car
   imports: [
     CommonModule,
     RouterLink,
-    NgOptimizedImage,
     ProjectCardsComponent
   ],
   templateUrl: './city-gym.component.html',
@@ -18,7 +17,7 @@ import { ProjectCardsComponent } from '../../../shared/project-cards/project-car
   animations: [
     trigger('staggerFade', [
       transition(':enter', [
-        query('.metric, img', [
+        query('.metric, img, .overview-item', [
           style({ 
             opacity: 0, 
             transform: 'translateY(20px)',
@@ -110,19 +109,19 @@ export class CityGymComponent {
 
   screenshots = [
     {
-      src: 'assets/projects/city-gym/app/activity-leaderboard.png',
+      src: 'assets/projects/city-gym/app/activity-leaderboard.webp',
       alt: 'Activity Leaderboard',
       caption: 'Member Leaderboard',
       description: 'Engaging competition system for CityGym members'
     },
     {
-      src: 'assets/projects/city-gym/app/ongoing-workout.png',
+      src: 'assets/projects/city-gym/app/ongoing-workout.webp',
       alt: 'Ongoing Workout',
       caption: 'Workout Tracking',
       description: 'Custom-built tracking for CityGym workouts'
     },
     {
-      src: 'assets/projects/city-gym/app/goal.png',
+      src: 'assets/projects/city-gym/app/goal.webp',
       alt: 'Goal Setting',
       caption: 'Goal Setting',
       description: 'Personalized goal tracking for members'

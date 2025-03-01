@@ -1,27 +1,28 @@
-<section id="home" class="hero">
+<section id="home" class="hero" aria-labelledby="hero-heading">
   <div class="hero-content">
-    <h1>
-      Empowering Businesses with <span class="highlight">Elite Tech Talent</span>
-      &amp; Scalable Solutions
+    <h1 id="hero-heading">
+      Empowering Businesses<br>with <span class="highlight">Elite Tech Talent</span> &amp; Scalable Solutions
     </h1>
-    <p class="partner-tagline">ResolVR – <i>"Your Partner in Offshore IT Success."</i></p>
-    <div class="shiny-line"></div>    
-    <a href="/services" class="cta-button" aria-label="Explore ResolVR Services">Explore Our Services →</a>
+    <p class="partner-tagline" aria-live="polite">ResolVR – <i>"Your Partner in Offshore IT Success."</i></p>
+    <div class="shiny-line" aria-hidden="true"></div>    
+    <a href="/services" class="cta-button" aria-label="Explore ResolVR Services" role="button">Explore Our Services →</a>
   </div>
 </section>
 
-<section class="partner-carousel">
+<section class="partner-carousel" aria-labelledby="partners-heading">
   <div class="title-section">
-    <h2 class="section-title">Trusted by Industry Leaders</h2>
-    <div class="shiny-line"></div>
+    <h2 id="partners-heading" class="section-title">Trusted by Industry Leaders</h2>
+    <div class="shiny-line" aria-hidden="true"></div>
   </div>
   
-  <div class="carousel-container">
+  <div class="carousel-container" role="region" aria-label="Partner logos carousel">
     <div class="logo-track">
       <div class="partner-icon" *ngFor="let partner of partners" [attr.title]="partner.name">
         <a [href]="partner.website" target="_blank" rel="noopener noreferrer" class="partner-link" [attr.aria-label]="'Visit ' + partner.name + '\'s website'">
           <div class="partner-logo">
-            <img [src]="partner.logo" [alt]="partner.alt" loading="lazy">
+            <img 
+              [src]="partner.logo"
+              [alt]="partner.alt">
           </div>
         </a>
       </div>
@@ -29,7 +30,9 @@
       <div class="partner-icon" *ngFor="let partner of partners" [attr.title]="partner.name">
         <a [href]="partner.website" target="_blank" rel="noopener noreferrer" class="partner-link" [attr.aria-label]="'Visit ' + partner.name + '\'s website'">
           <div class="partner-logo">
-            <img [src]="partner.logo" [alt]="partner.alt" loading="lazy">
+            <img 
+              [src]="partner.logo"
+              [alt]="partner.alt">
           </div>
         </a>
       </div>
@@ -37,10 +40,10 @@
   </div>
 </section>
 
-<section id="about" class="about-us">
+<section id="about" class="about-us" aria-labelledby="about-heading">
   <div class="about-container">
     <div class="about-content">
-      <h2>About <span class="highlight">ResolVR</span></h2>
+      <h2 id="about-heading">About <span class="highlight">ResolVR</span></h2>
       <p>
         At <span class="highlight">ResolVR</span>, we craft innovative, reliable, and efficient software solutions for startups and enterprises. 
         We prioritize collaboration and innovation to bring impactful solutions to life.
@@ -65,29 +68,29 @@
       </div>
     </div>
   </div>
-  <a href="/about" class="cta-button">Learn More →</a>
+  <a href="/about" class="cta-button" aria-label="Learn more about ResolVR" role="button">Learn More →</a>
 
 </section>
 
 <!-- Simplified Services Section -->
-<section id="services" class="services-overview">
+<section id="services" class="services-overview" aria-labelledby="services-heading">
   <div class="container">
-    <h2 class="section-title">Expert Software Development & IT Solutions</h2>
+    <h2 id="services-heading" class="section-title">Expert Software Development & IT Solutions</h2>
     <p class="services-text">
       We provide <span class="highlight">scalable</span>, <span class="highlight">custom</span>, and  <span class="highlight">high-performance</span> software solutions tailored to your business needs.
       Whether you need dedicated developers, system architecture, or full-scale product development, we've got you covered.
     </p>
-    <a href="/services" class="cta-button">Discover More →</a>`
+    <a href="/services" class="cta-button" aria-label="Discover ResolVR services" role="button">Discover More →</a>`
   </div>
 </section>
 
-<section class="partner-carousel technologies">
+<section class="partner-carousel technologies" aria-labelledby="technologies-heading">
   <div class="title-section">
-    <h2 class="section-title">Technologies We Use</h2>
-    <div class="shiny-line"></div>
+    <h2 id="technologies-heading" class="section-title">Technologies We Use</h2>
+    <div class="shiny-line" aria-hidden="true"></div>
   </div>
   
-  <div class="carousel-container">
+  <div class="carousel-container" role="region" aria-label="Technologies we use carousel">
     <div class="logo-track">
       <div class="tech-icon" *ngFor="let tech of techStack" [attr.title]="tech.title">
         <svg 

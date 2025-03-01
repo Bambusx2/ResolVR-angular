@@ -101,7 +101,7 @@ export class ContactUsComponent {
         message: this.formData.message
       }, this.emailjsUserId);
   
-      console.log('✅ Both Emails Sent Successfully');
+      // console.log('✅ Both Emails Sent Successfully');
       this.successMessage = '✅ Your message has been sent!';
       this.errorMessage = '';
   
@@ -117,7 +117,7 @@ export class ContactUsComponent {
   
   /** ✅ Reset Form */
   resetForm(form: any) {
-    console.log('Resetting Form...');
+    // console.log('Resetting Form...');
     
     // Reset form data
     this.formData = {

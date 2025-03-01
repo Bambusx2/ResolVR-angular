@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /assets/internal/
+Disallow: /admin/
+Disallow: /*?*query=
+
+# Allow specific bots to crawl everything
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /assets/images/
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+
+# Block specific folders that don't need to be indexed
+Disallow: /assets/logos/raw/
+Disallow: /assets/icons/raw/
+Disallow: /assets/images/performance/
+Disallow: /assets/js/debug/
+Disallow: /assets/css/draft/
+
+# Crawl delay for specific bots to reduce server load
+User-agent: *
+Crawl-delay: 10
+
+# Sitemap locations
+Sitemap: https://resolvr.dev/sitemap.xml
+Sitemap: https://resolvr.dev/sitemap-images.xml
+Sitemap: https://resolvr.dev/sitemap-projects.xml
+
+# Host directive for canonical hostname
+Host: resolvr.dev

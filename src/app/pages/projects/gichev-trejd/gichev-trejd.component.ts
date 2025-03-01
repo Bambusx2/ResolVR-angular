@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule, } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
@@ -19,7 +19,6 @@ interface Testimonial {
   imports: [
     CommonModule, 
     RouterLink, 
-    NgOptimizedImage,
     ProjectCardsComponent
   ],
   animations: [
@@ -94,19 +93,19 @@ export class GichevTrejdComponent {
 
   screenshots = [
     {
-      src: 'assets/projects/gichev-trejd/app/overview.png',
+      src: 'assets/projects/gichev-trejd/app/overview.webp',
       alt: 'Dashboard Overview',
       caption: 'Intuitive Dashboard',
       description: 'Real-time inventory tracking and analytics dashboard'
     },
     {
-      src: 'assets/projects/gichev-trejd/app/inventory.png',
+      src: 'assets/projects/gichev-trejd/app/inventory.webp',
       alt: 'Inventory Management',
       caption: 'Smart Inventory Control',
       description: 'Automated stock management with predictive analytics'
     },
     {
-      src: 'assets/projects/gichev-trejd/app/order.png',
+      src: 'assets/projects/gichev-trejd/app/order.webp',
       alt: 'Order Processing',
       caption: 'Streamlined Orders',
       description: 'Efficient order processing and tracking system'

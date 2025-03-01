@@ -98,19 +98,19 @@ export class HotelParkComponent {
 
   screenshots = [
     {
-      src: 'assets/projects/hotel-park/app/control-center.png',
+      src: 'assets/projects/hotel-park/app/control-center.webp',
       alt: 'Control Center Interface',
       caption: 'Smart Control Center',
       description: 'Centralized management of all hotel systems and devices'
     },
     {
-      src: 'assets/projects/hotel-park/app/ac-control.png',
+      src: 'assets/projects/hotel-park/app/ac-control.webp',
       alt: 'Climate Control',
       caption: 'Climate Management',
       description: 'Advanced climate control and energy optimization features'
     },
     {
-      src: 'assets/projects/hotel-park/app/overview.png',
+      src: 'assets/projects/hotel-park/app/overview.webp',
       alt: 'System Overview',
       caption: 'System Overview',
       description: 'Complete overview of hotel operations and status'

@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
@@ -22,7 +22,6 @@ interface Testimonial {
   imports: [
     CommonModule, 
     RouterLink, 
-    NgOptimizedImage,
     ProjectCardsComponent
   ],
   animations: [
@@ -42,14 +41,14 @@ interface Testimonial {
     ]),
     trigger('staggerFade', [
       transition(':enter', [
-        query('.metric', [
+        query('.metric, .overview-item', [
           style({ opacity: 0, transform: 'translateY(20px)' }),
           stagger(100, [
             animate('0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', 
               style({ opacity: 1, transform: 'translateY(0)' })
             )
           ])
-        ])
+        ], { optional: true })
       ])
     ])
   ]

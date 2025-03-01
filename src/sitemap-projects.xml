@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Iskratel Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/iskratel</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/iskratel"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://resolvr.dev/sl/our-work/iskratel"/>
+  </url>
+  
+  <!-- Kontron Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/kontron</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/kontron"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://resolvr.dev/de/our-work/kontron"/>
+  </url>
+  
+  <!-- Hotel Park Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/hotel-park</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/hotel-park"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://resolvr.dev/sl/our-work/hotel-park"/>
+  </url>
+  
+  <!-- Piano School Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/piano-school</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/piano-school"/>
+  </url>
+  
+  <!-- RIMA Term Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/rima-term</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/rima-term"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://resolvr.dev/sl/our-work/rima-term"/>
+  </url>
+  
+  <!-- City Gym Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/city-gym</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/city-gym"/>
+  </url>
+  
+  <!-- UGD Mineral Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/ugd-mineral</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/ugd-mineral"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://resolvr.dev/mk/our-work/ugd-mineral"/>
+  </url>
+  
+  <!-- Gichev Trejd Project -->
+  <url>
+    <loc>https://resolvr.dev/our-work/gichev-trejd</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/our-work/gichev-trejd"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://resolvr.dev/mk/our-work/gichev-trejd"/>
+  </url>
+  
+  <!-- Technologies Used in Projects -->
+  <url>
+    <loc>https://resolvr.dev/technologies</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/technologies"/>
+  </url>
+  
+  <!-- Client Success Stories -->
+  <url>
+    <loc>https://resolvr.dev/success-stories</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resolvr.dev/success-stories"/>
+  </url>
+  
+</urlset>

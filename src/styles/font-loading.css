@@ -1,0 +1,46 @@
+/* Font loading optimization styles */
+
+/* 
+ * Define fallback font sizes that match the metrics of our custom fonts
+ * This helps prevent layout shifts when custom fonts load
+ */
+html {
+  /* Initial state: use system fonts */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom DesMontilles font */
+@font-face {
+  font-family: 'DesMontilles';
+  src: url('../assets/fonts/font1.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BrittanySignature font */
+@font-face {
+  font-family: 'BrittanySignature';
+  src: url('../assets/fonts/BrittanySignature-MaZx.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Set font-display strategy for all text elements */
+h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, textarea, label {
+  font-display: swap;
+}
+
+/* Reserve space for text elements to prevent layout shifts */
+h1 {
+  min-height: 2.5em;
+}
+
+h2 {
+  min-height: 2em;
+}
+
+p {
+  min-height: 1.2em;
+}

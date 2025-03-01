@@ -510,6 +510,15 @@ h2 {
   .client-overview {
     padding: 6rem 0;
   }
+  
+  .metrics-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
