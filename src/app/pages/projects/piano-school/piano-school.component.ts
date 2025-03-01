@@ -105,19 +105,19 @@ export class PianoSchoolComponent {
 
   screenshots = [
     {
-      src: 'assets/projects/piano-school/app/learn.png',
+      src: 'assets/projects/piano-school/app/learn.webp',
       alt: 'Interactive Learning Interface',
       caption: 'Smart Learning Platform',
       description: "'Professor Gorgieva's interactive piano lessons with real-time guidance'"
     },
     {
-      src: 'assets/projects/piano-school/app/listen.png',
+      src: 'assets/projects/piano-school/app/listen.webp',
       alt: 'Sheet Music Player',
       caption: 'Practice & Learn',
       description: "'Follow along with Professor Gorgieva's curated compositions and instructions'"
     },
     {
-      src: 'assets/projects/piano-school/app/chat.png',
+      src: 'assets/projects/piano-school/app/chat.webp',
       alt: 'Professor Chat Interface',
       caption: 'Direct Communication',
       description: 'Instant connection with Professor Gorgieva for personalized feedback and support'

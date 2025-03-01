@@ -1,0 +1,72 @@
+Lazy loading image styles
+
+/* Base styles for images that will be lazy loaded */
+img[data-src] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  height: auto; /* Preserve aspect ratio */
+}
+
+/* Loaded state */
+img.loaded {
+  opacity: 1;
+  height: auto; /* Preserve aspect ratio */
+}
+
+/* Loading state - blur effect for placeholders */
+img.loading {
+  filter: blur(5px);
+  transition: filter 0.3s;
+  height: auto; /* Preserve aspect ratio */
+}
+
+/* Set a minimum height/width for images to prevent layout shifts */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+/* Add additional aspect ratio classes as needed */
+.aspect-ratio-16-9 {
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.aspect-ratio-4-3 {
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+.aspect-ratio-1-1 {
+  padding-bottom: 100%; /* 1:1 aspect ratio (square) */
+}
+
+/* Actual image will fill the container */
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Using contain instead of cover to preserve aspect ratio */
+}
+
+/* Lightweight SVG placeholder */
+.svg-placeholder {
+  background-image: url('../assets/images/performance/placeholder.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Specific styles for logos to maintain consistency */
+.logo img {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+}
+
+/* Ensure work images maintain proportions */
+.work-image {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}

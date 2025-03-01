@@ -20,21 +20,21 @@ export class TestimonialsComponent implements AfterViewInit {
 
   testimonials = [
     {
-      logo: 'assets/logos/kontron.png',
+      logo: 'assets/logos/kontron.webp',
       alt: 'Kontron Logo',
       text: 'ResolVR has expertly integrated with our team to develop key modules for our dealer management system.',
       name: 'Slobodan Jovanovski',
       position: 'Head of Department'
     },
     {
-      logo: 'assets/logos/ugd.png',
+      logo: 'assets/logos/ugd.webp',
       alt: 'UGD Logo',
       text: 'ResolVR is a trusted resource. Their quality, responsiveness, and communication are unparalleled.',
       name: 'Tena Sijakova Ivanova',
       position: 'Head of Department of Petrology and Mineralogy'
     },
     {
-      logo: 'assets/logos/hotel_park.jpg',
+      logo: 'assets/logos/hotel_park1.webp',
       alt: 'Hotel Park Logo',
       text: 'ResolVR impressed us with their excellent execution, adaptability, and seamless integration into our processes.',
       name: 'Angel Bogdov',
@@ -48,14 +48,14 @@ export class TestimonialsComponent implements AfterViewInit {
       position: 'Founder and CEO'
     },
     {
-      logo: 'assets/logos/enbravia.png',
+      logo: 'assets/logos/enbravia.webp',
       alt: 'Enbravia Logo',
       text: "ResolVR's integration of cutting-edge solutions has revolutionized our business processes, driving efficiency and innovation.",
       name: 'Alex Spasov',
       position: 'Founder and CEO'
     },
     { 
-      logo: 'assets/logos/spar.png',
+      logo: 'assets/testimonials-logos/spar-testimonial-logo.webp',
       alt: 'SPAR ICS Logo',
       text: "ResolVR doesn't just execute tasks—they take the time to understand the why behind them.",
       name: 'Michael Meike',

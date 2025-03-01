@@ -1,3 +1,6 @@
+/* Import lazy loading optimizations */
+@import './styles/lazy-loading.css';
+
 /* Box sizing reset for consistency */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -25,6 +28,7 @@
   img, picture {
     max-width: 100%;
     display: block;
+    height: auto;
   }
   
   /* Remove border and outline on buttons */
@@ -48,7 +52,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   /* Remove border for links in images */
   a img {
     border: none;
@@ -71,4 +75,3 @@
     box-shadow: 0 0 0px 1000px white inset;
     transition: background-color 5000s ease-in-out 0s;
   }
-  

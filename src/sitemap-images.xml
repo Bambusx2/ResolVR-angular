@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page Images -->
+  <url>
+    <loc>https://resolvr.dev/</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/resolvr-logo.webp</image:loc>
+      <image:title>ResolVR Logo</image:title>
+      <image:caption>ResolVR - Elite Tech Talent &amp; Scalable Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/hero-background.jpg</image:loc>
+      <image:title>ResolVR Hero Image</image:title>
+      <image:caption>Software Development and IT Solutions</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page Images -->
+  <url>
+    <loc>https://resolvr.dev/about</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/about/team.jpg</image:loc>
+      <image:title>ResolVR Team</image:title>
+      <image:caption>Our team of elite software developers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/about/office.jpg</image:loc>
+      <image:title>ResolVR Office</image:title>
+      <image:caption>Our modern development office space</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: Iskratel -->
+  <url>
+    <loc>https://resolvr.dev/our-work/iskratel</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/iskratel/main.jpg</image:loc>
+      <image:title>Iskratel Project</image:title>
+      <image:caption>Custom telecommunications software development for Iskratel</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: Kontron -->
+  <url>
+    <loc>https://resolvr.dev/our-work/kontron</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/kontron/main.jpg</image:loc>
+      <image:title>Kontron Project</image:title>
+      <image:caption>Embedded systems development for Kontron</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: Hotel Park -->
+  <url>
+    <loc>https://resolvr.dev/our-work/hotel-park</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/hotel-park/main.jpg</image:loc>
+      <image:title>Hotel Park Project</image:title>
+      <image:caption>Hotel management software for Hotel Park</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: Piano School -->
+  <url>
+    <loc>https://resolvr.dev/our-work/piano-school</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/piano-school/main.jpg</image:loc>
+      <image:title>Piano School Project</image:title>
+      <image:caption>Online learning platform for Piano School</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: RIMA Term -->
+  <url>
+    <loc>https://resolvr.dev/our-work/rima-term</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/rima-term/main.jpg</image:loc>
+      <image:title>RIMA Term Project</image:title>
+      <image:caption>Terminal management software for RIMA Term</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Project: City Gym -->
+  <url>
+    <loc>https://resolvr.dev/our-work/city-gym</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/projects/city-gym/main.jpg</image:loc>
+      <image:title>City Gym Project</image:title>
+      <image:caption>Fitness management platform for City Gym</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services: Product Development -->
+  <url>
+    <loc>https://resolvr.dev/services/product-development</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/services/product-development.jpg</image:loc>
+      <image:title>Product Development Services</image:title>
+      <image:caption>End-to-end product development services from ResolVR</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services: Team Augmentation -->
+  <url>
+    <loc>https://resolvr.dev/services/team-augmentation</loc>
+    <image:image>
+      <image:loc>https://resolvr.dev/assets/services/team-augmentation.jpg</image:loc>
+      <image:title>Team Augmentation Services</image:title>
+      <image:caption>Skilled developer team augmentation services</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

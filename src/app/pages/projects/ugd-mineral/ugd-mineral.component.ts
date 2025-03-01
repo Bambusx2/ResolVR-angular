@@ -1,7 +1,6 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { NgOptimizedImage } from '@angular/common';
 import { trigger, transition, style, animate, stagger, query, group } from '@angular/animations';
 import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
@@ -11,7 +10,6 @@ import { ProjectCardsComponent } from '../../../shared/project-cards/project-car
   imports: [
     CommonModule, 
     RouterLink, 
-    NgOptimizedImage,
     ProjectCardsComponent
   ],
   templateUrl: './ugd-mineral.component.html',
@@ -43,7 +41,7 @@ import { ProjectCardsComponent } from '../../../shared/project-cards/project-car
               })
             )
           ])
-        ])
+        ], { optional: true })
       ])
     ])
   ]
@@ -102,19 +100,19 @@ export class UgdMineralComponent {
 
   screenshots = [
     {
-      src: 'assets/projects/ugd-mineral/app/overview.png',
+      src: 'assets/projects/ugd-mineral/app/overview.webp',
       alt: 'Analysis Dashboard',
       caption: 'Research Dashboard',
       description: 'Custom-built mineral analysis dashboard for UGD research requirements.'
     },
     {
-      src: 'assets/projects/ugd-mineral/app/operations.png',
+      src: 'assets/projects/ugd-mineral/app/operations.webp',
       alt: 'Sample Management',
       caption: 'Sample Management',
       description: "Comprehensive system for managing UGD's mineral samples and research data."
       },
     {
-      src: 'assets/projects/ugd-mineral/app/comparison.png',
+      src: 'assets/projects/ugd-mineral/app/comparison.webp',
       alt: 'Data Comparison',
       caption: 'Analysis Tools',
       description: "Specialized tools for comparing and analyzing mineral properties in UGD's research."
