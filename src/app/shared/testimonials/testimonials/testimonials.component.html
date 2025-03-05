@@ -34,7 +34,7 @@
                 <p>{{ testimonial.text }}</p>
             </blockquote>
 
-            <div class="rating" aria-label="5 out of 5 stars rating">
+            <div class="rating">
                 <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]; let i = index" 
                    [style.--i]="i"></i>
             </div>
