@@ -3,32 +3,10 @@ import { isPlatformBrowser } from '@angular/common';
 import { TestimonialsComponent } from '../../shared/testimonials/testimonials/testimonials.component';
 import { CommonModule } from '@angular/common';
 import { SeoService } from '../../core/services/seo.service';
-import { 
-  siApachekafka,
-  siOpenjdk,
-  siSpringboot,
-  siAngular,
-  siDocker,
-  siKubernetes,
-  siPostgresql,
-  siReact,
-  siMongodb,
-  siRedis,
-  siApache,
-  siRabbitmq,
-  siWordpress,
-  siJavascript,
-  siTypescript,
-  siCss3,
-  siHtml5
-} from 'simple-icons';
 
 interface TechStack {
   title: string;
-  icon: {
-    path: string;
-    hex: string;
-  };
+  iconPath: string;
 }
 
 interface Partner {
@@ -47,23 +25,39 @@ interface Partner {
 })
 export class HomeComponent implements AfterViewInit, OnInit {
   techStack: TechStack[] = [
-    { title: 'Kafka', icon: siApachekafka },
-    { title: 'Java', icon: siOpenjdk },
-    { title: 'Spring Boot', icon: siSpringboot },
-    { title: 'Angular', icon: siAngular },
-    { title: 'React', icon: siReact },
-    { title: 'Docker', icon: siDocker },
-    { title: 'Kubernetes', icon: siKubernetes },
-    { title: 'PostgreSQL', icon: siPostgresql },
-    { title: 'MongoDB', icon: siMongodb },
-    { title: 'Redis', icon: siRedis },
-    { title: 'Apache', icon: siApache },
-    { title: 'RabbitMQ', icon: siRabbitmq },
-    { title: 'Wordpress', icon: siWordpress },
-    { title: 'JavaScript', icon: siJavascript },
-    { title: 'TypeScript', icon: siTypescript },
-    { title: 'HTML', icon: siHtml5 },
-    { title: 'CSS', icon: siCss3 },
+    { title: 'Alpine.js', iconPath: 'assets/techonologies/alpinedotjs.svg' },
+    { title: 'Angular', iconPath: 'assets/techonologies/angular.svg' },
+    { title: 'Apache', iconPath: 'assets/techonologies/apache.svg' },
+    { title: 'Apache Cassandra', iconPath: 'assets/techonologies/apachecassandra.svg' },
+    { title: 'Apache JMeter', iconPath: 'assets/techonologies/apachejmeter.svg' },
+    { title: 'Apache Kafka', iconPath: 'assets/techonologies/apachekafka.svg' },
+    { title: 'Canva', iconPath: 'assets/techonologies/canva.svg' },
+    { title: 'CSS', iconPath: 'assets/techonologies/css.svg' },
+    { title: 'Docker', iconPath: 'assets/techonologies/docker.svg' },
+    { title: 'Figma', iconPath: 'assets/techonologies/figma.svg' },
+    { title: 'Git', iconPath: 'assets/techonologies/git.svg' },
+    { title: 'Grafana', iconPath: 'assets/techonologies/grafana.svg' },
+    { title: 'GraphQL', iconPath: 'assets/techonologies/graphql.svg' },
+    { title: 'HTML5', iconPath: 'assets/techonologies/html5.svg' },
+    { title: 'JavaScript', iconPath: 'assets/techonologies/javascript.svg' },
+    { title: 'Jenkins', iconPath: 'assets/techonologies/jenkins.svg' },
+    { title: 'Jira', iconPath: 'assets/techonologies/jira.svg' },
+    { title: 'Kibana', iconPath: 'assets/techonologies/kibana.svg' },
+    { title: 'Kubernetes', iconPath: 'assets/techonologies/kubernetes.svg' },
+    { title: 'MariaDB', iconPath: 'assets/techonologies/mariadb.svg' },
+    { title: 'MongoDB', iconPath: 'assets/techonologies/mongodb.svg' },
+    { title: 'MySQL', iconPath: 'assets/techonologies/mysql.svg' },
+    { title: 'Netlify', iconPath: 'assets/techonologies/netlify.svg' },
+    { title: 'Java', iconPath: 'assets/techonologies/openjdk.svg' },
+    { title: 'PostgreSQL', iconPath: 'assets/techonologies/postgresql.svg' },
+    { title: 'Prometheus', iconPath: 'assets/techonologies/prometheus.svg' },
+    { title: 'RabbitMQ', iconPath: 'assets/techonologies/rabbitmq.svg' },
+    { title: 'React', iconPath: 'assets/techonologies/react.svg' },
+    { title: 'Redis', iconPath: 'assets/techonologies/redis.svg' },
+    { title: 'Sketch', iconPath: 'assets/techonologies/sketch.svg' },
+    { title: 'Spring Boot', iconPath: 'assets/techonologies/springboot.svg' },
+    { title: 'TypeScript', iconPath: 'assets/techonologies/typescript.svg' },
+    { title: 'WordPress', iconPath: 'assets/techonologies/wordpress.svg' },
   ];
 
   partners: Partner[] = [
