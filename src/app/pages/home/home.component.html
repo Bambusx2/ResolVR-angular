@@ -93,28 +93,22 @@
   <div class="carousel-container" role="region" aria-label="Technologies we use carousel">
     <div class="logo-track">
       <div class="tech-icon" *ngFor="let tech of techStack" [attr.title]="tech.title">
-        <svg 
-          role="img" 
-          viewBox="0 0 24 24" 
-          xmlns="http://www.w3.org/2000/svg"
+        <img 
+          [src]="tech.iconPath" 
+          [alt]="tech.title + ' icon'"
+          role="img"
           [attr.aria-label]="tech.title + ' icon'"
-        >
-          <title>{{tech.title}}</title>
-          <path [attr.d]="tech.icon.path"/>
-        </svg>
+        />
         <span class="tech-name">{{tech.title}}</span>
       </div>
       <!-- Duplicate for infinite scrolling -->
       <div class="tech-icon" *ngFor="let tech of techStack" [attr.title]="tech.title">
-        <svg 
-          role="img" 
-          viewBox="0 0 24 24" 
-          xmlns="http://www.w3.org/2000/svg"
+        <img 
+          [src]="tech.iconPath" 
+          [alt]="tech.title + ' icon'"
+          role="img"
           [attr.aria-label]="tech.title + ' icon'"
-        >
-          <title>{{tech.title}}</title>
-          <path [attr.d]="tech.icon.path"/>
-        </svg>
+        />
         <span class="tech-name">{{tech.title}}</span>
       </div>
     </div>
