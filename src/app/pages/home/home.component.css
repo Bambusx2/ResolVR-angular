@@ -122,7 +122,7 @@
 .logo-track {
   display: flex;
   gap: 40px;
-  animation: scroll 60s linear infinite;
+  animation: scroll 120s linear infinite;
   width: max-content;
   padding: 0 20px;
   align-items: center;

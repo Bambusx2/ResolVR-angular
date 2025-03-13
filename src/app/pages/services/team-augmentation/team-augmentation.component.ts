@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+
+interface ExpertiseGroup {
+  title: string;
+  description: string;
+  specialties: string[];
+}
 
 @Component({
   selector: 'app-team-augmentation',
@@ -10,6 +16,44 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./team-augmentation.component.css']
 })
 export class TeamAugmentationComponent implements OnInit {
+  expertise = signal<ExpertiseGroup[]>([
+    {
+      title: 'Backend Engineering',
+      description: 'Building robust, scalable server-side solutions with our core expertise in Java',
+      specialties: ['Java', 'Spring Boot', 'PHP', 'Node.js', 'REST APIs', 'GraphQL']
+    },
+    {
+      title: 'Frontend Development',
+      description: 'Expert UI/UX specialists building modern, responsive interfaces',
+      specialties: ['Angular', 'React', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Responsive Design']
+    },
+    {
+      title: 'DevOps & Infrastructure',
+      description: 'Infrastructure and deployment automation specialists',
+      specialties: ['Docker', 'CI/CD Pipelines', 'Linux Administration', 'Nginx/Apache', 'Kubernetes']
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'Ensuring high-quality, bug-free applications through rigorous testing',
+      specialties: ['Manual Testing', 'Automated Testing', 'Performance Testing', 'Test Planning']
+    },
+    {
+      title: 'CMS & E-commerce',
+      description: 'Building and maintaining content-managed websites and online stores',
+      specialties: ['WordPress', 'WooCommerce', 'Custom WordPress Themes', 'WordPress Plugins']
+    },
+    {
+      title: 'Mobile Development',
+      description: 'Creating seamless mobile experiences across platforms',
+      specialties: ['React Native', 'Progressive Web Apps (PWA)', 'Hybrid Applications']
+    },
+    {
+      title: 'Enterprise Solutions',
+      description: 'Implementing and customizing business management systems',
+      specialties: ['Microsoft Dynamics', 'ERP Integration', 'Business Process Automation', 'Custom Solutions']
+    }
+  ]);
+
   constructor(
     private meta: Meta,
     private title: Title
