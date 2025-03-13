@@ -101,7 +101,7 @@
           <span>✔</span>
           <div class="benefit-content">
             <strong>Scalable solutions</strong>
-            <p>Adjust your team size with ease as your needs evolve.</p>
+            <p>Adjust team size and budget as your project evolves.</p>
           </div>
         </li>
         <li>
@@ -114,43 +114,40 @@
       </ul>
     </div>
 
-    <!-- Team Profiles Section -->
+    <!-- Technology Expertise Section -->
     <div class="profiles-section">
-      <h2 class="section-title">Available <span class="highlight">Expertise</span></h2>
+      <h2 class="section-title">Our <span class="highlight">Technology Expertise</span></h2>
+      <p class="expertise-intro">
+        Our talent pool includes pre-vetted, senior-level specialists across a wide range of technologies,
+        ready to seamlessly integrate with your team and deliver immediate value.
+      </p>
       <div class="profiles-grid">
-        <div class="profile-card">
-          <div class="profile-icon">
-            <i class="fas fa-code"></i>
+        <ng-container *ngFor="let group of expertise()">
+          <div class="profile-card">
+            <div class="profile-icon">
+              <i class="fas" [ngClass]="{
+                'fa-code': group.title === 'Frontend Development',
+                'fa-database': group.title === 'Backend Engineering',
+                'fa-cogs': group.title === 'DevOps & Infrastructure',
+                'fa-clipboard-check': group.title === 'Quality Assurance',
+                'fa-wordpress': group.title === 'CMS & E-commerce',
+                'fa-mobile-alt': group.title === 'Mobile Development',
+                'fa-building': group.title === 'Enterprise Solutions'
+              }"></i>
+            </div>
+            <h3>{{group.title}}</h3>
+            <p>{{group.description}}</p>
+            <div class="specialty-tags">
+              <span class="specialty-tag" *ngFor="let specialty of group.specialties">{{specialty}}</span>
+            </div>
           </div>
-          <h3>Senior Full-Stack Developer</h3>
-          <ul>
-            <li>5+ years of experience in Java, .Net, Node.js, React, or Angular</li>
-            <li>Expert in REST APIs and cloud deployments</li>
-            <li>Guides junior developers and ensures code quality</li>
-          </ul>
-        </div>
-        <div class="profile-card">
-          <div class="profile-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>DevOps Engineer</h3>
-          <ul>
-            <li>Skilled in CI/CD, AWS/Azure, Docker, and Kubernetes</li>
-            <li>Focuses on automation and infrastructure reliability</li>
-            <li>Supports agile workflows and rapid deployments</li>
-          </ul>
-        </div>
-        <div class="profile-card">
-          <div class="profile-icon">
-            <i class="fas fa-bug"></i>
-          </div>
-          <h3>QA Automation Specialist</h3>
-          <ul>
-            <li>Proficient in Selenium, Cypress, or Jest</li>
-            <li>Develops automated test frameworks</li>
-            <li>Ensures end-to-end quality and faster release cycles</li>
-          </ul>
-        </div>
+        </ng-container>
+      </div>
+      <div class="expertise-contact">
+        <p>
+          Don't see what you're looking for? Our talent pool extends beyond these areas.
+          <a href="/contact-us" class="contact-link">Contact us</a> to discuss your specific requirements.
+        </p>
       </div>
     </div>
 
