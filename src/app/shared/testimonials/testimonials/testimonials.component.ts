@@ -57,9 +57,9 @@ export class TestimonialsComponent implements AfterViewInit {
     { 
       logo: 'assets/testimonials-logos/spar-testimonial-logo.webp',
       alt: 'SPAR ICS Logo',
-      text: "ResolVR doesn't just execute tasks—they take the time to understand the why behind them.",
-      name: 'Michael Meike',
-      position: 'Head of Retail Technologies'
+      text: "ResolVR isn’t just about getting things done—they bring strategic insight and a deep understanding of the bigger picture.",
+      name: 'Gerwin Abbingh',
+      position: 'Head of Development'
     }
   ];
 
