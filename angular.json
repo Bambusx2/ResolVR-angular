@@ -26,12 +26,7 @@
               "src/assets",
               "src/robots.txt",
               "src/sitemap.xml",
-              "src/manifest.webmanifest",
-              {
-                "glob": "**/*",
-                "input": "src/assets/icons",
-                "output": "assets/icons"
-              }
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css",
