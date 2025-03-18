@@ -34,15 +34,37 @@ const baseProviders = [
   Meta
 ];
 
-// Only add service worker in production
+// Handle service worker registration - this needs to be in production build
 if (!isDevMode()) {
-  console.log('Enabling service worker for production');
-  baseProviders.push(
-    provideServiceWorker('ngsw-worker.js', {
-      enabled: true,
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  );
+  try {
+    // Check if the browser supports service workers before adding
+    if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+      console.log('Enabling service worker for production');
+      baseProviders.push(
+        provideServiceWorker('ngsw-worker.js', {
+          enabled: true,
+          registrationStrategy: 'registerImmediately'
+        })
+      );
+      
+      // Add error handling for registration failures
+      if (typeof window !== 'undefined') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.getRegistration().then(registration => {
+            if (!registration) {
+              console.warn('Service worker not registered, PWA functionality may be limited');
+            }
+          }).catch(err => {
+            console.error('Service worker check failed:', err);
+          });
+        });
+      }
+    } else {
+      console.log('Service workers not supported in this browser');
+    }
+  } catch (e) {
+    console.warn('Error setting up service worker:', e);
+  }
 } else {
   console.log('Service worker disabled in development mode');
 }
