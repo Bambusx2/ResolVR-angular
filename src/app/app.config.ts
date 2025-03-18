@@ -10,32 +10,44 @@ import { IMAGE_CONFIG } from '@angular/common';
 import { routes } from './app.routes';
 import { SelectivePreloadingStrategy } from './core/strategies/selective-preloading-strategy';
 
-export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(
-      routes,
-      withPreloading(SelectivePreloadingStrategy),
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
-    ),
-    provideAnimations(),
-    // Removed provideClientHydration() as we're not using SSR
-    provideHttpClient(
-      withInterceptorsFromDi(),
-      withJsonpSupport()
-    ),
-    // Suppress image size warnings to maintain original design
-    {
-      provide: IMAGE_CONFIG,
-      useValue: {
-        disableImageSizeWarning: true,
-        disableImageLazyLoadWarning: true
-      }
-    },
-    Title,
-    Meta,
+// Create the base providers array without service worker
+const baseProviders = [
+  provideRouter(
+    routes,
+    withPreloading(SelectivePreloadingStrategy),
+    withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+  ),
+  provideAnimations(),
+  provideHttpClient(
+    withInterceptorsFromDi(),
+    withJsonpSupport()
+  ),
+  // Suppress image size warnings to maintain original design
+  {
+    provide: IMAGE_CONFIG,
+    useValue: {
+      disableImageSizeWarning: true,
+      disableImageLazyLoadWarning: true
+    }
+  },
+  Title,
+  Meta
+];
+
+// Only add service worker in production
+if (!isDevMode()) {
+  console.log('Enabling service worker for production');
+  baseProviders.push(
     provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
+      enabled: true,
       registrationStrategy: 'registerWhenStable:30000'
     })
-  ]
+  );
+} else {
+  console.log('Service worker disabled in development mode');
+}
+
+// Export the application configuration
+export const appConfig: ApplicationConfig = {
+  providers: baseProviders
 };

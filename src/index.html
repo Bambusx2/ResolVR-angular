@@ -10,10 +10,8 @@
   <meta name="author" content="ResolVR">
   <meta name="robots" content="index, follow">
   
-  <!-- Performance optimizations -->
-  <link rel="preload" href="assets/resolvr-logo.webp" as="image">
-  
-  <!-- Critical CSS will be inlined by the PerformanceService -->
+  <!-- Performance optimizations - only preload critical images -->
+  <link rel="preload" href="assets/resolvr-logo.webp" as="image" type="image/webp">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -34,22 +32,9 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://resolvr.dev/">
   
-  <!-- Web app manifest -->
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
-  <meta name="application-name" content="ResolVR">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="ResolVR">
-  
-  <!-- Favicons -->
+  <!-- Basic favicon only for development, PWA features will be enabled in production -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-  
+
   <!-- Security headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -62,12 +47,56 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-  gtag('config', 'G-0KW06HHF5N');
+    gtag('config', 'G-0KW06HHF5N');
   </script>
 
+  <!-- Conditionally load PWA components in production only -->
+  <script>
+    // Only add PWA features in production
+    if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
+      // Add manifest
+      const manifestLink = document.createElement('link');
+      manifestLink.rel = 'manifest';
+      manifestLink.href = 'manifest.webmanifest';
+      document.head.appendChild(manifestLink);
+      
+      // Add Apple PWA meta tags
+      const metaTags = [
+        { name: 'theme-color', content: '#1976d2' },
+        { name: 'application-name', content: 'ResolVR' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'apple-mobile-web-app-title', content: 'ResolVR' }
+      ];
+      
+      metaTags.forEach(tagInfo => {
+        const tag = document.createElement('meta');
+        tag.name = tagInfo.name;
+        tag.content = tagInfo.content;
+        document.head.appendChild(tag);
+      });
+      
+      // Add additional icon links for production
+      const iconLinks = [
+        { rel: 'icon', type: 'image/png', href: 'assets/icons/icon-192x192.png' },
+        { rel: 'icon', type: 'image/png', href: 'assets/icons/icon-512x512.png' },
+        { rel: 'apple-touch-icon', href: 'assets/icons/icon-192x192.png' },
+        { rel: 'mask-icon', href: 'assets/icons/safari-pinned-tab.svg', color: '#5bbad5' }
+      ];
+      
+      iconLinks.forEach(linkInfo => {
+        const link = document.createElement('link');
+        link.rel = linkInfo.rel;
+        if (linkInfo.type) link.type = linkInfo.type;
+        link.href = linkInfo.href;
+        if (linkInfo.color) link.setAttribute('color', linkInfo.color);
+        document.head.appendChild(link);
+      });
+    }
+  </script>
 </head>
 <body>
   <app-root></app-root>
-
 </body>
 </html>
