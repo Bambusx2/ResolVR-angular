@@ -476,7 +476,7 @@ h2 {
     padding: 1.5rem;
 }
 
-/* Enhanced Testimonials */
+/* Testimonials Section */
 .testimonials {
     position: relative;
     overflow: hidden;
@@ -484,67 +484,61 @@ h2 {
 }
 
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .testimonial {
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
     padding: 2.5rem;
+    border-radius: 1.5rem;
     position: relative;
-    transition: all 0.4s ease;
+    max-width: 800px;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonial::before {
-    content: '"';
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    font-size: 3rem;
-    font-family: Georgia, serif;
-    color: rgba(17, 196, 185, 0.2);
-    line-height: 1;
 }
 
 .testimonial:hover {
-    transform: translateY(-0.5rem);
-    border-color: rgba(17, 196, 185, 0.3);
+    transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(17, 196, 185, 0.2);
+    box-shadow: 0 15px 30px rgba(17, 196, 185, 0.15);
 }
 
 .testimonial p {
-    flex: 1;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .testimonial footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .testimonial footer cite {
     font-size: 1.1rem;
     font-weight: 600;
+    font-style: normal;
     background: linear-gradient(135deg, #11c4b9, #673ab7);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 .testimonial footer span {
     color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: 1rem;
 }
 
 /* Enhanced CTA Section */

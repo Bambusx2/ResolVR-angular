@@ -99,7 +99,7 @@ export class PianoSchoolComponent {
     {
       quote: "Working with the team was a fantastic experience. They perfectly captured our vision for music education and created an intuitive platform that both teachers and students love using. The sheet music management features are exactly what we needed.",
       author: "Professor Bisera Ivanova Gorgieva",
-      position: "SEO of BIG Piano School"
+      position: "CEO of BIG Piano School"
     }
   ];
 

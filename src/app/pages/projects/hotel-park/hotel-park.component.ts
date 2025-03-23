@@ -2,7 +2,7 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
-import { ProjectCardsComponent } from '../../../../shared/project-cards/project-cards.component';
+import { ProjectCardsComponent } from '../../../shared/project-cards/project-cards.component';
 
 @Component({
   selector: 'app-hotel-park',

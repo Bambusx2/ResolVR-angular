@@ -8,7 +8,7 @@ import { TeamAugmentationComponent } from './pages/services/team-augmentation/te
 import { ProductImprovementComponent } from './pages/services/product-improvement/product-improvement.component';
 import { SmartIotSolutionsComponent } from './pages/services/smart-iot-solutions/smart-iot-solutions.component';
 import { OurWorkComponent } from './pages/our-work/our-work.component';
-import { HotelParkComponent } from './pages/projects/hotel-park/hotel-park/hotel-park.component';
+import { HotelParkComponent } from './pages/projects/hotel-park/hotel-park.component';
 import { GichevTrejdComponent } from './pages/projects/gichev-trejd/gichev-trejd.component';
 import { UgdMineralComponent } from './pages/projects/ugd-mineral/ugd-mineral.component';
 import { PianoSchoolComponent } from './pages/projects/piano-school/piano-school.component';
@@ -75,7 +75,7 @@ export const routes: Routes = [
   },
   { 
     path: 'our-work/hotel-park', 
-    loadComponent: () => import('./pages/projects/hotel-park/hotel-park/hotel-park.component').then(c => c.HotelParkComponent),
+    loadComponent: () => import('./pages/projects/hotel-park/hotel-park.component').then(m => m.HotelParkComponent),
     title: 'Hotel Park Case Study - ResolVR Projects'
   },
   { 
