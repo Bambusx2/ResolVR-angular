@@ -54,6 +54,7 @@
   <script>
     // Only add PWA features in production
     if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
+      console.log('Enabling service worker for production');
       // Add manifest
       const manifestLink = document.createElement('link');
       manifestLink.rel = 'manifest';
@@ -62,7 +63,7 @@
       
       // Add Apple PWA meta tags
       const metaTags = [
-        { name: 'theme-color', content: '#1976d2' },
+        { name: 'theme-color', content: '#0066cc' },
         { name: 'application-name', content: 'ResolVR' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'mobile-web-app-capable', content: 'yes' },
@@ -79,16 +80,17 @@
       
       // Add additional icon links for production
       const iconLinks = [
-        { rel: 'icon', type: 'image/png', href: 'assets/icons/icon-192x192.png' },
-        { rel: 'icon', type: 'image/png', href: 'assets/icons/icon-512x512.png' },
-        { rel: 'apple-touch-icon', href: 'assets/icons/icon-192x192.png' },
-        { rel: 'mask-icon', href: 'assets/icons/safari-pinned-tab.svg', color: '#5bbad5' }
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: './assets/icons/icon-192x192.png' },
+        { rel: 'icon', type: 'image/png', sizes: '512x512', href: './assets/icons/icon-512x512.png' },
+        { rel: 'apple-touch-icon', href: './assets/icons/icon-192x192.png' },
+        { rel: 'mask-icon', href: './assets/icons/safari-pinned-tab.svg', color: '#5bbad5' }
       ];
       
       iconLinks.forEach(linkInfo => {
         const link = document.createElement('link');
         link.rel = linkInfo.rel;
         if (linkInfo.type) link.type = linkInfo.type;
+        if (linkInfo.sizes) link.sizes = linkInfo.sizes;
         link.href = linkInfo.href;
         if (linkInfo.color) link.setAttribute('color', linkInfo.color);
         document.head.appendChild(link);
