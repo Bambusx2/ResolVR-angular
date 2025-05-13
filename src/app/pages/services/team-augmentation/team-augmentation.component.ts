@@ -64,13 +64,13 @@ export class TeamAugmentationComponent implements OnInit {
   }
 
   private initSEO() {
-    this.title.setTitle('Elite Nearshore Team Augmentation & Staff Augmentation Services | ResolVR');
+    this.title.setTitle('Elite Team Augmentation & Staff Augmentation Services | ResolVR');
     
     this.meta.addTags([
-      { name: 'description', content: 'Scale your development team with top-tier nearshore developers. Expert staff augmentation services with pre-vetted senior engineers from Macedonia.' },
-      { name: 'keywords', content: 'team augmentation, staff augmentation, nearshore developers, hire developers, development team, Macedonia developers, IT staffing, remote developers' },
-      { property: 'og:title', content: 'Elite Nearshore Team Augmentation & Staff Augmentation Services | ResolVR' },
-      { property: 'og:description', content: 'Scale your development team with top-tier nearshore developers. Expert staff augmentation services with pre-vetted senior engineers from Macedonia.' },
+      { name: 'description', content: 'Scale your development team with top-tier developers. Expert staff augmentation services with pre-vetted senior engineers from Macedonia.' },
+      { name: 'keywords', content: 'team augmentation, staff augmentation, developers, hire developers, development team, Macedonia developers, IT staffing, remote developers' },
+      { property: 'og:title', content: 'Elite Team Augmentation & Staff Augmentation Services | ResolVR' },
+      { property: 'og:description', content: 'Scale your development team with top-tier developers. Expert staff augmentation services with pre-vetted senior engineers from Macedonia.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://resolvr.dev/services/team-augmentation' },
       { property: 'og:image', content: 'https://resolvr.dev/assets/images/team-augmentation.jpg' },

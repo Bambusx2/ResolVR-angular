@@ -135,13 +135,13 @@ export class HomeComponent implements AfterViewInit, OnInit {
     },
     {
       name: 'BIG Piano School',
-      logo: 'assets/logos/pianoSchoolNoBg.webp',
+      logo: 'assets/logos/big.png',
       alt: 'BIG Piano School - Music Education',
       website: 'https://www.bigpianoschool.com'
     },
     {
       name: 'City Gym',
-      logo: 'assets/logos/cityGym.webp',
+      logo: 'assets/logos/city.png',
       alt: 'City Gym - Fitness Center',
       website: 'https://www.citygym.com'
     }
